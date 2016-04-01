@@ -1,0 +1,27 @@
+extends ./templates/template.jade
+
+block vars
+  - var title = article.title + '| Lindekaer'
+  - var author = article.author
+  - var description = article.description
+  - var keywords = article.keywords
+  - var page = 'page-article'
+
+block content
+
+  .navigation__back
+    a(href="/") Go back
+
+  .article
+
+    h1.article__title #{article.title}
+
+    .article__meta
+      .article__meta__author #{article.author}
+      .article__meta__date #{article.date}
+
+    .article__content.
+      !{article.content}
+
+  .navigation__back
+    a(href="/") Go back

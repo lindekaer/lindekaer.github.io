@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="Theodor C. Listov Lindekaer"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300, 300italic|Lato:900|Source+Code+Pro" type="text/css"><link rel="stylesheet" href="assets/css/dist-vendor.min.css" type="text/css"><link rel="stylesheet" href="assets/css/dist.min.css" type="text/css"><title>Docker 101| Lindekaer</title></head><body class="page-article"><div class="wrapper"><div class="navigation__back"><a href="/">Go back</a></div><div class="article"><h1 class="article__title">Docker 101</h1><div class="article__meta"><div class="article__meta__author">Theodor C. Listov Lindekaer</div><div class="article__meta__date">March 17, 2016</div></div><div class="article__content"><p>There are plenty of resources on Docker out there, but not all tutorials are equally clear. I have therefore decided to provide a walkthrough of setting up a Docker project from scratch.</p><h2 id="step-1-server-setup">Step 1 - Server setup</h2><p>Spin up a virtual server. You can use <a href="https://www.virtualbox.org/">Virtualbox</a>, but I decided to spin up a virtual 64 bit Centos server on Digital Ocean with 512 MB memory and a 20 GB disk (this server will in Docker context be referred to as the <em>host machine</em>). Prepare the server with the following commands:</p><pre><code class="lang-bash"># List kernel version - it MUST be 3.10 or above
+&gt; uname -r
+
+# Update system packages
+&gt; sudo yum update
+
+# Add yum repository
+&gt; sudo tee /etc/yum.repos.d/docker.repo &lt;&lt;-&#39;EOF&#39;
+[dockerrepo]
+name=Docker Repository
+baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
+enabled=1
+gpgcheck=1
+gpgkey=https://yum.dockerproject.org/gpg
+EOF
+
+# Install Docker
+&gt; sudo yum install docker-engine
+</code></pre><p>This should make it possible for you to run the <code>docker</code> command from the command line on your server. Try <code>docker --help</code> for a listing of commands.</p><h2 id="step-2-downloading-images">Step 2 - Downloading images</h2><p>We are now able to start our first container. I will show you how to start a a Nginx and a MySQL container. In order to get up and running quickly, we are going to use the official Dockerfiles for both Nginx and MySQL stored on <strong>Dockerhub</strong> (equivalent to Github, but for Dockerfiles). You can store your own Dockerfiles in the cloud by signing up at <a href="https://hub.docker.com/">hub.docker.com</a>.</p><p>Now we are ready to pull the Dockerfiles using <code>docker pull nginx</code> and <code>docker pull mysql</code>. To see the images that we have just downloaded, run <code>docker images</code>. Verify that you can see the image for both Nginx and MySQL.</p><h2 id="step-3-starting-containers">Step 3 - Starting containers</h2><p>You are now ready to start some containers. In order for our Nginx server to serve some HTML, we need to create a HTML file. On your host machine run the following commands:</p><pre><code class="lang-bash"># Create a directory to store the HTML file
+&gt; mkdir -p /var/www
+
+# Create an index page
+&gt; echo &quot;&lt;html&gt;&lt;h1&gt;Hello from host machine!&lt;/h1&gt;&lt;/html&gt;&quot; &gt; /var/www/index.html
+</code></pre><p>Read carefully through the code below before firing up the containers. Additionally, run <code>docker run --help</code> for parameter explanations.</p><pre><code class="lang-bash"># run    = starts the container process
+# -d     = detach the container and run in the background
+# -p     = map port from host machine to container
+# --name = name your container
+# -e     = set environment variable
+# -v     = mount a drive from the host machine to the container
+&gt; docker run -d -p 80:80 -v /var/www/:/usr/share/nginx/html --name &quot;nginx-server&quot; nginx
+&gt; docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Xa8j3cs10 --name &quot;mysql-server&quot; mysql
+</code></pre><p>Containers should be regarded as immutable as they don&#39;t change after initialization. Furthermore, they can quickly be stopped, removed and started again. They are therefore not suitable for storing data. When working with MySQL, you want to make sure that the data written to the database is persisted. This can be achieved by mounting a directory from the host machine to the container.</p><pre><code class="lang-bash"># Stop the MySQL container
+&gt; docker stop &quot;mysql-server&quot;
+
+# Remove the MySQL container
+&gt; docker rm &quot;mysql-server&quot;
+
+# Create directory on host machine to hold data
+&gt; mkdir -p /var/data
+
+# Start the MySQL container again (this time writing data to the host machine)
+&gt; docker run -d -p 3306:3306 -v /var/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Xa8j3cs10 --name &quot;mysql-server&quot; mysql
+</code></pre><p>Verify that the containers have started by running <code>docker ps</code>.</p><h2 id="step-4-testing-containers">Step 4 - Testing containers</h2><p>As described above, we have mapped the host machine&#39;s port 80 to port 80 on the Nginx container. Visit the IP address of the host machine and you should be welcomed by your own <code>index.html</code>! You have now successfully started a Nginx container and are able to control it through Docker commands.</p><p>In order to test the MySQL container try to connect using <code>root</code> as username and your chosen password. You can connect on the command line or use a MySQL manager such as <a href="http://www.sequelpro.com/">Sequel Pro</a>.</p><h2 id="wrapping-it-up">Wrapping it up</h2><p>Docker makes it easy to deploy your applications. Using Docker you can focus on your application and use well-supported images for your web server and databases. Additionally Docker takes the anxiety out of deploying to production - because of the isolation of containers you know that what works in development also works in production.</p><p>I have included a few useful Docker snippets:</p><pre><code class="lang-bash"># List all Docker images
+&gt; docker images -a
+
+# List all Docker containers
+&gt; docker ps -a
+
+# Stop and remove all Docker containers
+&gt; docker stop $(docker ps -a -q)
+&gt; docker rm $(docker ps -a -q)
+
+# Get command line access to a container
+&gt; docker exec -it [CONTAINER_ID] /bin/bash
+
+# Get logs from container
+&gt; docker logs [CONTAINER_ID]
+
+# Remove all exited containers
+&gt; docker rm -v $(docker ps -a -q -f status=exited)
+</code></pre></div></div><div class="navigation__back"><a href="/">Go back</a></div></div><script src="assets/js/dist-vendor.min.js"></script><script src="assets/js/dist.min.js"></script></body></html>

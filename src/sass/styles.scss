@@ -1,8 +1,13 @@
 @font-face {
   font-family: 'ColorsOfAutumn';
-  src: url('../../src/fonts/ColorsOfAutumn.ttf') format('truetype');
+  src: url('../../src/fonts/ColorsOfAutumn.eot'); /* IE9 Compat Modes */
+  src: url('../../src/fonts/ColorsOfAutumn.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../../src/fonts/ColorsOfAutumn.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../../src/fonts/ColorsOfAutumn.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../../src/fonts/ColorsOfAutumn.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+  
 /*
 -----------------------------------------------------------------------------------
 |

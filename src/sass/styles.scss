@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'ColorsOfAutumn';
-  src: url('../../src/fonts/ColorsOfAutumn.ttf');
+  src: url('../../src/fonts/ColorsOfAutumn.ttf') format('truetype');
 }
 
 /*
@@ -240,6 +240,9 @@ code {
   margin-top: 3em;
   height: 500px;
   border-radius: 4px;
+  @media (max-width: 720px) {
+    height: 350px;
+  }
 }
 
 /*

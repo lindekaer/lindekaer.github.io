@@ -42,6 +42,7 @@
     "watchify": "3.7.0"
   },
   "dependencies": {
+    "hint.css": "2.2.1",
     "leaflet": "0.7.7",
     "prismjs": "1.4.1"
   }

@@ -1,8 +1,8 @@
 //- Default variables that can be overwritten from files that extend the template
 - var title       = 'Blog | Lindekaer'
-- var description = ''
-- var keywords    = ''
-- var author      = ''
+- var description = 'My personal blog with tutorials, ideas and crazy thoughts'
+- var keywords    = 'development, hiking, outdoor, learning'
+- var author      = 'Theodor C. Listov Lindekaer'
 
 //- Make it possible to pass variables to this template
 block vars
@@ -23,8 +23,7 @@ html(lang="en")
     title #{title}
     block head
   body(class="#{page}")
-    .wrapper
-        block content
+    block content
 
     script(src="assets/js/dist-vendor.min.js")
     script(src="assets/js/dist.min.js")

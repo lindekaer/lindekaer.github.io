@@ -1,9 +1,6 @@
 extends ./templates/template.jade
 
 block vars
-  - var author = 'Theodor C. Listov Lindekaer'
-  - var description = 'Awesome it is...'
-  - var keywords = 'test, test, test'
   - var page = 'page-index';
 
 block content
@@ -11,15 +8,15 @@ block content
   h1.front__headline Lindekaer
   ul.front__links
     li
-      a(href="https://github.com/lindekaer", target="_blank") Github
+      a(href="https://github.com/lindekaer", target="_blank", title="Github") Github
     li 
-      a(href="mailto:theodor.lindekaer@gmail.com") Email
+      a(href="mailto:theodor.lindekaer@gmail.com", title="Email") Email
     li 
-      a(href="https://www.linkedin.com/in/theodor-c-listov-lindekaer-3289833b", target="_blank") LinkedIn
+      a(href="https://www.linkedin.com/in/theodor-c-listov-lindekaer-3289833b", target="_blank", title="LinkedIn") LinkedIn
     li 
-      a(href="https://www.facebook.com/theodor.lindekaer", target="_blank") Facebook
+      a(href="https://www.facebook.com/theodor.lindekaer", target="_blank", title="Facebook") Facebook
     li 
-      a(href="https://twitter.com/lindekaer", target="_blank") Twitter
+      a(href="https://twitter.com/lindekaer", target="_blank", title="Twitter") Twitter
 
   select.front__article-selector.js-selector
     option(value="index") Stuff I've written

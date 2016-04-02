@@ -75,7 +75,8 @@ gulp.task('sass', function() {
 gulp.task('sass:vendor', function() {
   return gulp.src([
     './node_modules/prismjs/themes/prism-okaidia.css',
-    './node_modules/leaflet/dist/leaflet.css'
+    './node_modules/leaflet/dist/leaflet.css',
+    './node_modules/hint.css/hint.css'
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.css'))

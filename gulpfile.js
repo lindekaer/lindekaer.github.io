@@ -109,24 +109,20 @@ gulp.task('js:vendor', function() {
   .pipe(browserSync.stream());
 });
 
-gulp.task('jade', function(cb) {
+gulp.task('jade', function() {
+  runSequence('jade:articles', 'jade:pages', browserSync.reload);
+});
+
+gulp.task('jade:articles', function(cb) {
   runSequence['clean'];
   var config = require('./config.js');
   var articles = config.articles;
-  for (let article of articles) {
-    var rawMd = fs.readFileSync('./articles/' + article.slug + '.md').toString();
-    article.content = md(rawMd);
-    var locals = { 
-      article: article
-    }
-    render('article', article.slug, locals);
-  }
-  locals = {
-    articles: articles
-  }
-  render('index', 'index', locals);
-  browserSync.reload();
-  cb();
+  iterate(articles, 0, cb);
+});
+
+gulp.task('jade:pages', function(cb) {
+  var locals = { articles: require('./config.js').articles }
+  render('index', 'index', locals, cb);
 });
 
 gulp.task('clean', function() {
@@ -152,7 +148,7 @@ gulp.task('prod', function() {
 -----------------------------------------------------------------------------------
 */
 
-function render(template, name, locals) {
+function render(template, name, locals, cb) {
   return gulp.src('./src/jade/' + template + '.jade')
   .pipe(plumber(errHandler))
   .pipe(jade({ locals: locals}))
@@ -162,4 +158,16 @@ function render(template, name, locals) {
     extname: '.html'
   }))
   .pipe(gulp.dest('.'))
+  .on('end', cb)
+}
+
+function iterate(articles, index, cb) {
+  if (index === articles.length) return cb();
+  var article = articles[index];
+  var rawMd = fs.readFileSync('./articles/' + article.slug + '.md').toString();
+  article.content = md(rawMd);
+  article.locals = { article: article }
+  render('article', article.slug, article.locals, () => {
+    iterate(articles, ++index, cb);
+  });
 }

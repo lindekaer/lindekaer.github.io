@@ -226,4 +226,7 @@ alias gp='git push'
 
 # Get all remote branches
 > git fetch --all
+
+# Clear staging area and rewrite working tree from specified commit
+> git reset --hard [COMMIT]
 ```

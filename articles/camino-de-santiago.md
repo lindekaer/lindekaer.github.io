@@ -4,7 +4,7 @@ In the summer of 2015 I started out on an amazing journey with my friend Andrei.
 Since the Middle Ages pilgrims have been walking towards Santiago as it is believed that the remains of St. James are buried there; hence the English name St. James's Way. The symbol for the Camino is a scallop shell - in the Middle Ages, bringing back a scallop shell was the proof for having visited the Atlantic Coast. The scallop shell also holds great symbolic power, as the grooves in the shell meet at the same point and thereby symbolizes the joint goal of reaching the shrine in Santiago.
 
 ## The journey
-We decided to walk Camino Francés (there are [many different caminos](http://www.caminoguides.com/route.html)), which starts in the small French town **St. Jean Pied de Port** and ends in **Santiago de Compostela**. The total route amounts to roughly <span class="distance hint--bottom" data-hint="Thank you!">800 km</span>.
+We decided to walk Camino Francés (there are [many different caminos](http://www.caminoguides.com/route.html)), which starts in the small French town **St. Jean Pied de Port** and ends in **Santiago de Compostela**. The total route amounts to roughly <span class="distance hint--bottom" data-hint="Thank you!">800 kilometers</span>.
 
 <div id="map1" data-lat="42.9767345" data-lng="-4.402924" data-zoom="6" data-type="streets">
   <div data-lat="43.1569752" data-lng="-1.251297" data-label="St. Jean Pied de Port"></div>

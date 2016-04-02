@@ -20,8 +20,7 @@ class Map {
       var zoom = parseFloat(map.getAttribute('data-zoom'));
       var type = map.getAttribute('data-type');
       var id = map.getAttribute('id');
-
-      console.log(id);
+      var markers = Array.apply(null, map.querySelectorAll('*'));
 
       var mapObject = L.map(id).setView([lat, lng], zoom);
       this.maps.push(mapObject);
@@ -29,6 +28,14 @@ class Map {
           id: `mapbox.${type}`,
           accessToken: 'pk.eyJ1IjoibGluZGVrYWVyIiwiYSI6ImNpbWV4MmxhajAwNGF3MGx1aDZtMnVyaGcifQ.hRO_0kjf-RttjttrnO4Lfg'
       }).addTo(mapObject);
+
+      for (let marker of markers) {
+        var lat = parseFloat(marker.getAttribute('data-lat'));
+        var lng = parseFloat(marker.getAttribute('data-lng'));
+        var label = marker.getAttribute('data-label');
+        var marker = L.marker([lat, lng]).addTo(mapObject);
+        marker.bindPopup(label);
+      }
     }
   }
 

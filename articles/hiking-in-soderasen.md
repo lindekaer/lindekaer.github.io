@@ -1,6 +1,11 @@
 Europe's largest natural forest, Söderåsen, is located only 30 kilometers from Helsingborg. Last weekend I went for a hike with a group of friends to explore the park. We spent approximately two full days in late March.
 
-<div id="map1" data-lat="56.026805" data-lng="13.234562" data-zoom="12" data-type="outdoors"></div>
+<div id="map1" data-lat="56.026805" data-lng="13.234562" data-zoom="12" data-type="outdoors">
+  <div data-lat="56.003776" data-lng="13.275760" data-label="Odensjön"></div>
+  <div data-lat="56.024719" data-lng="13.229154" data-label="Liagården"></div>
+  <div data-lat="56.035078" data-lng="13.248037" data-label="Hjortsprånget"></div>
+  <div data-lat="56.035102" data-lng="13.235763" data-label="Kopparhatten"></div>
+</div>
 
 ## Hiking
 The park offers a range of marked hiking trails. The shortest trail being 800 meters and the longest <span class="distance">14 kilometers</span>. Since nature is allowed to grow wildly, some of the trail markings can be hard to spot, so pay attention when walking. The hiking terrain is fairly flat and welcomes even the most unexperienced hikers.

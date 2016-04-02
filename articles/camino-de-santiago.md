@@ -11,6 +11,11 @@ We decided to walk Camino Francés (there are [many different caminos](http://ww
   <div data-lat="42.8802036" data-lng="-8.5622792" data-label="Santiago de Compostela"></div>
 </div>
 
+<div class="media">
+  <img class="media__image" src="/img/camino-de-santiago.andrei.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <p class="media__caption">Andrei walking the strech between Pamplona and Logroño</p>
+</div>
+
 ## Housing
 
 ## Food

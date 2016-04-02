@@ -14,3 +14,7 @@ export function slugify(str) {
     .replace(/^-+/, '')                                     // Trim - from start of text
     .replace(/-+$/, '');                                    // Trim - from end of text
 }
+
+export function toMiles(km) {
+  return km * 0.62137;
+}

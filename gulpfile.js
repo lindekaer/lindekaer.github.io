@@ -131,7 +131,7 @@ gulp.task('clean', function() {
 
 gulp.task('default', function() {
   runSequence(['sass', 'js'], 'jade', 'browserSync');
-  watch(['./src/jade/**/*.jade', './articles/*.md'], function() { gulp.start('jade'); });
+  watch(['./src/jade/**/*.jade', './articles/*.md', './config.js'], function() { gulp.start('jade'); });
   watch('./src/sass/**/*.scss', function() { gulp.start('sass'); });
   watch('./src/js/**/*.js', function() { gulp.start('js'); });
 });

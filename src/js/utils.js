@@ -16,5 +16,5 @@ export function slugify(str) {
 }
 
 export function toMiles(km) {
-  return km * 0.62137;
+  return parseInt(km * 0.62137);
 }

@@ -55,6 +55,9 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
+* {
+  box-sizing: border-box;
+}
 
 /*
 -----------------------------------------------------------------------------------
@@ -243,7 +246,7 @@ code {
 */
 
 [id*="map"] {
-  margin-top: 3em;
+  margin: 3em 0em 3em 0em;
   height: 500px;
   border-radius: 4px;
   @media (max-width: 720px) {

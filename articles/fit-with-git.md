@@ -31,7 +31,7 @@ Git works by taking snapshots of your project at different points in time. This 
 - Working directory
 - Staging area
 
-The *repository* is the `.git` directory that we just created. It stores all the metadata and all the snapshots of your project. The *working directory* represents a single version of the project that you are currently working on. Lastly, the *staging area* holds the changed files that will be permantly stored in your repository after next commit. For further details dive into [this article](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics).
+The *repository* is the `.git` directory that we just created. It stores all the metadata and all the snapshots of your project. The *working directory* represents a single version of the project that you are currently working on. Lastly, the *staging area* holds the changed files that will be permanently stored in your repository after next commit. For further details dive into [this article](https://git-scm.com/book/en/v2/Getting-Started-Git-Basics).
 
 ## Tracking and commiting
 
@@ -166,9 +166,9 @@ Stashing does by default only stash changes to already tracked files. This means
 
 ## Using Github
 
-It is commonly belived that Git only works with [Github](https://github.com/). This is not true as Github only provides a web interface and cloud storage for your project - Git can be used entirely on its own on your machine as we have done throughout the tutorial. However because using Github is so widely used (and **awesome**) we need to add it to your developer toolbelt! Without further ado let's create you an account on Github - click [here](https://github.com/) and come back when you are done.
+It is commonly believed that Git only works with [Github](https://github.com/). This is not true as Github only provides a web interface and cloud storage for your project - Git can be used entirely on its own on your machine as we have done throughout the tutorial. However because using Github is so widely used (and **awesome**) we need to add it to your developer tool belt! Without further ado let's create you an account on Github - click [here](https://github.com/) and come back when you are done.
 
-Go to your profile and create a new repository. We will now link this repository to our local project so we can start pushing code to the cloud. The repository on Github will become the *remote* to our project. Firstly, let's try to list our current remote by running `git remote` - it doesn't print anything, since our project does not yet have a remote. Athe remote by running `git remote add origin https://github.com/lindekaer/fit-with-git.git` (use the link to your own repository). Now running `git remote --verbose` you see something like:
+Go to your profile and create a new repository. We will now link this repository to our local project so we can start pushing code to the cloud. The repository on Github will become the *remote* to our project. Firstly, let's try to list our current remote by running `git remote` - it doesn't print anything, since our project does not yet have a remote. Add the remote by running `git remote add origin https://github.com/lindekaer/fit-with-git.git` (use the link to your own repository). Now running `git remote --verbose` you see something like:
 
 ```plain
 origin  https://github.com/lindekaer/fit-with-git.git (fetch)
@@ -179,7 +179,7 @@ So what does this mean? The name *origin* is just a commonly used shortname. You
 
 ### Pushing and pulling
 
-Let's push all our local data to the master branch on our remote `git push origin master`. It is annoying to constantly specifcy both *origin* and *master* when pushing to the remote. To make it easier, we can set the remote's master branch as our local master branch's *upstream* `git push --set-upstream origin master`. You can now just run `git push` in the future. Pulling data is just as easy, simply run `git pull` to get the newest data from the Github repository.
+Let's push all our local data to the master branch on our remote `git push origin master`. It is annoying to constantly specify both *origin* and *master* when pushing to the remote. To make it easier, we can set the remote's master branch as our local master branch's *upstream* `git push --set-upstream origin master`. You can now just run `git push` in the future. Pulling data is just as easy, simply run `git pull` to get the newest data from the Github repository.
 
 ## Tips and tricks
 

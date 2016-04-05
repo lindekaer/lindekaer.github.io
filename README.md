@@ -3,4 +3,4 @@
 ## TODO
 - Add table of contents
 - CLI method to compress images when pushing
-- Figure out why latinmap is included in build
+- Move slugify out of config.js

@@ -19,8 +19,9 @@ var runSequence  = require('run-sequence');
 var source       = require('vinyl-source-stream');
 var buffer       = require('vinyl-buffer')
 var browserify   = require('browserify');
+var rollupify    = require('rollupify');
 var watchify     = require('watchify');
-var babel        = require('babelify');
+var babelify     = require('babelify');
 var sass         = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var csso         = require('gulp-csso');
@@ -86,7 +87,10 @@ gulp.task('sass:vendor', function() {
 });
 
 gulp.task('js', function() {
-  var bundler = browserify('./src/js/app.js', { debug: true }).transform(babel, { presets: ['es2015'] });
+  var bundler = browserify('./src/js/app.js', { debug: true })
+  .transform(rollupify)
+  .transform(babelify, { presets: ['es2015'] });
+
   return bundler.bundle()
   .on('error', function(err) { console.error(err); this.emit('end'); })
   .pipe(source('dist.min.js'))

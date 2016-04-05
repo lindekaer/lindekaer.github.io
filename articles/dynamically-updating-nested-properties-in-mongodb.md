@@ -1,4 +1,4 @@
-Developing my REST application (running on Express), I experienced a problem when trying to update nested object properties. Specifically, I was passing the `req.body` directly to the MongoDB `$set` operator. This did however lead to problems, as I accidently removed properties.
+Developing my REST application (running on Express), I experienced a problem when trying to update nested object properties. Specifically, I was passing the `req.body` directly to the MongoDB `$set` operator. This did however lead to problems, as I accidentally removed properties.
 
 ```javascript
 // The user object in MongoDB (before the update)

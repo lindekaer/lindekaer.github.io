@@ -11,28 +11,30 @@
 // Enable ES2015 features
 require('babel-core/register');
 
-var fs           = require('fs');
-var del          = require('del');
-var gulp         = require('gulp');
-var md           = require('marked');
-var runSequence  = require('run-sequence');
-var source       = require('vinyl-source-stream');
-var buffer       = require('vinyl-buffer')
-var browserify   = require('browserify');
-var rollupify    = require('rollupify');
-var watchify     = require('watchify');
-var babelify     = require('babelify');
-var sass         = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-var csso         = require('gulp-csso');
-var htmlmin      = require('gulp-htmlmin');
-var plumber      = require('gulp-plumber');
-var rename       = require('gulp-rename');
-var jade         = require('gulp-jade');
-var concat       = require('gulp-concat');
-var uglify       = require('gulp-uglify');
-var watch        = require('gulp-watch');
-var browserSync  = require('browser-sync').create();
+var fs               = require('fs');
+var del              = require('del');
+var gulp             = require('gulp');
+var md               = require('marked');
+var runSequence      = require('run-sequence');
+var source           = require('vinyl-source-stream');
+var buffer           = require('vinyl-buffer')
+var browserify       = require('browserify');
+var rollupify        = require('rollupify');
+var babelify         = require('babelify');
+var sass             = require('gulp-sass');
+var autoprefixer     = require('gulp-autoprefixer');
+var csso             = require('gulp-csso');
+var htmlmin          = require('gulp-htmlmin');
+var plumber          = require('gulp-plumber');
+var rename           = require('gulp-rename');
+var jade             = require('gulp-jade');
+var concat           = require('gulp-concat');
+var uglify           = require('gulp-uglify');
+var watch            = require('gulp-watch');
+var imagemin         = require('imagemin');
+var imageminJpegtran = require('imagemin-jpegtran');
+var imageminOptipng  = require('imagemin-optipng');
+var browserSync      = require('browser-sync').create();
 
 var errHandler = {
   errorHandler: function(err) {
@@ -129,6 +131,13 @@ gulp.task('jade:pages', function(cb) {
   render('index', 'index', locals, cb);
 });
 
+gulp.task('img:compress', () => {
+    return gulp.src('./img/*')
+    .pipe(imageminOptipng({optimizationLevel: 3})())
+    .pipe(imageminJpegtran({progressive: true})())
+    .pipe(gulp.dest('./img'));
+});
+
 gulp.task('clean', function() {
   return del(['./*.html']);
 });
@@ -141,7 +150,7 @@ gulp.task('default', function() {
 });
 
 gulp.task('prod', function() {
-  runSequence('clean', 'sass', 'sass:vendor', 'js', 'js:vendor', 'jade');
+  runSequence('clean', 'sass', 'sass:vendor', 'js', 'js:vendor', 'jade', 'img:compress');
 });
 
 /*

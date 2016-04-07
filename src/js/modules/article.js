@@ -1,4 +1,4 @@
-import { toMiles } from '../utils';
+import { toMiles, toFahrenheit } from '../utils';
 
 class Article {
   constructor() {
@@ -8,64 +8,64 @@ class Article {
     this.article = el.querySelector('div.article');
 
     this.animateArticle();
-    this.enableTooltips();
+    this.enableTooltips('km-to-miles');
+    this.enableTooltips('celcius-to-fahrenheit');
   }
 
   animateArticle() {
     this.article.classList.add('active');
   }
 
-  enableTooltips() {
+  enableTooltips(type) {
     // Find all paragraphs in the DOM
     var paragraphs = document.querySelectorAll('p');
     for (let p of Array.apply(null, paragraphs)) {
 
       // Setup regex and array to hold indices of all occurences
-      var regex = /(\s)(kilometer)(s)?/gi
+      if (type === 'km-to-miles') var regex = /[0-9]*\s(kilometer)(s)?/gi;
+      if (type === 'celcius-to-fahrenheit') var regex = /[0-9]*\s(\u2103)/gi;
+      
+      var result;
       var numberOfOccurences = 0;
 
-      // Substring match text until no more matches (push these indeces to the array)
+      // Substring match text until no more matches (push these indices to the array)
       while ((result = regex.exec(p.innerHTML))) numberOfOccurences++;
+
 
       for (var i = 0; i < numberOfOccurences; i++) {
         var indices = [];
         var result;
+        var text = p.innerHTML;
   
         while ((result = regex.exec(p.innerHTML))) {
-          indices.push(result.index);
+          indices.push({
+            startIndex: result.index,
+            endIndex: result.index + result[0].length
+          });
         }
 
-        var index = indices[i];
-        var origIndex = index;
-        var text = p.innerHTML;
+        var index = indices[i].startIndex;
+        var startIndex = indices[i].startIndex;
+        var endIndex = indices[i].endIndex;
 
-        // Move backwards in the string until you find a space
-        index--;
-        while(text[index] !== ' ' && text[index] !== undefined) {
-          index--;
-        }
-
-        // Store the found number of km
-        var km = parseInt(text.slice(index + 1, origIndex));
-        if (isNaN(km)) continue;
-
-        var insertStartIndex = index;
-        index = origIndex;
-          
-        index++;
-        while(text[index] !== ' ' && text[index] !== undefined) {
+        // Move ahead until we find a space (e.g. "200 kilometers")
+        while(text[index] !== ' ') {
           index++;
         }
 
-        var insertEndIndex = index;
+        // Store the found number (can be fx km or celcius degrees)
+        var num = parseInt(text.slice(startIndex, index));
+        if (isNaN(num)) continue;
 
         // Inser the tooltip HTML and print to DOM
-        var firstPart = text.slice(0, insertStartIndex);
-        var midPart   = `<span class="hint--bottom" data-hint="${toMiles(km)} miles">${text.slice(insertStartIndex, insertEndIndex)}</span>`;
-        var lastPart  = text.slice(insertEndIndex, text.length);
-        p.innerHTML = firstPart + ' ' + midPart + lastPart;
+        if (type === 'km-to-miles') var unit = `${toMiles(num)} miles`;
+        if (type === 'celcius-to-fahrenheit') var unit = `${toFahrenheit(num)} \u2109`;
+   
+        var firstPart = text.slice(0, startIndex);
+        var midPart   = `<span class="hint--bottom" data-hint="${unit}">${text.slice(startIndex, endIndex)}</span>`;
+        var lastPart  = text.slice(endIndex, text.length);
+        p.innerHTML = firstPart + midPart + lastPart;
       }
-
     }
   }
 

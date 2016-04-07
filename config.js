@@ -21,7 +21,7 @@ var moment = require('moment');
 class Article {
   constructor(title, date, description, keywords) {
     this.title       = title;
-    this.date        = moment(date).format('LL');
+    this.date        = `${moment(date).format('LL')} (${moment(date).fromNow()})`;
     this.author      = 'Theodor C. Listov Lindekaer';
     this.slug        = slugify(title);
     this.description = description || ''

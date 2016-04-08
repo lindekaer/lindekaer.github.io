@@ -75,3 +75,8 @@ At many hostels there kitchen facilities were available. Some pilgrims cook for 
 ## Looking back
 It is impossible to conclude and make a final remark about my experiences on the camino. I can however only say that I believe everyone should give it a go. The only prerequisite for being generously rewarded when walking the camino is having an open mind. To me the camino marked a period of change in my life; I believe the pace of walking and the long hours on the road gave rise to being brutally responsive and honest to myself.
 
+<div class="media">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.end.jpg" title="We made it to the end">
+  <p class="media__caption">We made it to the end</p>
+</div>
+

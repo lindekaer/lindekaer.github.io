@@ -33,7 +33,8 @@ Staying for the night is a wonderful opportunity to get to know the other pilgri
 
 - Hostel 1 
 - Hostel 2
-- Hostel 3
+- [Albergue San Miguel](http://alberguesanmiguel.com/en/inicio-2/) (one day hike from Léon)
+- [Hospederia San Martín Pinario](http://www.hsanmartinpinario.com/) (ask for a pilgrims room; there is also an ordinary hotel)
 
 ## People
 In the Camino people are everything. The camino is a special journey; the daily grind is left at home, the phone barely has signal and every day passes by in a gentle pace of memorable moments. On top of this, you stay active for the entire day and spend every moment in nature. This, I believe, brings forth the best in people.

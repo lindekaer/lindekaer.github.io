@@ -11,3 +11,11 @@ export function toMiles(km) {
 export function toFahrenheit(celcius) {
   return parseInt(celcius * 1.8 + 32);
 }
+
+export function loadWebFonts() {
+  WebFont.load({
+    google: {
+      families: ['Merriweather:300, 300italic', 'Lato:900', 'Source Code Pro']
+    }
+  });
+}

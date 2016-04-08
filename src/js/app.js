@@ -1,6 +1,7 @@
 import Front from './modules/front';
 import Article from './modules/article';
 import Map from './modules/map';
+import { loadWebFonts } from './utils';
 
 class App {
   
@@ -8,6 +9,8 @@ class App {
     new Front();
     new Article();
     new Map();
+
+    loadWebFonts();
   }
 
 }

@@ -24,7 +24,6 @@ class Article {
     for (let img of Array.apply(null, images)) {
       img.setAttribute('src', img.getAttribute('data-src'));
       img.onload = function() {
-        console.log("Hey!");
         img.removeAttribute('data-src');
       }
     }

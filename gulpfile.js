@@ -106,7 +106,8 @@ gulp.task('js:vendor', function() {
   return gulp.src([
     './node_modules/prismjs/prism.js',
     './node_modules/prismjs/components/prism-bash.js',
-    './node_modules/leaflet/dist/leaflet.js'
+    './node_modules/leaflet/dist/leaflet.js',
+    './node_modules/components-webfontloader/webfont.js'
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.js'))

@@ -3,3 +3,4 @@
 ## TODO
 - Add table of contents
 - Analyze the page using Chrome Devtools Rendering options
+- Use font-loader

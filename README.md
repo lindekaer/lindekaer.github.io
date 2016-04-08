@@ -2,4 +2,4 @@
 
 ## TODO
 - Add table of contents
-- CLI method to compress images when pushing
+- Analyze the page using Chrome Devtools Rendering options

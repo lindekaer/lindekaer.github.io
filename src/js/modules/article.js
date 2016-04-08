@@ -1,4 +1,4 @@
-import { toMiles, toFahrenheit } from '../utils';
+import { toMiles, toFahrenheit, isMobile } from '../utils';
 
 class Article {
   constructor() {
@@ -8,12 +8,26 @@ class Article {
     this.article = el.querySelector('div.article');
 
     this.animateArticle();
-    this.enableTooltips('km-to-miles');
-    this.enableTooltips('celcius-to-fahrenheit');
+    this.enableLazyLoading();
+    if (!isMobile()) {
+      this.enableTooltips('km-to-miles');
+      this.enableTooltips('celcius-to-fahrenheit');  
+    }    
   }
 
   animateArticle() {
     this.article.classList.add('active');
+  }
+
+  enableLazyLoading() {
+    var images = document.querySelectorAll('img[data-src]');
+    for (let img of Array.apply(null, images)) {
+      img.setAttribute('src', img.getAttribute('data-src'));
+      img.onload = function() {
+        console.log("Hey!");
+        img.removeAttribute('data-src');
+      }
+    }
   }
 
   enableTooltips(type) {

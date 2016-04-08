@@ -11,7 +11,7 @@ Europe's largest natural forest, Söderåsen, is located only 30 kilometers from
 The park offers a range of marked hiking trails. The shortest trail being 800 meters and the longest 14 kilometers. Since nature is allowed to grow wildly, some of the trail markings can be hard to spot, so pay attention when walking. The hiking terrain is fairly flat and welcomes even the most unexperienced hikers.
 
 <div class="media">
-  <img class="media__image" src="/img/hiking-in-soderasen.cliffs.jpg" title="Hiking the steep cliffs around Odensjön">
+  <img class="media__image" data-src="/img/article/hiking-in-soderasen.cliffs.jpg" title="Hiking the steep cliffs around Odensjön">
   <p class="media__caption">Hiking the steep cliffs around Odensjön</p>
 </div>
 
@@ -21,7 +21,7 @@ The 1000 kilometer long Skåneleden hike goes straight through the park from Kl�
 Söderåsen offers different possibilities for lodging. There are two cabins located centrally in the park - **Liagården** and **Dahlbergs**. We decided to sleep in Liagården and were able to park the car nearby. The cabin has four simple rooms that provides shelter from wind and weather - there is no running water or electricity. Outside the cabin one may use a water pump to get fresh water. Additionally there are toilets as well as a shed providing free firewood. You are also able to bring your own tent and camp on the cabin grounds.
 
 <div class="media">
-  <img class="media__image" src="/img/hiking-in-soderasen.cabin.jpg" title="Enjoying the sun outside Dahlbergs cabin">
+  <img class="media__image" data-src="/img/article/hiking-in-soderasen.cabin.jpg" title="Enjoying the sun outside Dahlbergs cabin">
   <p class="media__caption">Enjoying the sun outside Dahlbergs cabin</p>
 </div>
 

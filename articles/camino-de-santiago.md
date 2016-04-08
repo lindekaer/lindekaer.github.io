@@ -17,7 +17,7 @@ We decided to walk Camino Francés (there are [many different caminos](http://ww
 When starting out in St. Jean Pied de Port we received a hiking guide suggesting daily hikes all the way to Santiago. It was suggested to walk an average of 23 kilometers per day and thus reach Santiago in 35 days. The number of kilometers that one is able to walk every day highly depends on the terrain and the weather. We experienced extremes in both ends - walking in 45 ℃ from Pamplona and traversing the steep Pyrenees. It was a great comfort to have the guide at hand for looking ahead while walking, but we didn't strictly follow it. We ended up walking a bit ahead and completed the camino in just 28 days.
 
 <div class="media">
-  <img class="media__image" src="/img/camino-de-santiago.pyrenees.jpg" title="The beautiful view from the Pyrenees on our first morning">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.pyrenees.jpg" title="The beautiful view from the Pyrenees on our first morning">
   <p class="media__caption">The beautiful view from the Pyrenees on our first morning</p>
 </div>
 
@@ -25,7 +25,7 @@ When starting out in St. Jean Pied de Port we received a hiking guide suggesting
 Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find public hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from EUR 5-15 per night (often including a simple meal).
 
 <div class="media">
-  <img class="media__image" src="/img/camino-de-santiago.group.jpg" title="Wearing our sandals after a long day on the road">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.group.jpg" title="Wearing our sandals after a long day on the road">
   <p class="media__caption">Wearing our sandals after a long day on the road</p>
 </div>
 
@@ -40,12 +40,25 @@ In the Camino people are everything. The camino is a special journey; the daily 
 
 The motivations for walking the camino are as manyfold as the number of places on your feet where you can have blisters. Some people have faced a life-changing event at home and seek the contemplation of the open road, while others seek out the physical challenge of walking nonstop for one month. Personally, I saw the camino as an opportunity to do something completely different and spend some quality time with Andrei.
 
-## Equipment
-
 <div class="media group">
-  <img class="media__image" src="/img/camino-de-santiago.andrei.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" src="/img/camino-de-santiago.break.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" src="/img/camino-de-santiago.andrei.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" src="/img/camino-de-santiago.break.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.andrei.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.break.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.karel.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="Andrei walking the strech between Pamplona and Logroño">
   <p class="media__caption">Wearing our sandals after a long day on the road</p>
 </div>
+
+## Equipment
+
+## Culinary adventures
+
+<div class="media group">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.drinks.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.pasta.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.beer.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.tapas.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.clams.jpg" title="Andrei walking the strech between Pamplona and Logroño">
+  <p class="media__caption">Wearing our sandals after a long day on the road</p>
+</div>
+

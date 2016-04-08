@@ -132,7 +132,7 @@ gulp.task('jade:pages', function(cb) {
 });
 
 gulp.task('img:compress', () => {
-    return gulp.src('./img/*')
+    return gulp.src('./img/**/*')
     .pipe(imageminOptipng({optimizationLevel: 3})())
     .pipe(imageminJpegtran({progressive: true})())
     .pipe(gulp.dest('./img'));

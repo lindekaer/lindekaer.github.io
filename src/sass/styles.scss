@@ -237,6 +237,14 @@ code {
 .media__image {
   border-radius: 4px;
   width: 100%;
+  // For lazy loading
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+.media__image[data-src] {
+  // For lazy loading
+  opacity: 0;
 }
 
 .media__caption {

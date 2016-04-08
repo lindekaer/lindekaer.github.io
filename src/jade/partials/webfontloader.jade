@@ -1,3 +1,13 @@
+style.
+  .wf-loading * {
+    opacity: 0;
+  }
+  .wf-active *, 
+  .wf-inactive * {
+    -webkit-transition: opacity 1s ease-out;
+    transition: opacity 1s ease-out;  
+  }
+
 script.
   WebFontConfig = {
     google: { families: ['Merriweather:300, 300italic', 'Lato:900', 'Source Code Pro'] }
@@ -10,13 +20,3 @@ script.
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(wf, s);
   })();
-
-style.
-  .wf-loading * {
-    opacity: 0;
-  }
-  .wf-active *, 
-  .wf-inactive * {
-    -webkit-transition: opacity 1s ease-out;
-    transition: opacity 1s ease-out;  
-  }

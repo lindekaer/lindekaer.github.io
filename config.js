@@ -35,7 +35,7 @@ module.exports = {
     new Article('Docker 101', '2016-03-17'),
     new Article('Dynamically updating nested properties in MongoDB', '2016-03-03'),
     new Article('Hiking in Söderåsen', '2016-03-29'),
-    // new Article('Camino de Santiago', '2016-04-02')
+    new Article('Camino de Santiago', '2016-04-02')
     // new Article('Pacific Crest Trail', ''),
     // new Article('Painfree deployment with Nginx and Docker', '')
   ]

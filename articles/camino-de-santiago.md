@@ -22,17 +22,15 @@ When starting out in St. Jean Pied de Port we received a hiking guide suggesting
 </div>
 
 ## Accommodation
-Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find public hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from EUR 5-15 per night (often including a simple meal).
+Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find public hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from 5-15 EUR per night (often including a simple meal).
 
 <div class="media">
   <img class="media__image" data-src="/img/article/camino-de-santiago.group.jpg" title="Wearing our sandals after a long day on the road">
-  <p class="media__caption">Wearing our sandals after a long day on the road</p>
+  <p class="media__caption">Happily wearing our sandals after a long day on the road. Time to rest for the night.</p>
 </div>
 
-Staying for the night is a wonderful opportunity to get to know the other pilgrims. It was not unusual to sleep 20 people in the same room and engaging in conversations was therefore inevitable. If you desire more comfort, many hostels offer both private and double rooms. Despite it being hard to pick, here are some suggestions for hostels worth a visit:
+Staying for the night is a wonderful opportunity to get to know the other pilgrims. It was not unusual to sleep 20 people in the same room and engaging in conversations was therefore inevitable. If you desire more comfort, many hostels offer both private and double rooms. Despite it being hard to pick, here are a few suggestions for hostels worth a visit:
 
-- Hostel 1 
-- Hostel 2
 - [Albergue San Miguel](http://alberguesanmiguel.com/en/inicio-2/) (one day hike from Léon)
 - [Hospederia San Martín Pinario](http://www.hsanmartinpinario.com/) (ask for a pilgrims room; there is also an ordinary hotel)
 
@@ -68,10 +66,8 @@ A typical day started out with a cup of strong coffee and a tortilla sandwich, w
   <p class="media__caption">The classic paella, tapas and jackknife clam. Beer, wine or drinks as a much needed side order.</p>
 </div>
 
-<div class="media group">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.andrei.jpg" title="">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.break.jpg" title="">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.karel.jpg" title="">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="">
-  <p class="media__caption">Wearing our sandals after a long day on the road</p>
-</div>
+At many hostels there kitchen facilities were available. Some pilgrims cooks for themselves every single day, which is the cheapest way of getting by. We cooked 4-5 times in total; when arriving late in the afternoon we sought the comfort of having our meals prepared.
+
+## Looking back
+It is impossible to conclude and make a final remark about my experiences on the camino. I can however only say that I believe everyone should give it a go. The only prerequisite for being generously rewarded when walking the camino is having an open mind. To me the camino marked a period of change in my life; I believe the pace of walking and the long hours on the road gave rise to being brutally responsive and honest to myself.
+

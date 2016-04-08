@@ -42,24 +42,36 @@ In the Camino people are everything. The camino is a special journey; the daily 
 The motivations for walking the camino are as manyfold as the number of places on your feet where you can have blisters. Some people have faced a life-changing event at home and seek the contemplation of the open road, while others seek out the physical challenge of walking nonstop for one month. Personally, I saw the camino as an opportunity to do something completely different and spend some quality time with Andrei.
 
 <div class="media group">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.andrei.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.break.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.karel.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <p class="media__caption">Wearing our sandals after a long day on the road</p>
+  <img class="media__image" data-src="/img/article/camino-de-santiago.break.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.iron-pilgrim.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.family.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.leon.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.statue.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.water-and-wine.jpg" title="">
+  <p class="media__caption">The pure and sincere encounterings of the camino make the experience. With everyone walking towards the same goal on the same conditions a sense of family arises.</p>
 </div>
 
-## Equipment
+It has been wonderful staying in touch with my friends from the camino. However, on the camino you meet many other pilgrims every single day. The implicit fellowship causes spontaneous good deeds and great moments. As soon as these moments appear they cease to exist and you may never meet the other again. In the context of our society's constant and pervasive networking, these special moments are far too rare on a daily basis. I find a lot of beauty in this and have tried my best to bring it back home.
 
 ## Culinary adventures
+I am admittedly a foodie and the topic of my culinary experiences can therefore not be left out. The Spanish cuisine offers a range of delicious goodies including paella, tortilla, jamón serrano, pulpo, great wine and of course an endless range of tapas. 
+
+A typical day started out with a cup of strong coffee and a tortilla sandwich, which was usually offered at almost every restaurant and cafe. When having lunch and dinner many restaurants offered a *pilgrims menu* consisting of basic and nutritious dishes. This was most often the cheapest alternative at around 10 EUR for two courses and a drink. Due to the constant physical effort, the tastiness of every meal was greatly amplified and made even the smallest bite a memorable moment.
 
 <div class="media group">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.drinks.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.pasta.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.beer.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.tapas.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.clams.jpg" title="Andrei walking the strech between Pamplona and Logroño">
-  <p class="media__caption">Wearing our sandals after a long day on the road</p>
+  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.drinks.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.pasta.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.beer.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.tapas.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.clams.jpg" title="">
+  <p class="media__caption">The classic paella, tapas and jackknife clam. Beer, wine or drinks as a much needed side order.</p>
 </div>
 
+<div class="media group">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.andrei.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.break.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.karel.jpg" title="">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="">
+  <p class="media__caption">Wearing our sandals after a long day on the road</p>
+</div>

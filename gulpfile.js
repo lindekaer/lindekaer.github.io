@@ -61,7 +61,11 @@ gulp.task('browserSync', function() {
   });
 });
 
-gulp.task('sass', function() {
+gulp.task('sass', function(cb) {
+  runSequence('sass:custom', 'sass:inlineStyles', cb);
+});
+
+gulp.task('sass:custom', function() {
   return gulp.src('./src/sass/*.scss')
   .pipe(plumber(errHandler))
   .pipe(sass())
@@ -73,10 +77,7 @@ gulp.task('sass', function() {
     extname: '.css'
   }))
   .pipe(gulp.dest('./assets/css'))
-  .pipe(browserSync.stream())
-  .on('end', function() {
-    runSequence('sass:inlineStyles');
-  });
+  .pipe(browserSync.stream());
 });
 
 gulp.task('sass:inlineStyles', function() {
@@ -84,7 +85,7 @@ gulp.task('sass:inlineStyles', function() {
   .pipe(inline({
     base: './',
     disabledTypes: ['svg', 'img', 'js'],
-    ignore: ['./assets/css/dist-vendor.min.css']
+    ignore: ['assets/css/dist-vendor.min.css']
   }))
   .pipe(gulp.dest('./'));
 });
@@ -98,8 +99,7 @@ gulp.task('sass:vendor', function() {
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.css'))
   .pipe(csso())
-  .pipe(gulp.dest('./assets/css'))
-  .pipe(browserSync.stream());
+  .pipe(gulp.dest('./assets/css'));
 });
 
 gulp.task('js', function() {
@@ -112,8 +112,7 @@ gulp.task('js', function() {
   .pipe(source('dist.min.js'))
   .pipe(buffer())
   .pipe(uglify())
-  .pipe(gulp.dest('./assets/js'))
-  .pipe(browserSync.stream());
+  .pipe(gulp.dest('./assets/js'));
 });
 
 gulp.task('js:vendor', function() {
@@ -130,8 +129,8 @@ gulp.task('js:vendor', function() {
   .pipe(browserSync.stream());
 });
 
-gulp.task('jade', function() {
-  runSequence('jade:articles', 'jade:pages', browserSync.reload);
+gulp.task('jade', function(cb) {
+  runSequence(['jade:articles', 'jade:pages'], cb);
 });
 
 gulp.task('jade:articles', function(cb) {
@@ -159,9 +158,9 @@ gulp.task('clean', function() {
 
 gulp.task('default', function() {
   runSequence('jade', ['sass', 'js'], 'browserSync');
-  watch(['./src/jade/**/*.jade', './articles/*.md', './config.js'], function() { gulp.start('jade'); });
-  watch('./src/sass/**/*.scss', function() { gulp.start('sass'); });
-  watch('./src/js/**/*.js', function() { gulp.start('js'); });
+  watch(['./src/jade/**/*.jade', './articles/*.md', './config.js'], function() { runSequence('jade', browserSync.reload) });
+  watch('./src/sass/**/*.scss', function() { runSequence('jade', 'sass', browserSync.reload) });
+  watch('./src/js/**/*.js', function() { runSequence('js', browserSync.reload) });
 });
 
 gulp.task('prod', function() {

@@ -20,11 +20,15 @@ class Map {
       var lat = parseFloat(map.getAttribute('data-lat'));
       var lng = parseFloat(map.getAttribute('data-lng'));
       var zoom = parseFloat(map.getAttribute('data-zoom'));
+
+      // Zoom out of on mobile device
+      if (isMobile()) zoom--;
+
       var type = map.getAttribute('data-type');
       var id = map.getAttribute('id');
       var markers = Array.apply(null, map.querySelectorAll('*'));
 
-      var mapObject = L.map(id, { scrollWheelZoom: false, dragging: isMobile() ? false : true }).setView([lat, lng], zoom);
+      var mapObject = L.map(id, { scrollWheelZoom: false, dragging: isMobile() ? false : true }).setView([lat, lng], 5);
       this.maps.push(mapObject);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
           id: `mapbox.${type}`,

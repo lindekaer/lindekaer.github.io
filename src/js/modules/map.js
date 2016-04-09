@@ -28,7 +28,7 @@ class Map {
       var id = map.getAttribute('id');
       var markers = Array.apply(null, map.querySelectorAll('*'));
 
-      var mapObject = L.map(id, { scrollWheelZoom: false, dragging: isMobile() ? false : true }).setView([lat, lng], 5);
+      var mapObject = L.map(id, { scrollWheelZoom: false, dragging: isMobile() ? false : true }).setView([lat, lng], zoom);
       this.maps.push(mapObject);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
           id: `mapbox.${type}`,

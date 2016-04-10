@@ -52,8 +52,16 @@ The motivations for walking the camino are as manyfold as the number of places o
 It has been wonderful staying in touch with my friends from the camino. However, on the camino you meet many other pilgrims every single day. The implicit fellowship causes spontaneous good deeds and great moments. As soon as these moments appear they cease to exist and you may never meet the other again. In the context of our society's constant and pervasive networking, these special moments are far too rare on a daily basis. I find a lot of beauty in this and have tried my best to bring it back home.
 
 ## Religion
+Given the nature of the camino being a pilgrimage, the topic of religion is omnipresent. I started the camino with my rational, Scandinavian, fact-driven mind equipped with a strong denial of transcendent powers. This turned out to give rise to many interesting and intense discussions. 
 
-## Philosophy
+One of my greatest struggles was to understand how one could possibly believe that all the biblical figures and events wasn't just fiction. I quickly realized this emphasis lacked nuance and prevented the discussion to depart any further. I greatly benefited from many long discussions with my dear friend Karel, a strongly devoted Christian fighting for unity through [TLIG](http://www.tlig.org/), who opened my eyes to the symbolic meaning of biblical references.
+
+<div class="media">
+  <img class="media__image" data-src="/img/article/camino-de-santiago.burgos-cathedral.jpg" title="The breathtaking cathedral of Burgos">
+  <p class="media__caption">The breathtaking cathedral of Burgos</p>
+</div>
+
+Being more aware of religion than in my daily life, I started noticing the warmth, compassion and brotherhood with which religious people met on the camino. Two people who prior to the meeting had been total strangers suddenly had a strong emotional bond and the same frame of reference. As an atheist, one cannot avoid envying this.
 
 ## Culinary adventures
 I am admittedly a foodie and the topic of my culinary experiences can therefore not be left out. The Spanish cuisine offers a range of delicious goodies including paella, tortilla, jamón serrano, pulpo, great wine and of course an endless range of tapas. 

@@ -23,6 +23,9 @@ EOF
 
 # Install Docker
 > sudo yum install docker-engine
+
+# Start the Docker daemon
+> sudo service docker start
 ```
 
 This should make it possible for you to run the `docker` command from the command line on your server. Try `docker --help` for a listing of commands.

@@ -30,6 +30,8 @@ class Map {
 
       var mapObject = L.map(id, { 
         scrollWheelZoom: false, 
+        touchZoom: isMobile() ? false : true,
+        doubleClickZoom: isMobile() ? false : true, 
         dragging: isMobile() ? false : true,
         tap: isMobile() ? false : true,
       }).setView([lat, lng], zoom);

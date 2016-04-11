@@ -21,6 +21,8 @@ When starting out in St. Jean Pied de Port we received a hiking guide suggesting
   <p class="media__caption">The beautiful view from the Pyrenees on our first morning</p>
 </div>
 
+Walking the camino, you are taken from the sight to sight. Never once do you have to worry whether you could experience something more elsewhere; the camino is packed with experiences and takes your pass the most adorable villages, magnificent churches and lively town squares.
+
 ## Accommodation
 Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from 5-15 EUR per night (often including a simple meal).
 
@@ -54,14 +56,14 @@ It has been wonderful staying in touch with my friends from the camino. However,
 ## Religion
 Given the nature of the camino being a pilgrimage, the topic of religion is omnipresent. I started the camino with my rational, Scandinavian, fact-driven mind equipped with a strong denial of transcendent powers. This turned out to give rise to many interesting and intense discussions. 
 
-One of my greatest struggles was to understand how one could possibly believe that all the biblical figures and events wasn't just fiction. I quickly realized this emphasis lacked nuance and prevented the discussion to depart any further. I greatly benefited from many long discussions with my dear friend Karel, a strongly devoted Christian fighting for unity through [TLIG](http://www.tlig.org/), who opened my eyes to the symbolic meaning of biblical references.
+One of my greatest struggles was to understand how one could possibly believe that all the biblical figures and events wasn't just fiction. I quickly realized this emphasis lacked nuance and prevented the discussion to depart any further. I greatly benefited from many long discussions with my dear friend Karel, a strongly devoted Christian fighting for unity through [TLIG](http://www.tlig.org/), who opened my eyes to the symbolic meaning of biblical references. Digging more into religious symbolism I read [The Power of Myth](http://www.goodreads.com/book/show/35519.The_Power_of_Myth) by Joseph Campbell - this book is a **must read** for anyone wanting to nuance their view on religion and was a perfect match for a pilgrimage. 
 
 <div class="media">
   <img class="media__image" data-src="/img/article/camino-de-santiago.burgos-cathedral.jpg" title="The breathtaking cathedral of Burgos">
   <p class="media__caption">The breathtaking cathedral of Burgos</p>
 </div>
 
-Being more aware of religion than in my daily life, I started noticing the warmth, compassion and brotherhood with which religious people met on the camino. Two people who prior to the meeting had been total strangers suddenly had a strong emotional bond and the same frame of reference. As an atheist, one cannot avoid envying this.
+Being more aware of religion than in my daily life, I started noticing the warmth, compassion and brotherhood with which religious people met on the camino. Two people who prior to the meeting had been total strangers suddenly had a strong emotional bond and the same frame of reference. As an atheist, one cannot avoid envying this. In essence, the camino opened me eyes to the positive aspects of religion. This was achieved mostly by self-discovery fueled by deep conversation with people on the road.
 
 ## Culinary adventures
 I am admittedly a foodie and the topic of my culinary experiences can therefore not be left out. The Spanish cuisine offers a range of delicious goodies including paella, tortilla, jamón serrano, pulpo, great wine and of course an endless range of tapas. 
@@ -82,6 +84,8 @@ At many hostels there kitchen facilities were available. Some pilgrims cook for 
 
 ## Looking back
 It is impossible to conclude and make a final remark about my experiences on the camino. I can however only say that I believe everyone should give it a go. The only prerequisite for being generously rewarded when walking the camino is having an open mind. To me the camino marked a period of change in my life; I believe the pace of walking and the long hours on the road gave rise to being brutally responsive and honest to myself.
+
+Tie your shoes and get on the road.
 
 <div class="media">
   <img class="media__image" data-src="/img/article/camino-de-santiago.end.jpg" title="We made it to the end">

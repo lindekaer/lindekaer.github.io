@@ -22,7 +22,7 @@ When starting out in St. Jean Pied de Port we received a hiking guide suggesting
 </div>
 
 ## Accommodation
-Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find public hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from 5-15 EUR per night (often including a simple meal).
+Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from 5-15 EUR per night (often including a simple meal).
 
 <div class="media">
   <img class="media__image" data-src="/img/article/camino-de-santiago.group.jpg" title="Happily wearing our sandals after a long day on the road. Time to rest for the night.">
@@ -35,7 +35,7 @@ Staying for the night is a wonderful opportunity to get to know the other pilgri
 - [Hospederia San Martín Pinario](http://www.hsanmartinpinario.com/) (ask for a pilgrims room; there is also an ordinary hotel)
 
 ## People
-In the Camino people are everything. The camino is a special journey; the daily grind is left at home, the phone barely has signal and every day passes by in a gentle pace of memorable moments. On top of this, you stay active for the entire day and spend every moment in nature. This, I believe, brings forth the best in people.
+On the Camino people are everything. The camino is a special journey; the daily grind is left at home, the phone barely has signal and every day passes by in a gentle pace of memorable moments. On top of this, you stay active for the entire day and spend every moment in nature. This, I believe, brings forth the best in people.
 
 The motivations for walking the camino are as manyfold as the number of places on your feet where you can have blisters. Some people have faced a life-changing event at home and seek the contemplation of the open road, while others seek out the physical challenge of walking nonstop for one month. Personally, I saw the camino as an opportunity to do something completely different and spend some quality time with Andrei.
 

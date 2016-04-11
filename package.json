@@ -4,7 +4,7 @@
   "description": "My personal blog",
   "main": "index.html",
   "scripts": {
-    "prod": "gulp prod; sips -Z 800 ~/Sites/blog/img/article/*.jpg; git add .; git commit -m 'Production build'; git push; echo $PATH"
+    "prod": "gulp prod; sips -Z 800 ~/Sites/blog/img/article/*.jpg; git add .; git commit -m 'Production build'; gp; "
   },
   "repository": {
     "type": "git",

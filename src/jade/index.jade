@@ -20,5 +20,11 @@ block content
 
   select.front__article-selector.js-selector
     option(value="index") Stuff I've written
-    for article in articles
-      option(value="#{article.slug}", hash="#{article.hash}") #{article.title}
+    for category in content
+      optgroup(label="#{category.name}")
+        for article in category.articles
+          option(value="#{article.slug}", hash="#{article.hash}") #{article.title}  
+
+      
+
+

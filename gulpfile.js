@@ -140,7 +140,33 @@ gulp.task('jade:articles', function(cb) {
 });
 
 gulp.task('jade:pages', function(cb) {
-  var locals = { articles: require('./config.js').articles }
+  var articles = require('./config.js').articles;
+  var categories = new Set();
+  for (let article of articles) {
+    categories.add(article.category);
+  }
+
+  var content = [];
+
+  categories.forEach((category) => {
+    content.push({
+      name: category,
+      articles: []
+    });
+  });
+
+  articles.forEach((article) => {
+    content.forEach((category) => {
+      if (category.name === article.category) {
+        category.articles.push(article);
+      }
+    });
+  });
+
+  var locals = { 
+   content: content
+  }
+
   render('index', 'index', locals, cb);
 });
 

@@ -6,8 +6,8 @@ App
 Markings
 
 <div class="media">
-  <img class="media__image" data-src="upplandsleden.markings.jpg" title="Trail markings">
-  <p class="media__caption">Happily wearing our sandals after a long day on the road. Time to rest for the night.</p>
+  <img class="media__image" data-src="upplandsleden.markings.jpg" title="Easy to spot orange trail markings throughout the whole trail">
+  <p class="media__caption">Easy to spot orange trail markings throughout the whole trail</p>
 </div>
 
 ## Our hike
@@ -25,3 +25,15 @@ We estimated that it would be possible to walk around 30 kilometers per day. Upo
 
 We brought a complete sleeping system with mat, sleeping bag and tent. We ended up using the tent for the two first days and slept in a shelter at **Rastplats Kolsjön** for the last night. The shelter was amazing - located next to a lake, with a practical fireplace and with dry firewood. Due to the many shelter on Upplandsleden it is possible to plan a trip sleeping only in shelters.
 
+<div class="media">
+  <img class="media__image" data-src="upplandsleden.city.jpg" title="Rare encounter with civilization">
+  <p class="media__caption">Rare encounter with civilization</p>
+</div>
+
+<div class="media group">
+  <img class="media__image" data-src="upplandsleden.bacon.jpg" title="Ole preparing dinner bacon">
+  <img class="media__image" data-src="upplandsleden.lunch.jpg" title="Delicious mackerel in tomato for lunch">
+  <img class="media__image" data-src="upplandsleden.dinner.jpg" title="Preparing for dinner. Notice the chocolate">
+  <img class="media__image" data-src="upplandsleden.fireplace.jpg" title="Fireplaces are awesome. Nuff said.">
+  <p class="media__caption">Our diet consisted of oatmeal, mackerel and pasta. Fireplaces for tea and cozy vibe.</p>
+</div>

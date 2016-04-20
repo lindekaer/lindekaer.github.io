@@ -22,7 +22,7 @@ class Article {
   constructor(title, category, date, description, keywords) {
     this.title       = title;
     this.category    = category;
-    this.date        = `${moment(date).format('LL')} (${moment(date).fromNow()})`;
+    this.date        = `${moment(date).format('MMMM Do, YYYY')} (${moment(date).fromNow()})`;
     this.author      = 'Theodor C. Listov Lindekaer';
     this.slug        = slugify(title);
     this.description = description || ''
@@ -36,7 +36,8 @@ module.exports = {
     new Article('Docker 101', 'Tech', '2016-03-17'),
     new Article('Dynamically updating nested properties in MongoDB', 'Tech', '2016-03-03'),
     new Article('Hiking in Söderåsen', 'Outdoor', '2016-03-29'),
-    new Article('Camino de Santiago', 'Outdoor', '2016-04-02')
+    new Article('Camino de Santiago', 'Outdoor', '2016-04-02'),
+    new Article('Upplandsleden', 'Outdoor', '2016-04-18')
     // new Article('Pacific Crest Trail', ''),
     // new Article('Painfree deployment with Nginx and Docker', '')
   ]

@@ -171,10 +171,21 @@ gulp.task('jade:pages', function(cb) {
 });
 
 gulp.task('img:compress', () => {
-    return gulp.src('./img/**/*')
+  runSequence(['img:compress:desktop', 'img:compress:mobile'])
+})
+
+gulp.task('img:compress:desktop', () => {
+    return gulp.src('./img/article/desktop/*')
     .pipe(imageminOptipng({optimizationLevel: 3})())
     .pipe(imageminJpegtran({progressive: true})())
-    .pipe(gulp.dest('./img'));
+    .pipe(gulp.dest('./img/article/desktop'));
+});
+
+gulp.task('img:compress:mobile', () => {
+    return gulp.src('./img/article/mobile/*')
+    .pipe(imageminOptipng({optimizationLevel: 3})())
+    .pipe(imageminJpegtran({progressive: true})())
+    .pipe(gulp.dest('./img/article/mobile'));
 });
 
 gulp.task('clean', function() {

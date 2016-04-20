@@ -17,7 +17,7 @@ We decided to walk Camino Francés (there are [many different caminos](http://ww
 When starting out in St. Jean Pied de Port we received a hiking guide suggesting daily hikes all the way to Santiago. It was suggested to walk an average of 23 kilometers per day and thus reach Santiago in 35 days. The number of kilometers that one is able to walk every day highly depends on the terrain and the weather. We experienced extremes in both ends - walking in 45 ℃ from Pamplona and traversing the steep Pyrenees. It was a great comfort to have the guide at hand for looking ahead while walking, but we didn't strictly follow it. We ended up walking a bit ahead and completed the camino in just 28 days.
 
 <div class="media">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.pyrenees.jpg" title="The beautiful view from the Pyrenees on our first morning">
+  <img class="media__image" data-src="camino-de-santiago.pyrenees.jpg" title="The beautiful view from the Pyrenees on our first morning">
   <p class="media__caption">The beautiful view from the Pyrenees on our first morning</p>
 </div>
 
@@ -27,12 +27,13 @@ Walking the camino, you are taken from the sight to sight. Never once do you hav
 Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from 5-15 EUR per night (often including a simple meal).
 
 <div class="media">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.group.jpg" title="Happily wearing our sandals after a long day on the road. Time to rest for the night.">
+  <img class="media__image" data-src="camino-de-santiago.group.jpg" title="Happily wearing our sandals after a long day on the road. Time to rest for the night.">
   <p class="media__caption">Happily wearing our sandals after a long day on the road. Time to rest for the night.</p>
 </div>
 
 Staying for the night is a wonderful opportunity to get to know the other pilgrims. It was not unusual to sleep 20 people in the same room and engaging in conversations was therefore inevitable. If you desire more comfort, many hostels offer both private and double rooms. Despite it being hard to pick, here are a few suggestions for hostels worth a visit:
 
+<!-- - [] (In Santo Domingo de la Calzada; a true authentic monastery experience) -->
 - [Albergue San Miguel](http://alberguesanmiguel.com/en/inicio-2/) (one day hike from Léon)
 - [Hospederia San Martín Pinario](http://www.hsanmartinpinario.com/) (ask for a pilgrims room; there is also an ordinary hotel)
 
@@ -42,12 +43,12 @@ On the Camino people are everything. The camino is a special journey; the daily 
 The motivations for walking the camino are as manyfold as the number of places on your feet where you can have blisters. Some people have faced a life-changing event at home and seek the contemplation of the open road, while others seek out the physical challenge of walking nonstop for one month. Personally, I saw the camino as an opportunity to do something completely different and spend some quality time with Andrei.
 
 <div class="media group">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.break.jpg" title="Taking a break after descending from the Mountain of Forgiveness">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.iron-pilgrim.jpg" title="Hanging out with Klara, Jessie and Marie">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.family.jpg" title="A family photo">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.leon.jpg" title="Sitting at the central square of Léon">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.statue.jpg" title="Posing at a pilgrim's statue">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.water-and-wine.jpg" title="The amazing taps - on with water and one with wine">
+  <img class="media__image" data-src="camino-de-santiago.break.jpg" title="Taking a break after descending from the Mountain of Forgiveness">
+  <img class="media__image" data-src="camino-de-santiago.iron-pilgrim.jpg" title="Hanging out with Klara, Jessie and Marie">
+  <img class="media__image" data-src="camino-de-santiago.family.jpg" title="A family photo">
+  <img class="media__image" data-src="camino-de-santiago.leon.jpg" title="Sitting at the central square of Léon">
+  <img class="media__image" data-src="camino-de-santiago.statue.jpg" title="Posing at a pilgrim's statue">
+  <img class="media__image" data-src="camino-de-santiago.water-and-wine.jpg" title="The amazing taps - on with water and one with wine">
   <p class="media__caption">The pure and sincere encounterings of the camino make the experience. With everyone walking towards the same goal on the same conditions a sense of family arises.</p>
 </div>
 
@@ -59,7 +60,7 @@ Given the nature of the camino being a pilgrimage, the topic of religion is omni
 One of my greatest struggles was to understand how one could possibly believe that all the biblical figures and events wasn't just fiction. I quickly realized this emphasis lacked nuance and prevented the discussion to depart any further. I greatly benefited from many long discussions with my dear friend Karel, a strongly devoted Christian fighting for unity through [TLIG](http://www.tlig.org/), who opened my eyes to the symbolic meaning of biblical references. Digging more into religious symbolism I read [The Power of Myth](http://www.goodreads.com/book/show/35519.The_Power_of_Myth) by Joseph Campbell - this book is a **must read** for anyone wanting to nuance their view on religion and was a perfect match for a pilgrimage. 
 
 <div class="media">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.burgos-cathedral.jpg" title="The breathtaking cathedral of Burgos">
+  <img class="media__image" data-src="camino-de-santiago.burgos-cathedral.jpg" title="The breathtaking cathedral of Burgos">
   <p class="media__caption">The breathtaking cathedral of Burgos</p>
 </div>
 
@@ -71,12 +72,12 @@ I am admittedly a foodie and the topic of my culinary experiences can therefore 
 A typical day started out with a cup of strong coffee and a tortilla sandwich, which was usually offered at almost every restaurant and cafe. When having lunch and dinner many restaurants offered a *pilgrims menu* consisting of basic and nutritious dishes. This was most often the cheapest alternative at around 10 EUR for two courses and a drink. Due to the constant physical effort, the tastiness of every meal was greatly amplified and made even the smallest bite a memorable moment.
 
 <div class="media group">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.paella.jpg" title="A delicious paella served on our last night in Santiago">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.drinks.jpg" title="Celebrating our amazing experiences with a drink in Santiago">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.pasta.jpg" title="Sharing a meal together at a hostel">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.beer.jpg" title="A refreshing midday beer">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.tapas.jpg" title="One of the better pilgrim menus, tapas!">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.clams.jpg" title="The delicious jackknife clam served at Fisterra">
+  <img class="media__image" data-src="camino-de-santiago.paella.jpg" title="A delicious paella served on our last night in Santiago">
+  <img class="media__image" data-src="camino-de-santiago.drinks.jpg" title="Celebrating our amazing experiences with a drink in Santiago">
+  <img class="media__image" data-src="camino-de-santiago.pasta.jpg" title="Sharing a meal together at a hostel">
+  <img class="media__image" data-src="camino-de-santiago.beer.jpg" title="A refreshing midday beer">
+  <img class="media__image" data-src="camino-de-santiago.tapas.jpg" title="One of the better pilgrim menus, tapas!">
+  <img class="media__image" data-src="camino-de-santiago.clams.jpg" title="The delicious jackknife clam served at Fisterra">
   <p class="media__caption">The classic paella, tapas and jackknife clam. Beer, wine or drinks as a much needed side order.</p>
 </div>
 
@@ -88,7 +89,7 @@ It is impossible to conclude and make a final remark about my experiences on the
 Tie your shoes and get on the road.
 
 <div class="media">
-  <img class="media__image" data-src="/img/article/camino-de-santiago.end.jpg" title="We made it to the end">
+  <img class="media__image" data-src="camino-de-santiago.end.jpg" title="We made it to the end">
   <p class="media__caption">We made it to the end</p>
 </div>
 

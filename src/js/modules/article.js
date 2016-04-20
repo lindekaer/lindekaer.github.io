@@ -8,7 +8,7 @@ class Article {
     this.article = el.querySelector('div.article');
 
     this.animateArticle();
-    this.enableLazyLoading();
+    this.enableLazyImageLoading();
     if (!isMobile()) {
       this.enableTooltips('km-to-miles');
       this.enableTooltips('celcius-to-fahrenheit');  
@@ -19,10 +19,13 @@ class Article {
     this.article.classList.add('active');
   }
 
-  enableLazyLoading() {
+  enableLazyImageLoading() {
     var images = document.querySelectorAll('img[data-src]');
     for (let img of Array.apply(null, images)) {
-      img.setAttribute('src', img.getAttribute('data-src'));
+      var src = !isMobile() 
+        ? `img/article/desktop/${img.getAttribute('data-src')}` 
+        : `img/article/mobile/${img.getAttribute('data-src')}`;
+      img.setAttribute('src', src);
       img.onload = function() {
         img.removeAttribute('data-src');
       }

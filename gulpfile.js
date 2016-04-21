@@ -215,8 +215,15 @@ gulp.task('html:enrich', function() {
 */
 
 gulp.task('img:compress', () => {
-  runSequence(['img:compress:desktop', 'img:compress:mobile'])
-})
+  runSequence(['img:compress:general', 'img:compress:desktop', 'img:compress:mobile'])
+});
+
+gulp.task('img:compress:general', () => {
+    return gulp.src('./img/*')
+    .pipe(imageminOptipng({optimizationLevel: 3})())
+    .pipe(imageminJpegtran({progressive: true})())
+    .pipe(gulp.dest('./img'));
+});
 
 gulp.task('img:compress:desktop', () => {
     return gulp.src('./img/article/desktop/*')

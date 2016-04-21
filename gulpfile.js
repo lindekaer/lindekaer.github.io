@@ -28,6 +28,7 @@ var htmlmin          = require('gulp-htmlmin');
 var inline           = require('gulp-inline');
 var plumber          = require('gulp-plumber');
 var rename           = require('gulp-rename');
+var cheerio          = require('gulp-cheerio');
 var jade             = require('gulp-jade');
 var concat           = require('gulp-concat');
 var uglify           = require('gulp-uglify');
@@ -47,7 +48,7 @@ var errHandler = {
 /*
 -----------------------------------------------------------------------------------
 |
-| Tasks
+| Server
 |
 -----------------------------------------------------------------------------------
 */
@@ -60,6 +61,14 @@ gulp.task('browserSync', function() {
     }
   });
 });
+
+/*
+-----------------------------------------------------------------------------------
+|
+| SASS
+|
+-----------------------------------------------------------------------------------
+*/
 
 gulp.task('sass', function(cb) {
   runSequence('sass:custom', 'sass:inlineStyles', cb);
@@ -102,6 +111,14 @@ gulp.task('sass:vendor', function() {
   .pipe(gulp.dest('./assets/css'));
 });
 
+/*
+-----------------------------------------------------------------------------------
+|
+| JS
+|
+-----------------------------------------------------------------------------------
+*/
+
 gulp.task('js', function() {
   var bundler = browserify('./src/js/app.js', { debug: true })
   .transform(rollupify)
@@ -128,8 +145,16 @@ gulp.task('js:vendor', function() {
   .pipe(browserSync.stream());
 });
 
+/*
+-----------------------------------------------------------------------------------
+|
+| Jade and HTML
+|
+-----------------------------------------------------------------------------------
+*/
+
 gulp.task('jade', function(cb) {
-  runSequence(['jade:articles', 'jade:pages'], cb);
+  runSequence(['jade:articles', 'jade:pages'], 'html:enrich', cb);
 });
 
 gulp.task('jade:articles', function(cb) {
@@ -170,6 +195,25 @@ gulp.task('jade:pages', function(cb) {
   render('index', 'index', locals, cb);
 });
 
+gulp.task('html:enrich', function() {
+  return gulp.src('*.html')
+  .pipe(cheerio(function ($, file) {
+    $('img').each(function(index, el) {
+      var title = $(el).attr('title');
+      $(el).attr('alt', title);
+    });
+  }))
+  .pipe(gulp.dest('.'));
+})
+
+/*
+-----------------------------------------------------------------------------------
+|
+| Images
+|
+-----------------------------------------------------------------------------------
+*/
+
 gulp.task('img:compress', () => {
   runSequence(['img:compress:desktop', 'img:compress:mobile'])
 })
@@ -187,6 +231,14 @@ gulp.task('img:compress:mobile', () => {
     .pipe(imageminJpegtran({progressive: true})())
     .pipe(gulp.dest('./img/article/mobile'));
 });
+
+/*
+-----------------------------------------------------------------------------------
+|
+| Various tasks
+|
+-----------------------------------------------------------------------------------
+*/
 
 gulp.task('clean', function() {
   return del(['./*.html']);

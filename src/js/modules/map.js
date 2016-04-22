@@ -2,7 +2,7 @@ import { isMobile } from '../utils';
 
 class Map {
   constructor() {
-    this.els = document.querySelectorAll('[id*="map"]');
+    this.els = Array.apply(null, document.querySelectorAll('[id*="map"]'));
     if (this.els === null) return;
     
     this.maps = [];
@@ -16,7 +16,7 @@ class Map {
   }
 
   initMaps() {
-    for (let map of Array.apply(null, this.els)) {
+    for (let map of this.els) {
       var lat = parseFloat(map.getAttribute('data-lat'));
       var lng = parseFloat(map.getAttribute('data-lng'));
       var zoom = parseFloat(map.getAttribute('data-zoom'));
@@ -30,10 +30,10 @@ class Map {
 
       var mapObject = L.map(id, { 
         scrollWheelZoom: false, 
-        touchZoom: isMobile() ? false : true,
+        touchZoom:       isMobile() ? false : true,
         doubleClickZoom: isMobile() ? false : true, 
-        dragging: isMobile() ? false : true,
-        tap: isMobile() ? false : true,
+        dragging:        isMobile() ? false : true,
+        tap:             isMobile() ? false : true,
       }).setView([lat, lng], zoom);
       this.maps.push(mapObject);
       L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {

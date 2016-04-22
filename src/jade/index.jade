@@ -18,12 +18,8 @@ block content
       a(href="https://twitter.com/lindekaer", target="_blank", title="Twitter") Twitter
 
   select.front__article-selector.js-selector
-    option(value="index") Stuff I've written
+    option(value="index") Pick an article
     for category in content
       optgroup(label="#{category.name}")
         for article in category.articles
-          option(value="#{article.slug}", hash="#{article.hash}") #{article.title}  
-
-      
-
-
+          option(value="#{article.slug}", hash="#{article.hash}") #{article.title}

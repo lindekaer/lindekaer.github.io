@@ -125,7 +125,7 @@ gulp.task('js', function() {
   .transform(babelify, { presets: ['es2015'] });
 
   return bundler.bundle()
-  .on('error', function(err) { console.error(err); this.emit('end'); })
+  .on('error', function(err) { console.log(err); this.emit('end'); })
   .pipe(source('dist.min.js'))
   .pipe(buffer())
   .pipe(uglify())

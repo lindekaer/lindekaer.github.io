@@ -1,4 +1,5 @@
 import { toMiles, toFahrenheit, isMobile } from '../utils';
+import LazyLoad from './lazyLoad';
 
 class Article {
   constructor() {
@@ -8,28 +9,18 @@ class Article {
     this.article = el.querySelector('div.article');
 
     this.animateArticle();
-    this.enableLazyImageLoading();
+   
     if (!isMobile()) {
       this.enableTooltips('km-to-miles');
       this.enableTooltips('celcius-to-fahrenheit');  
-    }    
+    }
+
+    var images = document.querySelectorAll('img[data-src]');
+    new LazyLoad(images);
   }
 
   animateArticle() {
     this.article.classList.add('active');
-  }
-
-  enableLazyImageLoading() {
-    var images = document.querySelectorAll('img[data-src]');
-    for (let img of Array.apply(null, images)) {
-      var src = !isMobile() 
-        ? `img/article/desktop/${img.getAttribute('data-src')}` 
-        : `img/article/mobile/${img.getAttribute('data-src')}`;
-      img.setAttribute('src', src);
-      img.onload = function() {
-        img.removeAttribute('data-src');
-      }
-    }
   }
 
   enableTooltips(type) {

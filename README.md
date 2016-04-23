@@ -1,6 +1,7 @@
 # Blog
 
 ## TODO
-- Add table of contents (use Cheerio)
 - Analyze the page using Chrome Devtools Rendering options
-- Fix scroll settings on map for mobile
+
+## Notes
+- Due to a bug in Leaflet, the map hijacks scroll touch events. Use version 7.5 or wait for fix.

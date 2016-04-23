@@ -21,7 +21,7 @@ When starting out in St. Jean Pied de Port we received a hiking guide suggesting
   <p class="media__caption">The beautiful view from the Pyrenees on our first morning</p>
 </div>
 
-Walking the camino, you are taken from the sight to sight. Never once do you have to worry whether you could experience something more elsewhere; the camino is packed with experiences and takes your pass the most adorable villages, magnificent churches and lively town squares.
+Walking the camino, you are taken from sight to sight. Never once do you have to worry whether you could experience something more elsewhere; the camino is packed with experiences and takes your pass the most adorable villages, magnificent churches and lively town squares. It is therefore recommended to leave behind the tourist mindset and just indulge the camino experiences coming your way.
 
 ## Accommodation
 Throughout the pilgrimage you find plenty of opportunities for accommodation. In most cities, you find hostels that are publicly owned and often a bit cheaper than the private alternatives. Additionally many churches and monasteries along the way open their doors to pilgrims. We found these experiences to be the most memorable and provide the most authentic experiences. The prices range from 5-15 EUR per night (often including a simple meal).
@@ -52,19 +52,19 @@ The motivations for walking the camino are as manyfold as the number of places o
   <p class="media__caption">The pure and sincere encounterings of the camino make the experience. With everyone walking towards the same goal on the same conditions a sense of family arises.</p>
 </div>
 
-It has been wonderful staying in touch with my friends from the camino. However, on the camino you meet many other pilgrims every single day. The implicit fellowship causes spontaneous good deeds and great moments. As soon as these moments appear they cease to exist and you may never meet the other again. In the context of our society's constant and pervasive networking, these special moments are far too rare on a daily basis. I find a lot of beauty in this and have tried my best to bring it back home.
+It has been wonderful staying in touch with my friends from the camino. On the camino you meet many other pilgrims every single day and it is impossible to stay in touch with everyone. In the context of our society's constant and pervasive networking (yes, I am guilty), these one-time spontaneous good deeds and great moments hold a lot of beauty - at home, such are unfortunately far too rare. This made a tremendous impression on me and I have tried my best to bring it back home.
 
 ## Religion
 Given the nature of the camino being a pilgrimage, the topic of religion is omnipresent. I started the camino with my rational, Scandinavian, fact-driven mind equipped with a strong denial of transcendent powers. This turned out to give rise to many interesting and intense discussions. 
 
-One of my greatest struggles was to understand how one could possibly believe that all the biblical figures and events wasn't just fiction. I quickly realized this emphasis lacked nuance and prevented the discussion to depart any further. I greatly benefited from many long discussions with my dear friend Karel, a strongly devoted Christian fighting for unity through [TLIG](http://www.tlig.org/), who opened my eyes to the symbolic meaning of biblical references. Digging more into religious symbolism I read [The Power of Myth](http://www.goodreads.com/book/show/35519.The_Power_of_Myth) by Joseph Campbell - this book is a **must read** for anyone wanting to nuance their view on religion and was a perfect match for a pilgrimage. 
+One of my greatest struggles was to understand how one could possibly believe that all the biblical figures and events wasn't just fiction. I quickly realized this emphasis lacked nuance and prevented the discussion to depart any further. I greatly benefited from many long discussions with my dear friend Karel, a strongly devoted Christian fighting for unity through [TLIG](http://www.tlig.org/), who opened my eyes to the symbolic meaning of biblical references. Digging more into religious symbolism I read [The Power of Myth](http://www.goodreads.com/book/show/35519.The_Power_of_Myth) by Joseph Campbell - this book is a **must read** for anyone wanting to nuance their view on religion and was a perfect match for the pilgrimage. 
 
 <div class="media">
   <img class="media__image" data-src="camino-de-santiago.burgos-cathedral.jpg" title="The breathtaking cathedral of Burgos">
   <p class="media__caption">The breathtaking cathedral of Burgos</p>
 </div>
 
-Being more aware of religion than in my daily life, I started noticing the warmth, compassion and brotherhood with which religious people met on the camino. Two people who prior to the meeting had been total strangers suddenly had a strong emotional bond and the same frame of reference. As an atheist, one cannot avoid envying this. In essence, the camino opened me eyes to the positive aspects of religion. This was achieved mostly by self-discovery fueled by deep conversation with people on the road.
+Being more aware of religion than in my daily life, I started noticing the warmth, compassion and brotherhood with which religious people met on the camino. Two people who prior to the meeting had been total strangers suddenly had a strong emotional bond and the same frame of reference. As an atheist, one cannot avoid envying this. In essence, the camino made me aware of the positive aspects of religion. This was achieved mostly by self-discovery fueled by deep conversations with people on the road.
 
 ## Culinary adventures
 I am admittedly a foodie and the topic of my culinary experiences can therefore not be left out. The Spanish cuisine offers a range of delicious goodies including paella, tortilla, jamón serrano, pulpo, great wine and of course an endless range of tapas. 

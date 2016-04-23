@@ -26,7 +26,7 @@ class Article {
     this.title       = title;
     this.category    = category;
     this.date        = `${moment(date).format('MMMM Do, YYYY')} (${moment(date).fromNow()})`;
-    this.author      = 'Theodor C. Listov Lindekaer';
+    this.author      = 'Theodor Lindekaer';
     this.slug        = slugify(title);
 
     const keywords = {

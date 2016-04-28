@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>What is programming?</title>
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<style type="text/css">
+			.reveal h2 {
+				margin-bottom: 80px;
+			}
+			.box {
+				float: left;
+				width: 50%;
+			}
+			.reveal section img {
+				margin: 0px; 
+				background: none; 
+				border: none;
+				box-shadow: none;
+			}
+			.clock {
+				width: 260px;
+			}
+			.reveal .text-hand {
+				color: orange;
+				font-style: italic;
+			}
+			.reveal .text-pop {
+				color: #fff;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h1>Programming 101</h1>
+				</section>
+
+				<section>
+					<section>
+						<h2>How does a computer work?</h2>	
+					</section>
+
+					<section>
+						<h2>Analog & digital signals</h2>
+						<div class="box">
+							<img class="clock" src="img/clock_analog.png">
+						</div>
+						<div class="box">
+							<img class="clock" src="img/clock_digital.png">
+						</div>
+					</section>
+
+					<section>
+						<h2>Analog & digital signals</h2>
+						<div class="box">
+							<img class="clock" src="img/clock_analog_zoom.png">
+						</div>
+						<div class="box">
+							<img class="clock" src="img/clock_digital_zoom.png">
+						</div>
+					</section>
+
+					<section>
+						<h2>Analog & digital signals</h2>
+						<img src="img/analog_vs_digital.png">
+					</section>
+
+					<section>
+						<h2>Language of the computer</h2>
+						<img src="img/computer_language.png">
+					</section>
+
+					<section>
+						<h2>Binary representation</h2>
+						<ul>
+							<li><p>01010000 01000011 01010000 <span class="fragment text-pop">= PCP</span></p></li>
+							<li><p>01001000 01100101 01101010 <span class="fragment text-pop">= Hej</span></p></li>
+							<li><p>01000000 00100001 00100011 <span class="fragment text-pop">= @!#</span></p></li>
+						</ul>
+					</section>
+
+					<section>
+						<p>
+							10101010101010100100001010<br>
+							00101010111101010101001010<br>
+							10111010101010100100001010<br>
+							10101010101010101000001011<br>
+							10101101010001000101001011<br>
+						</p>
+						<h2 class="fragment">Need some help?</h2>
+					</section>
+
+					<section>
+							<h2>What if...</h2>
+							<img class="fragment" src="img/language_to_code.png">
+					</section>
+
+					<section>
+						<h2>⭐ Programming languages ⭐</h2>
+						<pre><code class="hljs" contenteditable>
+var guests = [
+  { name: 'John',      age: 19 },
+  { name: 'Lisa',      age: 20 },
+  { name: 'Androkles', age: 16 }
+];
+
+guests.forEach(function(index, guest) {
+  if (guest.age >= 18) {
+    print("Welcome to Devil's Dancefloor®");
+  } else {
+    print("Sorry, ${guest.name}, you are too young to enter!");
+  }
+});
+					</code></pre>
+					</section>
+
+					<section>
+							<h2>Abstraction</h2>
+							<img class="fragment" src="img/layers.png">
+					</section>
+					
+				</section> <!-- End nested section -->
+
+					<section>
+
+						<section>
+							<h2>How do you get started?</h2>
+						</section>
+
+						<section>
+								<h2>Starting to code</h2>
+								<img class="fragment" src="img/blind.gif">
+						</section>
+
+						<section>
+							<h2>Which language to choose?</h2>
+							<img class="fragment" src="img/programming_languages.png">
+						</section>
+
+						<section>
+							<h2>Depends on the platform</h2>
+							<img class="fragment" style="width: 60%" src="img/platforms.png">
+						</section>
+
+						<section>
+							<h2>The browser</h2>
+							<img class="fragment" style="width: 60%;" src="img/browser.png">
+						</section>
+
+						<section>
+							<h2>Web technologies</h2>
+							<img class="fragment" style="width: 60%;" src="img/html_css_js.png">
+						</section>
+
+						<section>
+							<h2>It's a hype</h2>
+							<img style="width: 60%;" src="img/fun.png">
+						</section>
+
+						<section>
+							<h2>🚀 Demo 🚀</h2>
+							<img class="fragment" style="width: 60%;" src="img/dance.gif">
+						</section>
+						
+					</section> <!-- End nested section -->
+					
+					<section>
+						<h2>Check out</h2>
+						<ul>
+							<li><a href="https://www.codecademy.com/">codecademy.com</a></li>
+							<li><a href="https://www.codepen.io/">codepen.io</a></li>
+              <li><a href="https://www.freecodecamp.com/">freecodecamp.com</a></li>
+							<li><a href="https://www.coursera.org/course/cs101">Stanford - Computer Science 101</a> (Coursera)</li>
+						</ul>
+					</section>
+
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			Reveal.initialize({
+				history: true,
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>

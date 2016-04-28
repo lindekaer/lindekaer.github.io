@@ -166,6 +166,7 @@ gulp.task('jade:articles', function(cb) {
 
 gulp.task('jade:pages', function(cb) {
   var articles = require('./config.js').articles;
+  var slides   = require('./config.js').slides;
   var categories = new Set();
   for (let article of articles) {
     categories.add(article.category);
@@ -189,7 +190,8 @@ gulp.task('jade:pages', function(cb) {
   });
 
   var locals = { 
-   content: content
+   content: content,
+   slides: slides
   }
 
   render('index', 'index', locals, cb);

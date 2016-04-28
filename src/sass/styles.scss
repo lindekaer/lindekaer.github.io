@@ -205,7 +205,12 @@ code {
   margin: 2em 0em !important;
 }
 
-.article p code {
+.article li {
+  margin-bottom: 0.3em;
+}
+
+.article p code,
+.article ul code {
   padding: 2px 4px;
   color: #c7254e;
   background-color: #f9f2f4;

@@ -28,7 +28,12 @@ EOF
 > sudo service docker start
 ```
 
-This should make it possible for you to run the `docker` command from the command line on your server. Try `docker --help` for a listing of commands.
+This should make it possible for you to run the `docker` command from the command line on your server. Try `docker --help` for a listing of commands. Before we proceed you need to know the differences between these Docker concepts:
+
+- **Container** is a an isolated environment in which software can be run. They only exists as long as their internal processes are running
+- **Image** is a technical blueprint for a container. You *run* an image to launch a container. Images can be composed in layered manner by multiple images
+- **Docker daemon** the Docker process that is used to configure and deploy containers. Also known as *Docker engine* or *Docker runtime*
+- **Docker client** the CLI to communicate with the Docker daemon; `docker build is an example
 
 ## Step 2 - Downloading images
 
@@ -109,5 +114,8 @@ I have included a few useful Docker snippets:
 
 # Remove all exited containers
 > docker rm -v $(docker ps -a -q -f status=exited)
+
+# Get command line access to a running container
+> docker attach [CONTAINER_ID]
 ```
 

@@ -43,6 +43,13 @@ class Article {
   }
 }
 
+class Slides {
+  constructor(title) {
+    this.title = title;
+    this.path  = `/slides/${slugify(title)}/index`;
+  }
+}
+
 module.exports = {
   articles: [
     new Article('Fit with Git', 'Development', '2016-03-20'),
@@ -50,9 +57,13 @@ module.exports = {
     new Article('Dynamically updating nested properties in MongoDB', 'Development', '2016-03-03'),
     new Article('Hiking in Söderåsen', 'Travel', '2016-03-29'),
     new Article('Camino de Santiago', 'Travel', '2016-04-02'),
-    new Article('Upplandsleden', 'Travel', '2016-04-18')
+    new Article('Upplandsleden', 'Travel', '2016-04-18'),
+    // new Article('Continuous integration', 'Development', '2016-04-25')
     // new Article('Pacific Crest Trail', ''),
     // new Article('Painfree deployment with Nginx and Docker', '')
+  ],
+  slides: [
+    new Slides('Programming 101')
   ]
 }
 

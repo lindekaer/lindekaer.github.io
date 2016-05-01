@@ -52,6 +52,21 @@ table {
 /*
 -----------------------------------------------------------------------------------
 |
+| Variables
+|
+-----------------------------------------------------------------------------------
+*/
+
+$color-first: #3CB5B5;
+$color-second: #EC6C20;
+$color-third: #FCD920;
+
+$color-first-blend: #1D5252;
+$color-second-blend: #693211;
+
+/*
+-----------------------------------------------------------------------------------
+|
 | Base
 |
 -----------------------------------------------------------------------------------
@@ -299,4 +314,20 @@ code {
 .navigation__back {
   text-align: center;
   margin: 3em 0px 3em 0px;
+}
+
+.focus {
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+
+  &.one {
+    background-color: $color-first;
+    color: $color-first-blend;
+  }
+
+  &.two {
+    background-color: $color-second;
+    color: $color-second-blend;
+  }
 }

@@ -117,5 +117,8 @@ I have included a few useful Docker snippets:
 
 # Get command line access to a running container
 > docker attach [CONTAINER_ID]
+
+# Get an updating log from container (like tail)
+> docker logs -f [CONTAINER_ID]
 ```
 

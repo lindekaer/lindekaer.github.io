@@ -1,7 +1,7 @@
 Spanning trees are most commonly used in the domain of pathfinding. The famous algorithms of *Dijkstra* and *A** both make use of spanning trees. 
 
 ## Definition
-Given a graph <span class="focus one">G</span>, a spanning tree is defined as a subgraph of <span class="focus one">G</span> that includes all vertices of <span class="focus one">G</span>. If G is disconnected graph, it is impossible to find a spanning tree. If all the edges of <span class="focus one">G</span> are included in the subgraph <span class="focus two">T</span>, then <span class="focus one">G</span> and <span class="focus two">T</span> are identical.
+Given a graph <span class="focus one">G</span>, a spanning tree is defined as a subgraph of <span class="focus one">G</span> that includes all vertices of <span class="focus one">G</span>. If <span class="focus one">G</span> is disconnected graph, it is impossible to find a spanning tree. If all the edges of <span class="focus one">G</span> are included in the subgraph <span class="focus two">T</span>, then <span class="focus one">G</span> and <span class="focus two">T</span> are identical.
 
 A graph can have many different spanning trees, but only one minimum spanning tree (MST). The MST is defined is being the spanning tree with the *lowest cost* (accumulated weight of edges).
 
@@ -31,6 +31,40 @@ function find(vertex, vertices) {}
  * @return {arr}      [united disjoint set]
  */
 function union(arr1, arr2) {}
+```
+
+## Problem scenario
+Imagine you are trying to plan a European tour. You want to visit Madrid, Paris, Rome, Bucharest and Berlin. There are many flights connecting the different cities and you want to find the cheapest path. A path that visits all the cities with the lowest total cost is an MST.
+
+<div id="map1" data-lat="47.9749327" data-lng="11.0781581" data-zoom="4" data-type="pencil">
+  <div data-lat="48.856614" data-lng="2.352222" data-label="Paris"></div>
+  <div data-lat="41.902783" data-lng="12.496366" data-label="Rome"></div>
+  <div data-lat="52.520007" data-lng="13.404954" data-label="Berlin"></div>
+  <div data-lat="40.416775" data-lng="-3.703790" data-label="Madrid"></div>
+  <div data-lat="44.426767" data-lng="26.102538" data-label="Bucharest"></div>
+</div>
+
+```javascript
+var vertices = [
+  'Paris',
+  'Rome',
+  'Berlin',
+  'Madrid',
+  'Bucharest'
+];
+
+// Interpreted as [origin, destination, price]
+var edges = [
+  ['Paris', 'Rome', 125],
+  ['Paris', 'Berlin', 70],
+  ['Paris', 'Madrid', 90],
+  ['Paris', 'Bucharest', 100],
+  ['Rome', 'Madrid', 120],
+  ['Berlin', 'Bucharest', 55],
+  ['Berlin', 'Madrid', 110],
+  ['Madrid', 'Bucharest', 85],
+  ['Bucharest', 'Rome', 110]
+];
 ```
 
 ## Sources

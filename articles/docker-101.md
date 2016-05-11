@@ -122,3 +122,11 @@ I have included a few useful Docker snippets:
 > docker logs -f [CONTAINER_ID]
 ```
 
+## Docker syllabus
+I have used these resources to get up to speed with Docker.
+
+- [Docker Deep Dive](https://www.pluralsight.com/courses/docker-deep-dive) (paid)
+- [Integrating Docker with DevOps Automated Workflows](https://app.pluralsight.com/library/courses/integrating-docker-with-devops-automated-workflows) (paid)
+- [Solomon Hykes at PyCon](https://www.youtube.com/watch?v=wW9CAH9nSLs)
+- [Docker, LXC and dotCloud with Solomon Hykes](https://changelog.com/89/)
+

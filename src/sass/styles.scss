@@ -178,6 +178,9 @@ code {
 .article__title { 
   font-size: 3em;
   line-height: 1.2em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
 }
 
 .article h2 { 

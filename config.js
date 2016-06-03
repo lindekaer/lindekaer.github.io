@@ -31,7 +31,7 @@ class Article {
 
     const keywords = {
       'Development': 'development, programming, technology, IT, computer, algorithm, tutorial, guide, Docker, Node, Javascript, HTML, CSS',
-      'Travel': 'travel, adventure, hiking, outdoor, gear, experience, friends'
+      'Travel': 'travel, adventure, hiking, outdoor, gear, experience, friends, food'
     }
 
     const articleHTML = md(fs.readFileSync(`./articles/${this.slug}.md`).toString());
@@ -58,6 +58,7 @@ module.exports = {
     new Article('Hiking in Söderåsen', 'Travel', '2016-03-29'),
     new Article('Camino de Santiago', 'Travel', '2016-04-02'),
     new Article('Upplandsleden', 'Travel', '2016-04-18'),
+    new Article('Hunting for Dracula', 'Travel', '2016-05-13'),
     // new Article('Finding the minimum spanning tree', 'Development', '2016-05-01'),
     // new Article('Continuous integration', 'Development', '2016-04-25')
     // new Article('Pacific Crest Trail', ''),

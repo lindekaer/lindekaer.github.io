@@ -103,8 +103,10 @@ I have included a few useful Docker snippets:
 > docker ps -a
 
 # Stop and remove all Docker containers
-> docker stop $(docker ps -a -q)
-> docker rm $(docker ps -a -q)
+> docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+
+# Remove all images
+> docker rmi $(docker images -q)
 
 # Get command line access to a container
 > docker exec -it [CONTAINER_ID] /bin/bash

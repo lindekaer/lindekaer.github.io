@@ -4,7 +4,8 @@
   "description": "My personal blog",
   "main": "index.html",
   "scripts": {
-    "prod": "gulp prod; sips -Z 800 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/mobile; sips -Z 2048 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/desktop; git add .; git commit -m 'Production build'; git push; imagesnap ~/Dropbox/private/mac/git_snapshots/$(date +'%m-%d-%yT%H:%M').jpg"
+    "prod": "gulp prod; sips -Z 800 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/mobile; sips -Z 2048 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/desktop; git add .; git commit -m 'Production build'; git push; imagesnap ~/Dropbox/private/mac/git_snapshots/$(date +'%m-%d-%yT%H:%M').jpg",
+    "img": "sips -Z 800 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/mobile; sips -Z 2048 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/desktop;"
   },
   "repository": {
     "type": "git",

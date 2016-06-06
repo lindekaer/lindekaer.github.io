@@ -59,6 +59,7 @@ module.exports = {
     new Article('Camino de Santiago', 'Travel', '2016-04-02'),
     new Article('Upplandsleden', 'Travel', '2016-04-18'),
     new Article('Hunting for Dracula', 'Travel', '2016-05-13'),
+    new Article('GR 6 Barcelona to Montserrat', 'Travel', '2016-06-05'),
     // new Article('Finding the minimum spanning tree', 'Development', '2016-05-01'),
     // new Article('Continuous integration', 'Development', '2016-04-25')
     // new Article('Pacific Crest Trail', ''),

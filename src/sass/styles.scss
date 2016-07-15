@@ -64,6 +64,9 @@ $color-third: #FCD920;
 $color-first-blend: #1D5252;
 $color-second-blend: #693211;
 
+$body-width: 840px;
+$img-wide-overlap: 500px;
+
 /*
 -----------------------------------------------------------------------------------
 |
@@ -88,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
   margin: 3em auto 0em auto;
-  max-width: 840px;
+  max-width: $body-width;
   padding: 1em;
   @media (max-width: 720px) {
     padding: 0em 1.5em 0em 1.5em;
@@ -253,6 +256,15 @@ code {
   // For lazy loading
   opacity: 1;
   transition: opacity 0.3s;
+
+  .media.wide & {
+    width: calc(100% + #{$img-wide-overlap});
+    margin-left: -250px;
+    @media (max-width: $body-width + $img-wide-overlap) {
+      width: 100%;
+      margin-left: 0px;
+    }
+  }
 }
 
 .media__image[data-src] {

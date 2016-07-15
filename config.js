@@ -31,7 +31,8 @@ class Article {
 
     const keywords = {
       'Development': 'development, programming, technology, IT, computer, algorithm, tutorial, guide, Docker, Node, Javascript, HTML, CSS',
-      'Travel': 'travel, adventure, hiking, outdoor, gear, experience, friends, food'
+      'Travel': 'travel, adventure, hiking, outdoor, gear, experience, friends, food',
+      'Sport': 'sport, adventure, training, workout, challenge, fun'
     }
 
     const articleHTML = md(fs.readFileSync(`./articles/${this.slug}.md`).toString());
@@ -60,6 +61,8 @@ module.exports = {
     new Article('Upplandsleden', 'Travel', '2016-04-18'),
     new Article('Hunting for Dracula', 'Travel', '2016-05-13'),
     new Article('GR 6 Barcelona to Montserrat', 'Travel', '2016-06-05'),
+    new Article('GR 20 Calenzana to Conca', 'Travel', '2016-07-10'),
+    // new Article('The Swedish Classic', 'Sport', '2017-03-20')
     // new Article('Finding the minimum spanning tree', 'Development', '2016-05-01'),
     // new Article('Continuous integration', 'Development', '2016-04-25')
     // new Article('Pacific Crest Trail', ''),

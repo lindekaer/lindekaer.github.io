@@ -8,8 +8,8 @@
 - Due to a bug in Leaflet, the map hijacks scroll touch events. Use version 7.5 or wait for fix.
 - Add Docker text (see below)
 - Create 404.html
-- Finnish Romania article
-- Write Barcelona article
+- Ascend vs Ascent
+- Store fonts locally
 
 https://docs.docker.com/v1.8/installation/centos/
 

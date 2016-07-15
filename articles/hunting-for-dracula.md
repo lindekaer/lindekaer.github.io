@@ -19,10 +19,10 @@ As the name of this post states Dracula was of great importance for our trip. In
 Despite Vlad's remote connection to Bran, the castle hosts a great museum with interesting facts about the tale of the Dracula. I learned that the Irish author Bram Stoker played a big part in popularizing the tale of the Dracula through his release of his book *"Dracula"* in 1897.
 
 <div class="media group">
-  <img class="media__image" data-src="hunting-for-dracula.market.jpg" title="Market in front of Bran Castle">
-  <img class="media__image" data-src="hunting-for-dracula.andrei-and-vlad.jpg" title="Andrei and Vlad">
-  <img class="media__image" data-src="hunting-for-dracula.outside-the-castle.jpg" title="The family outside the Bran Castle">
-  <img class="media__image" data-src="hunting-for-dracula.shields.jpg" title="Coat of arms on the walls of Bran Castle">
+  <img class="media__image" data-src="market.jpg" title="Market in front of Bran Castle">
+  <img class="media__image" data-src="andrei-and-vlad.jpg" title="Andrei and Vlad">
+  <img class="media__image" data-src="outside-the-castle.jpg" title="The family outside the Bran Castle">
+  <img class="media__image" data-src="shields.jpg" title="Coat of arms on the walls of Bran Castle">
   <p class="media__caption">Visiting the Bran Castle and the nearby market</p>
 </div>
 
@@ -35,8 +35,7 @@ Visiting the bear sanctuary you get to see plenty of bears and are told their st
 The city of Sigișhoara is on the UNESCO list of [World Heritage Sites](https://en.wikipedia.org/wiki/World_Heritage_Site). The old city center behind the city walls boasts of well-preserved medieval buildings. In particular, we enjoyed visiting *Biserica din Deal* church on top of the hill. Also, the main gate (previously the town hall) acted as a good viewpoint and contained a small museum. Sigișhoara is perfect for one day of historical indulgence!
 
 <div class="media">
-  <img class="media__image" data-src="hunting-for-dracula.sigishoara.jpg" title="View from the main gate of Sigișhoara">
-  <p class="media__caption">Badge showing the distance to Bucharest from the main gate of Sigișhoara</p>
+  <img class="media__image" data-src="sigishoara.jpg" title="View from the main gate of Sigișhoara">
 </div>
 
 ### Parc Aventura Brașov
@@ -45,8 +44,7 @@ In the adventure park we tried tree top walking. Wearing a safety harness (and a
 I was very close to completing the black course, but suddenly a thunder storm with fierce rain was above us. We were told to stay at the platform and had to rappel down from the tree. Wow, that was quite an experience! Check out their website [here](http://www.parc-aventura.ro/).
 
 <div class="media">
-  <img class="media__image" data-src="hunting-for-dracula.tree-top.jpg" title="Klara getting ready to transition from one obstacle to another">
-  <p class="media__caption">Klara getting ready to transition from one obstacle to another</p>
+  <img class="media__image" data-src="tree-top.jpg" title="Klara getting ready to transition from one obstacle to another">
 </div>
 
 ### Peleș Castle
@@ -55,25 +53,23 @@ Visiting the Peleș Castle was amazing. The castle was richly adorned both on th
 The castle's location is close to perfect - located in the middle of a spectacular mountain scenery with thick forests. The castle itself is placed in a glade in the midst of this. We visited the castle in heavy rain, but were not less impressed with the whole setting. We decided to go for the guided tour (highly recommended), which takes you through a small selection of the lushly decorated rooms.
 
 <div class="media">
-  <img class="media__image" data-src="hunting-for-dracula.castle.jpg" title="Dennis, Carlos and I outside the Peleș Castle">
-  <p class="media__caption">Dennis, Carlos and I outside the Peleș Castle</p>
+  <img class="media__image" data-src="castle.jpg" title="Dennis, Carlos and I outside the Peleș Castle">
 </div>
 
 ## Going back
 I was impressed by what Romania has to offer. Romania has fields, forest, mountains, rivers, old historical cities, diverse wildlife, fantastic kitchen and friendly people. A big thanks to Andrei for taking care of us for the whole stay. I am definitely going back!
 
 <div class="media">
-  <img class="media__image" data-src="hunting-for-dracula.group-picture.jpg" title="Exploring the city of Brașov - here at the main square">
-  <p class="media__caption">Exploring the city of Brașov - here at the main square</p>
+  <img class="media__image" data-src="group-picture.jpg" title="Exploring the city of Brașov - here at the main square">
 </div>
 
 ## P.S. Food
 Before rounding off, I would just like to highlight a few culinary experiences! The Romanian kitchen is its own. I can best describe it as: garlic, pork, potatoes, beans, love and more garlic. 
 
 <div class="media group">
-  <img class="media__image" data-src="hunting-for-dracula.pork.jpg" title="Smoked pork leg with beans">
-  <img class="media__image" data-src="hunting-for-dracula.ribs.jpg" title="Pork ribs">
-  <img class="media__image" data-src="hunting-for-dracula.soup.jpg" title="Bean soup served in a bread">
-  <img class="media__image" data-src="hunting-for-dracula.cutlet.jpg" title="A nice pork cutlet">
+  <img class="media__image" data-src="pork.jpg" title="Smoked pork leg with beans">
+  <img class="media__image" data-src="ribs.jpg" title="Pork ribs">
+  <img class="media__image" data-src="soup.jpg" title="Bean soup served in a bread">
+  <img class="media__image" data-src="cutlet.jpg" title="A nice pork cutlet">
   <p class="media__caption">A few classics - smoked pork leg, ribs, soup in bread and a cutlet</p>
 </div>

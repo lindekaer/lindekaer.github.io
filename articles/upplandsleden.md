@@ -5,16 +5,15 @@ Living in Scandinavia, you are surrounded by amazing hiking opportunities. My fr
 Upplandsleden is a concatenation of many minor sections. This turns out handy, as one can walk from milestone to milestone. When planning a hike on Upplandsleden, it is ideal to use their [IOS](https://itunes.apple.com/se/app/upplandsleden/id823491887?mt=8) or [Android](https://play.google.com/store/apps/details?id=com.appanero.upplandsleden) app, which contains a detailed map, section descriptions and geo-coordinates for shelters and camp sites.
 
 <div class="media group">
-  <img class="media__image" data-src="upplandsleden.markings.jpg" title="Easy to spot orange trail markings throughout the whole trail">
-  <img class="media__image" data-src="upplandsleden.sign.jpg" title="The guiding sign">
+  <img class="media__image" data-src="markings.jpg" title="Easy to spot orange trail markings throughout the whole trail">
+  <img class="media__image" data-src="sign.jpg" title="The guiding sign">
   <p class="media__caption">The *easy to spot* orange trail markings throughout the whole trail makes the hike a smooth experience</p>
 </div>
 
 The trail is very well kept without sacrificing the feeling of being in the wild. This feeling is also enforced by the trail only passing very few cities.
 
 <div class="media">
-  <img class="media__image" data-src="upplandsleden.city.jpg" title="A rare encounter with civilization">
-  <p class="media__caption">A rare encounter with civilization</p>
+  <img class="media__image" data-src="city.jpg" title="A rare encounter with civilization">
 </div>
 
 ## Our hike
@@ -33,17 +32,16 @@ We estimated that it would be possible to walk around 30 kilometers per day. Upo
 We brought a complete sleeping system with mat, sleeping bag and tent. We ended up using the tent for the two first days and slept in a shelter at **Rastplats Kolsjön** for the last night. The shelter was amazing - located next to a lake, with a practical fireplace and with dry firewood. Due to the many shelters on Upplandsleden it is possible to plan a trip sleeping only in shelters.
 
 <div class="media">
-  <img class="media__image" data-src="upplandsleden.tent-in-snow.jpg" title="Waking up to snow on the first morning - surprise!">
-  <p class="media__caption">Waking up to snow on the first morning - surprise!</p>
+  <img class="media__image" data-src="tent-in-snow.jpg" title="Waking up to snow on the first morning - surprise!">
 </div>
 
 We packed all of our food from home to make our hike easy and efficient. As always the snacks seemed to disappear at exponential speed. To our luck, the trail passed a few supermarkets on the way. We resupplied in Knutby.
 
 <div class="media group">
-  <img class="media__image" data-src="upplandsleden.bacon.jpg" title="Ole preparing dinner bacon">
-  <img class="media__image" data-src="upplandsleden.lunch.jpg" title="Delicious mackerel in tomato for lunch">
-  <img class="media__image" data-src="upplandsleden.dinner.jpg" title="Preparing for dinner. Notice the chocolate">
-  <img class="media__image" data-src="upplandsleden.fireplace.jpg" title="Fireplaces are awesome. Nuff said.">
+  <img class="media__image" data-src="bacon.jpg" title="Ole preparing dinner bacon">
+  <img class="media__image" data-src="lunch.jpg" title="Delicious mackerel in tomato for lunch">
+  <img class="media__image" data-src="dinner.jpg" title="Preparing for dinner. Notice the chocolate">
+  <img class="media__image" data-src="fireplace.jpg" title="Fireplaces are awesome. Nuff said.">
   <p class="media__caption">Our diet consisted of oatmeal, mackerel and pasta. Fireplaces for tea and a cozy vibe.</p>
 </div>
 
@@ -52,8 +50,5 @@ We packed all of our food from home to make our hike easy and efficient. As alwa
 Wow, Upplandsleden was a great experience! I would really like to return for a summer hike, despite us actually having three sunny days (talk about being lucky).
 
 <div class="media">
-  <img class="media__image" data-src="upplandsleden.wild.jpg" title="A day on the trail">
-  <p class="media__caption">A day on the trail</p>
+  <img class="media__image" data-src="wild.jpg" title="A day on the trail">
 </div>
-
-

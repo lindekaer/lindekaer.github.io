@@ -169,7 +169,7 @@ Ending my hike a few days earlier freed up some extra time for the beach. I deci
   <img class="media__image" data-src="ferry.jpg" title="The ferry going to mainland France">
   <img class="media__image" data-src="supermarket.jpg" title="Back in the supermarket">
   <img class="media__image" data-src="calvi-citadel.jpg" title="The view of Calvi from the old citadel">
-  <p class="media__caption">Back in the comfort of civilization</p>
+  <p class="media__caption">Back in the comforts of civilization</p>
 </div>
 
 I ended up staying at a camp site close to the beach paying only EUR 14 per night. As a counter balance to my sudden inactivity I headed for a small trip to the church Notre Dame de la Serra, which is located in the hills behind Calvi. What a magnificent view!

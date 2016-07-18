@@ -119,7 +119,7 @@ $img-wide-overlap: 500px;
 */
 
 html {
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', 'Verdana', 'Arial', 'Helvetica', serif;
   font-weight: 300;
   font-size: 21px;
   @media (max-width: 720px) {
@@ -128,7 +128,7 @@ html {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', 'Helvetica', sans-serif;
 }
 
 body {
@@ -146,7 +146,7 @@ h1 {
 
 code {
   font-size: 90%;
-  font-family: 'Source Code Pro' !important;
+  font-family: 'Source Code Pro', 'Lucida Console' !important;
 }
 
 /*

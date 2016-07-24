@@ -55,6 +55,7 @@
   "dependencies": {
     "cheerio": "0.20.0",
     "hint.css": "2.2.1",
+    "jump.js": "1.0.1",
     "leaflet": "0.7.7",
     "prismjs": "1.4.1"
   }

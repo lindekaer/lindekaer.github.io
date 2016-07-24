@@ -17,6 +17,8 @@ class Article {
 
     var images = document.querySelectorAll('img[data-src]');
     new LazyLoad(images);
+
+    this.enableTableOfContents();
   }
 
   animateArticle() {
@@ -74,6 +76,22 @@ class Article {
         p.innerHTML = firstPart + midPart + lastPart;
       }
     }
+  }
+
+  enableTableOfContents() {
+    var table = document.querySelector('.table-of-contents');
+    if (!table) return;
+    var tableLinks = Array.apply(null, table.querySelectorAll('a'));
+
+    for (let tableLink of tableLinks) {
+      tableLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        Jump(`.jump-${this.getAttribute('data-jump')}`, {
+          offset: -25
+        })
+      });
+    }
+
   }
 
 }

@@ -1,3 +1,5 @@
+<ul class="table-of-contents"></ul>
+
 The **GR 20** is known as the not only the most beautiful but also the toughest hike of Europe. These predicates could nothing but intrigue me and I therefore decided to give the hike a go in late June. The hike is found on the French island of Corsica.
 
 In case you wonder what *GR* means, I've written a detailed description of my first [*GR hike* in Spain](/gr-6-barcelona-to-montserrat.html).

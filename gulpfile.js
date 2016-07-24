@@ -136,7 +136,8 @@ gulp.task('js:vendor', function() {
   return gulp.src([
     './node_modules/prismjs/prism.js',
     './node_modules/prismjs/components/prism-bash.js',
-    './node_modules/leaflet/dist/leaflet.js'
+    './node_modules/leaflet/dist/leaflet.js',
+    './node_modules/jump.js/dist/jump.min.js'
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.js'))
@@ -154,7 +155,7 @@ gulp.task('js:vendor', function() {
 */
 
 gulp.task('jade', function(cb) {
-  runSequence(['jade:articles', 'jade:pages'], 'html:enrich-title', 'html:enrich-caption', 'html:enrich-src', cb);
+  runSequence(['jade:articles', 'jade:pages'], 'html:enrich-title', 'html:enrich-caption', 'html:enrich-src', 'html:enrich-table-of-contents', cb);
 });
 
 gulp.task('jade:articles', function(cb) {
@@ -229,6 +230,35 @@ gulp.task('html:enrich-src', function() {
       fileName = slugify($('h1').first().text()) + '.' + fileName;
       $(el).attr('data-src', fileName);
     });
+  }))
+  .pipe(gulp.dest('.'));
+});
+
+gulp.task('html:enrich-table-of-contents', function() {
+  return gulp.src('*.html')
+  .pipe(cheerio(function ($, file) {
+
+    if (!$('.table-of-contents').length) return;
+
+    $('h2, h3, h4, h5, h6').each(function(index, el) {
+      
+      // Add unique class to all headings (anchor for scrolling)
+      var text = $(el).text()
+      $(el).addClass('jump-' + slugify(text));
+
+      // Add table-of-contents elements to the DOM
+      var headingNumber = $(el)[0].tagName.split('h')[1];
+      var $tableEl = $('<li><a></a></li>');
+      $tableEl.find('a').text(text);
+      $tableEl.find('a').attr('href', '#');
+      $tableEl.find('a').attr('data-jump', slugify(text));
+      $tableEl.find('a').addClass(`number-${headingNumber}`);
+      $('.table-of-contents').append($tableEl);
+    });
+
+    
+    
+    
   }))
   .pipe(gulp.dest('.'));
 });

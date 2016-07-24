@@ -107,8 +107,13 @@ $color-third: #FCD920;
 $color-first-blend: #1D5252;
 $color-second-blend: #693211;
 
+$color-blue: #2196f3;
+$color-blue-dark: #1565c0;
+$color-blue-darker: #1A237E;
+
 $body-width: 840px;
 $img-wide-overlap: 500px;
+$table-of-contents-indent: 20px;
 
 /*
 -----------------------------------------------------------------------------------
@@ -147,6 +152,21 @@ h1 {
 code {
   font-size: 90%;
   font-family: 'Source Code Pro', 'Lucida Console' !important;
+}
+
+a {
+  color: $color-blue;
+  transition: color 0.250s ease-in-out;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $color-blue-dark;
+  }
+
+  &:visited {
+    color: $color-blue-darker;
+  }
 }
 
 /*
@@ -388,4 +408,32 @@ code {
     background-color: $color-second;
     color: $color-second-blend;
   }
+}
+
+.table-of-contents {
+  padding: 20px;
+  background-color: #f3f3f3;
+
+  li {
+    list-style: none;
+    font-size: 0.8em;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: $color-blue;
+    }
+  }
+
+  .number-3 { padding-left: $table-of-contents-indent; }
+  .number-4 { padding-left: $table-of-contents-indent * 2; }
+  .number-5 { padding-left: $table-of-contents-indent * 3; }
+  .number-6 { padding-left: $table-of-contents-indent * 4; }
+
 }

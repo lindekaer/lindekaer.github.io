@@ -9,20 +9,23 @@ class Article {
     this.article = el.querySelector('div.article');
 
     this.animateArticle();
+    this.lazyLoadImages();
+    this.enableTableOfContents();
    
     if (!isMobile()) {
       this.enableTooltips('km-to-miles');
       this.enableTooltips('celcius-to-fahrenheit');  
     }
-
-    var images = document.querySelectorAll('img[data-src]');
-    new LazyLoad(images);
-
-    this.enableTableOfContents();
+    
   }
 
   animateArticle() {
     this.article.classList.add('active');
+  }
+
+  lazyLoadImages() {
+    var images = document.querySelectorAll('img[data-src]');
+    new LazyLoad(images);
   }
 
   enableTooltips(type) {

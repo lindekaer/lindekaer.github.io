@@ -80,7 +80,7 @@ module.exports = {
     new Slides('Programming 101')
   ],
   projects: [
-    new Project('Geo Quiz')
+    // new Project('Geo Quiz')
   ]
 }
 

@@ -17,7 +17,8 @@ class Front {
     this.selector.addEventListener('change', function() {
       const type = this.options[this.selectedIndex].getAttribute('data-type');
       if (type === 'article') return window.location = this.value + '.html';  
-      if (type === 'slide') return window.location = this.value;
+      if (type === 'slides') return window.location = this.value;
+      if (type === 'project') return window.location = this.value;
     });
   }
 }

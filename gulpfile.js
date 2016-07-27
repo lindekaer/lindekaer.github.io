@@ -103,7 +103,8 @@ gulp.task('sass:vendor', function() {
   return gulp.src([
     './node_modules/prismjs/themes/prism-okaidia.css',
     './node_modules/leaflet/dist/leaflet.css',
-    './node_modules/hint.css/hint.css'
+    './node_modules/hint.css/hint.css',
+    './node_modules/jsonlylightbox/css/lightbox.css'
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.css'))
@@ -137,7 +138,8 @@ gulp.task('js:vendor', function() {
     './node_modules/prismjs/prism.js',
     './node_modules/prismjs/components/prism-bash.js',
     './node_modules/leaflet/dist/leaflet.js',
-    './node_modules/jump.js/dist/jump.min.js'
+    './node_modules/jump.js/dist/jump.min.js',
+    './node_modules/jsonlylightbox/js/lightbox.js'
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.js'))
@@ -166,9 +168,11 @@ gulp.task('jade:articles', function(cb) {
 });
 
 gulp.task('jade:pages', function(cb) {
-  var articles = require('./config.js').articles;
-  var slides   = require('./config.js').slides;
+  var articles   = require('./config.js').articles;
+  var slides     = require('./config.js').slides;
+  var projects   = require('./config.js').projects;
   var categories = new Set();
+
   for (let article of articles) {
     categories.add(article.category);
   }
@@ -192,7 +196,8 @@ gulp.task('jade:pages', function(cb) {
 
   var locals = { 
    content: content,
-   slides: slides
+   slides: slides,
+   projects: projects
   }
 
   render('index', 'index', locals, cb);

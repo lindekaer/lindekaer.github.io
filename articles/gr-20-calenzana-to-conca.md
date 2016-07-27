@@ -110,15 +110,15 @@ I passed the beautiful Lac de Nino lake and thought to myself that Refuge de Man
 
 I stopped for a little while at a local bergerie (small family-owned shop) to have a drink. To my luck I meet two wonderful Norwegian women, Wenche and Tori, who were planning to hike two additional stages past Manganu the next couple of days. 
 
-Arriving at Refuge de Manganu shortly after I met Weche and Tori again. I was running short on cash and with no ATMs on the whole route, I was planning to cut it short and stop in Vizzavona. Fortunately they were kind enough to lend me EUR 70 and even invited me to their table for dinner. I am very thankful for their support and care!
+Arriving at Refuge de Manganu shortly after I met Wenche and Tori again. I was running short on cash and with no ATMs on the whole route, I was planning to cut it short and stop in Vizzavona. Fortunately they were kind enough to lend me EUR 70 and even invited me to their table for dinner. I am very thankful for their support and care!
 
 <div class="media">
-  <img class="media__image" data-src="love-and-support.jpg" title="Weche and Tori at Refuge de Manganu">
+  <img class="media__image" data-src="love-and-support.jpg" title="Wenche and Tori at Refuge de Manganu">
 </div>
 
 ### Fifth day - Refuge de Manganu to Refuge de l'Onda (stage 8 and 9)
 
-When I woke up I was thrilled. Thanks to Weche and Tori I was back in the game and heading for Conca. I started out at 06:00 and began the climb. I planned on reaching Refuge de Pietra Piana for lunch and subsequently head for Refuge de l'Onda. The hike was diverse and changed from rock climbing to casual walking in green valleys between the peaks. I arrived to Pietra Piana within only five hours and went straight to the small shop to buy a can of cassoulet (French stew with beans, sausage and meats). Lovely lunch with the most spectacular view.
+When I woke up I was thrilled. Thanks to Wenche and Tori I was back in the game and heading for Conca. I started out at 06:00 and began the climb. I planned on reaching Refuge de Pietra Piana for lunch and subsequently head for Refuge de l'Onda. The hike was diverse and changed from rock climbing to casual walking in green valleys between the peaks. I arrived to Pietra Piana within only five hours and went straight to the small shop to buy a can of cassoulet (French stew with beans, sausage and meats). Lovely lunch with the most spectacular view.
 
 <div class="media group">
   <img class="media__image" data-src="cassoulet.jpg" title="Simple but good meal">

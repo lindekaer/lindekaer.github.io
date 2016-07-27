@@ -25,5 +25,8 @@ block content
           option(value="#{article.slug}" data-type="article") #{article.title}
     optgroup(label="Slides")
       for slide in slides 
-        option(value="#{slide.path}" data-type="slide") #{slide.title}
+        option(value="#{slide.path}" data-type="slides") #{slide.title}
+    optgroup(label="Projects")
+      for project in projects 
+        option(value="#{project.path}" data-type="project") #{project.title}
 

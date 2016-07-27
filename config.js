@@ -51,6 +51,13 @@ class Slides {
   }
 }
 
+class Project {
+  constructor(title) {
+    this.title = title;
+    this.path  = `/projects/${slugify(title)}`;
+  }
+}
+
 module.exports = {
   articles: [
     new Article('Fit with Git', 'Development', '2016-03-20'),
@@ -62,6 +69,7 @@ module.exports = {
     new Article('Hunting for Dracula', 'Travel', '2016-05-13'),
     new Article('GR 6 Barcelona to Montserrat', 'Travel', '2016-06-05'),
     new Article('GR 20 Calenzana to Conca', 'Travel', '2016-07-10'),
+    // new Article('Tour de Mont Blanc', 'Travel', '2016-08-12')
     // new Article('The Swedish Classic', 'Sport', '2017-03-20')
     // new Article('Finding the minimum spanning tree', 'Development', '2016-05-01'),
     // new Article('Continuous integration', 'Development', '2016-04-25')
@@ -70,6 +78,9 @@ module.exports = {
   ],
   slides: [
     new Slides('Programming 101')
+  ],
+  projects: [
+    new Project('Geo Quiz')
   ]
 }
 

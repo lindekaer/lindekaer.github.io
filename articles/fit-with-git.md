@@ -1,3 +1,5 @@
+<ul class="table-of-contents"></ul>
+
 Git is an amazing tool for collaboration, but it has a steep learning curve. While most master the basic Git commands, many get insecure when things get just a tiny bit complicated. This tutorial will take you through the basic Git usage and present some typical use cases. I will provide a bit of theory, but the primary focus of this tutorial is to provide practical examples.
 
 ## Learn by doing
@@ -183,7 +185,7 @@ Let's push all our local data to the master branch on our remote `git push origi
 
 ## Tips and tricks
 
-I would like to share a few simple tips to make your Git life easier. 
+I would like to share a few simple tips to make your Git life easier 🌟
 
 ### Git configuration
 

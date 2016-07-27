@@ -5,7 +5,6 @@ class Article {
   constructor() {
     var el = document.querySelector('.page-article');
     if (el === null) return;
-    
     this.article = el.querySelector('div.article');
 
     this.animateArticle();
@@ -14,7 +13,8 @@ class Article {
    
     if (!isMobile()) {
       this.enableTooltips('km-to-miles');
-      this.enableTooltips('celcius-to-fahrenheit');  
+      this.enableTooltips('celcius-to-fahrenheit');
+      this.enableLightbox();
     }
     
   }
@@ -78,6 +78,17 @@ class Article {
         var lastPart  = text.slice(endIndex, text.length);
         p.innerHTML = firstPart + midPart + lastPart;
       }
+    }
+  }
+
+  enableLightbox() {
+    var lightbox = new Lightbox();
+    lightbox.load();
+    for (let img of Array.apply(null, document.querySelectorAll('.media__image'))) {
+      img.setAttribute('data-jslghtbx', '');
+      img.addEventListener('click', () => {
+        lightbox.open(img.src);
+      });
     }
   }
 

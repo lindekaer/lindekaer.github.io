@@ -69,7 +69,6 @@ $color-blue-dark: #1565c0;
 $color-blue-darker: #1A237E;
 
 $body-width: 840px;
-$img-wide-overlap: 500px;
 $table-of-contents-indent: 26px;
 
 /*
@@ -277,12 +276,12 @@ a {
   transition: opacity 0.3s;
 
   .media.wide & {
-    width: calc(100% + #{$img-wide-overlap});
-    margin-left: -250px;
-    @media (max-width: $body-width + $img-wide-overlap) {
-      width: 100%;
-      margin-left: 0px;
-    }
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 }
 

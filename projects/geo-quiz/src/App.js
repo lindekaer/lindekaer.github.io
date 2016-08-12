@@ -14,7 +14,7 @@ class App extends Component {
         <div className="container">
           <div className="row">
             <div className="col-md-4 col-md-offset-4 text-center">
-              <Game data = {this.props.data}/>
+              <Game data= {this.props.data}/>
             </div>
           </div>
         </div>

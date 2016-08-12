@@ -11,8 +11,8 @@ class Game extends Component {
       hasStarted: false,
       correct: 0,
       lives: 3,
-      usedCapitals: [],
       game: {
+        previouslyUsed: [],
         toBeGuessed: null,
         options: null
       }
@@ -20,88 +20,80 @@ class Game extends Component {
     this.data = props.data
   }
 
+  componentWillMount() {
+    this.prepareGame();
+  }
+
+  prepareGame() {
+    // Make a copy of all data
+    var copyData = this.data;
+
+    // Pick a random capital
+    var randomIndex = Math.floor(Math.random() * copyData.length);
+    var capital     = copyData[randomIndex].capital;
+    var country     = copyData[randomIndex];
+    
+    // Remove country to avoid it being selected as an option twice
+    copyData.splice(randomIndex, 1);
+
+    // Pick three random countries
+    var countries = [];
+    for (let i = 0; i < 3; i++) {
+      randomIndex = Math.floor(Math.random() * copyData.length);
+      var randomCountry = copyData[randomIndex];
+      copyData.splice(randomIndex, 1);
+      countries.push(randomCountry);
+    }
+
+    // Add the correct country to the possibilites
+    countries.push(country);
+
+    console.log(this.state.game);
+    var previouslyUsed = this.state.game.previouslyUsed.slice().push(country);
+    console.log(this.state.game);
+
+    this.setState({
+      game: {
+        previouslyUsed: previouslyUsed,
+        toBeGuessed: country,
+        options: countries
+      }
+    });
+
+    console.log(this.state.game);
+  }
+
   render() {
     return (
       <div>
-        {this.renderHeadline()}
         {this.renderGame()}
         {this.renderGameStats()}
       </div>
     );
   }
 
-  renderHeadline() {
-    if (!this.state.hasStarted) {
-      return (
-        <h2>Pick a game type</h2>
-      )  
-    }
-  }
-  
   renderGame() {
-    if (!this.state.hasStarted) {
-      return (
-        <div>
-          <button className="btn btn-primary btn-block" onClick={this.pickGameType.bind(this, 'capital')}>Match capital and country</button>
-          <button className="btn btn-primary btn-block" onClick={this.pickGameType.bind(this, 'flag')}>Match flag and country</button>
-        </div>
-      )  
-    } else {
-      return this.startGame()
-    }
+    return (
+      <div>
+        <p className='lead'>{this.state.game.toBeGuessed.capital} is the capital of ... ?</p>
+        {this.renderButtons(this.state.game.options)}
+      </div>
+    )
   }
 
-  startGame() {
-    if (this.state.type === 'capital') {
-      
-      // Make a copy of all data
-      var copyData = this.data;
-
-      // Pick a random capital
-      var randomIndex = Math.floor(Math.random() * copyData.length);
-      var capital     = copyData[randomIndex].capital;
-      this.state.game.toBeGuessed = copyData[randomIndex];
-      
-      // Remove country to avoid it being selected as an option twice
-      copyData.splice(randomIndex, 1);
-
-      // Pick three random countries
-      var countries = [];
-      for (let i = 0; i < 3; i++) {
-        randomIndex = Math.floor(Math.random() * copyData.length);
-        var randomCountry = copyData[randomIndex];
-        copyData.splice(randomIndex, 1);
-        countries.push(randomCountry);
-      }
-
-      // Add the correct country to the possibilites
-      countries.push(this.state.game.toBeGuessed);
-
-      return (
-        <div>
-          <p className='lead'>{capital} is the capital of ... ?</p>
-          {this.renderButtons(countries)}
-        </div>
-      )
-
-    }
-  }
-
-  renderButtons(countries) {
-    shuffle(countries);
-    return countries.map(c => <button className="btn btn-primary btn-lg btn-block" onClick={this.selectCountry.bind(this)}><img src={`/material-ui/img/flags/${c.code}.png`}/> {c.name}</button>)
+  renderButtons(options) {
+    shuffle(options);
+    return options.map(c => <button className="btn btn-primary btn-lg btn-block" onClick={this.selectCountry.bind(this)}> {c.name}</button>)
   }
 
   selectCountry(e) {
     var button = e.currentTarget;
     if (e.currentTarget.textContent === this.state.game.toBeGuessed) alert('Correct!');
-  }
 
-  pickGameType(selectedType) {
-    this.setState({
-      type: selectedType,
-      hasStarted: true
-    });
+
+    // ...
+    
+    // this.prepareGame();
   }
 
   renderGameStats() {

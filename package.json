@@ -58,6 +58,7 @@
     "hint.css": "2.2.1",
     "jump.js": "1.0.1",
     "leaflet": "0.7.7",
-    "prismjs": "1.4.1"
+    "prismjs": "1.4.1",
+    "react-google-maps": "4.11.0"
   }
 }

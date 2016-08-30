@@ -15,8 +15,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -26,7 +26,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -197,7 +197,7 @@ a {
   }
 }
 
-.article__title { 
+.article__title {
   font-size: 3em;
   line-height: 1.2em;
   overflow-wrap: break-word;
@@ -205,7 +205,7 @@ a {
   hyphens: auto;
 }
 
-.article h2 { 
+.article h2 {
   font-size: 1.5em;
   margin-top: 2em;
 }
@@ -233,7 +233,7 @@ a {
   margin-top: 0.5em;
   font-size: 0.8em;
   font-style: italic;
-} 
+}
 
 .article__meta__date {
   margin-top: 0.5em;
@@ -270,6 +270,7 @@ a {
 }
 
 .media__image {
+  cursor: pointer;
   width: 100%;
   // For lazy loading
   opacity: 1;

@@ -70,6 +70,10 @@ Due to the nature of the TMB being split into stages, many hikers opted for the 
 
 Food always seems to become a pivotal point for my hikes. I know nothing better than eating great quantities of good food after a day of hiking 🍕. On the TMB you have the possibility to eat at many of the hostels. In case you need to buy supplies, you are often able to buy simple goods such as pasta, tomato sauce and tuna. However, if you seek anything beyond the basics, make sure to stack up in the cities before heading into the mountains.
 
+<div class="media">
+  <img class="media__image" data-src="camp.jpg" title="Setting up camp close to Refugio Bonatti">
+</div>
+
 Finding a place to set up your tent is not a challenge. Most cities have camp grounds that can be used at a small fee; usually 10 EUR. In general it is not allowed to set up your tent in the wild. We did however do this on a few occasions - once outside Courmayeur and once at Bonatti.
 
 <div class="media">

@@ -4,7 +4,9 @@ block vars
   - var page = 'page-index';
 
 block content
-  img.front__logo(src="img/logo.png")   
+  .front__top.js-top
+    span.front__emoticons.hidden.js-emoticons 🍷💣👻🔑🍉🐠
+    img.front__logo.js-logo(src="img/logo.png")   
   ul.front__links
     li
       a(href="https://github.com/lindekaer", target="_blank", title="Github") Github
@@ -29,4 +31,3 @@ block content
     //- optgroup(label="Projects")
       //- for project in projects 
       //-   option(value="#{project.path}" data-type="project") #{project.title}
-

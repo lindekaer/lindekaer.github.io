@@ -145,6 +145,15 @@ a {
 -----------------------------------------------------------------------------------
 */
 
+.front__top {
+  height: 75px;
+  user-select: none;
+}
+
+.front__emoticons {
+  font-size: 3.5em;
+}
+
 .front__logo {
   width: 100%;
   max-width: 500px;
@@ -345,6 +354,10 @@ a {
 |
 -----------------------------------------------------------------------------------
 */
+
+.hidden {
+  display: none;
+}
 
 .navigation__back {
   text-align: center;

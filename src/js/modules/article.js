@@ -5,18 +5,18 @@ class Article {
   constructor() {
     var el = document.querySelector('.page-article');
     if (el === null) return;
-    this.article = el.querySelector('div.article');
+    this.article = el.querySelector('article.article');
 
     this.animateArticle();
     this.lazyLoadImages();
     this.enableTableOfContents();
-   
+
     if (!isMobile()) {
       this.enableTooltips('km-to-miles');
       this.enableTooltips('celcius-to-fahrenheit');
       this.enableLightbox();
     }
-    
+
   }
 
   animateArticle() {
@@ -36,7 +36,7 @@ class Article {
       // Setup regex and array to hold indices of all occurences
       if (type === 'km-to-miles') var regex = /[0-9]*\s(kilometer)(s)?/gi;
       if (type === 'celcius-to-fahrenheit') var regex = /[0-9]*\s(\u2103)/gi;
-      
+
       var result;
       var numberOfOccurences = 0;
 
@@ -48,7 +48,7 @@ class Article {
         var indices = [];
         var result;
         var text = p.innerHTML;
-  
+
         while ((result = regex.exec(p.innerHTML))) {
           indices.push({
             startIndex: result.index,
@@ -72,7 +72,7 @@ class Article {
         // Inser the tooltip HTML and print to DOM
         if (type === 'km-to-miles') var unit = `${toMiles(num)} miles`;
         if (type === 'celcius-to-fahrenheit') var unit = `${toFahrenheit(num)} \u2109`;
-   
+
         var firstPart = text.slice(0, startIndex);
         var midPart   = `<span class="hint--bottom" data-hint="${unit}">${text.slice(startIndex, endIndex)}</span>`;
         var lastPart  = text.slice(endIndex, text.length);

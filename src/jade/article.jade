@@ -9,13 +9,15 @@ block vars
 
 block content
 
-  .article
+  article.article(itemscope='', itemtype='http://schema.org/Article')
 
-    h1.article__title #{article.title}
+    h1.article__title(itemprop='headline') #{article.title}
 
     .article__meta
-      .article__meta__author #{article.author}
-      .article__meta__date #{article.date}
+      .article__meta__author(itemprop='author', itemscope='', itemtype='https://schema.org/Person') 
+        span(itemprop='name') #{article.author}
+      .article__meta__date
+        span(itemprop='datePublished') #{article.date}
 
     .article__content.
       !{article.content}

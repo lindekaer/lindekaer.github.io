@@ -1,7 +1,7 @@
 The Mont Blanc massif is a mountain range located partly in Switzerland, France and Italy. The hike "Tour de Mont Blanc" (TMB) surrounds the Mont Blanc massif and commonly starts and ends in the French city of Les Houces, but one is free to begin anywhere on the circuit. We started in Les Houches and hiked anti-clockwise for 11 days in July and August.
 
 ## Background
-The TMB with its 170 kilometers is one of Europe's most popular long distance hikes. One of the great strengths of the TMB is it's flexibility - there are plenty of options for alternative routes, which makes it easy to tailor the hike to personal desires. The hike is varied both in terms of nature, but also culture, food and people since you pass through three different countries. A trip walking the TMB makes it possible to have both traditional Swiss raclette, great French wine and delicious Italian food almost at the same time.
+The TMB with its 170 kilometers is one of Europe's most popular long distance hikes. One of the great strengths of the TMB is it's flexibility - there are plenty of options for alternative routes, which makes it easy to tailor the hike to personal desires. The hike is varied both in terms of nature, but also culture, food and people since you pass through three different countries. One of my favorite aspects of the hike was the fact that the Mont Blanc massif was visible at almost all times. This set every scene in amazing mountain surroundings.
 
 <div id="map1" data-lat="45.9544249" data-lng="6.9329604" data-zoom="8" data-type="outdoors">
   <div data-lat="45.890388" data-lng="6.798735" data-label="Les Houches"></div>
@@ -68,7 +68,7 @@ Due to the nature of the TMB being split into stages, many hikers opted for the 
   <p class="media__caption">The trip offered everything from camp cooking to fine dining</p>
 </div>
 
-Food always seems to become a pivotal point for my hikes. I know nothing better than eating great quantities of good food after a day of hiking 🍕. On the TMB you have the possibility to eat at many of the hostels. In case you need to buy supplies, you are often able to buy simple goods such as pasta, tomato sauce and tuna. However, if you seek anything beyond the basics, make sure to stack up in the cities before heading into the mountains.
+Food always seems to become a pivotal point for my hikes. I know nothing better than eating great quantities of good food after a day of hiking 🍕. On the TMB you have the possibility to eat at many of the hostels. *Think about it* - walking the TMB makes it possible to have both traditional Swiss raclette, great French wine and delicious Italian food almost at the same time. In case you need to buy some more down-to-earth supplies, you are often able to buy simple goods such as pasta, tomato sauce and tuna at the camp grounds. However, if you seek anything beyond the basics, make sure to stack up in the cities before heading into the mountains.
 
 <div class="media">
   <img class="media__image" data-src="camp.jpg" title="Setting up camp close to Refugio Bonatti">

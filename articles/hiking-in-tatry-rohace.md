@@ -1,8 +1,0 @@
-- Sindlovec
-- Our two main hikes
-- Zuberec
-- High Tatras
-- Equipment
-- Food
-- Plan for the days
-- Prices

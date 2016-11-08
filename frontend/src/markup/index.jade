@@ -1,0 +1,29 @@
+extends ./templates/template.jade
+
+block vars
+  - var page = 'page-index';
+
+block content
+
+  .wrapper
+  
+    .header
+      .header__graphic.js-top
+        span.header__emoticons.hidden.js-emoticons 🍷💣👻🔑🍉🐠
+        img.header__logo.js-logo(src="frontend/dist/images/logo.png")
+      .header__search
+        input.header__search__field.js-search(type="text", placeholder="Search")
+    
+    //- a(href="https://github.com/lindekaer", target="_blank", title="Github") Github
+    //- a(href="mailto:theodor.lindekaer@gmail.com", title="Email") Email
+    //- a(href="https://www.linkedin.com/in/theodor-c-listov-lindekaer-3289833b", target="_blank", title="LinkedIn") LinkedIn
+    //- a(href="https://www.facebook.com/theodor.lindekaer", target="_blank", title="Facebook") Facebook
+    //- a(href="https://twitter.com/lindekaer", target="_blank", title="Twitter") Twitter
+
+    .article-grid
+      for article in articles.reverse()
+        a.article-grid__item.js-article(href="#{article.slug}.html", data-title="#{article.title}")
+          h2.article-grid__title #{article.title}
+          p.article-grid__meta 
+            span(class="category-#{article.category.toLowerCase()}") #{article.category}
+            | #{article.date}

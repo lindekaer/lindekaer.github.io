@@ -1,0 +1,29 @@
+//- Default variables that can be overwritten from files that extend the template
+- var title       = 'Blog | Lindekaer'
+- var description = 'My personal blog with tutorials, ideas and crazy thoughts'
+- var keywords    = 'development, hiking, outdoor, learning'
+- var author      = 'Theodor Lindekaer'
+
+//- Make it possible to pass variables to this template
+block vars
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="#{description}")
+    meta(name="keywords", content="#{keywords}")
+    meta(name="author", content="#{author}")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    include ../partials/favicon.jade
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Merriweather:300,+300italic|Lato:900|Source+Code+Pro', media='all')
+    link(rel="stylesheet", href="frontend/dist/styles/dist-vendor.min.css", type="text/css")
+    link(rel="stylesheet", href="frontend/dist/styles/dist.min.css", type="text/css")
+    title #{title}
+    block head
+  body(class="#{page}")
+    block content
+    
+    script(src="frontend/dist/scripts/dist-vendor.min.js")
+    script(src="frontend/dist/scripts/dist.min.js")

@@ -1,0 +1,145 @@
+/*
+-----------------------------------------------------------------------------------
+|
+| Article page styles
+|
+-----------------------------------------------------------------------------------
+*/
+
+.page-article {
+
+  .gradient-top {
+    @include gradient-background;
+    height: 500px;
+
+    @include mobile {
+      height: 100px;
+    }
+  }
+
+  .article {
+    background: white;
+    padding: 3em 4em;
+    margin: -250px auto 0px auto;
+    max-width: 1000px;
+
+    @include mobile {
+      margin-top: 0px;
+      padding: 3em 2.5em;
+    }
+  }
+
+  .article__title {
+    font-size: 3em;
+    line-height: 1.2em;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+
+  .article h2 {
+    font-size: 1.5em;
+    margin-top: 2em;
+  }
+
+  .article h3 {
+    margin-top: 2em;
+  }
+
+  .article p {
+    margin: 1em 0em;
+    line-height: 2em;
+  }
+
+  .article ul {
+    padding-left: 1.5em;
+    line-height: 2em;
+    margin: 1em 0em 1em 0em;
+  }
+
+  .article__meta {
+    margin: 1em 0em 2em 0em;
+  }
+
+  .article__meta__author {
+    margin-top: 0.5em;
+    font-size: 0.8em;
+    color: $color-light-grey;
+  }
+
+  .article__meta__date {
+    margin-top: 0.6em;
+    font-size: 0.8em;
+    color: $color-light-grey;
+  }
+
+  .article pre {
+    margin: 2em 0em !important;
+  }
+
+  .article li {
+    margin-bottom: 0.3em;
+  }
+
+  .article p code,
+  .article ul code {
+    padding: 2px 6px;
+    color: $color-purple;
+    background-color: #ededed;
+    border-radius: 4px;
+  }
+
+  .media {
+    margin: 2em 0em 2em 0em;
+  }
+
+  .media__image {
+    cursor: pointer;
+    width: 100%;
+
+    .media.wide & {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+  }
+
+  .media__caption {
+    font-style: italic;
+    font-size: 80%;
+    text-align: center;
+    width: 100%;
+    padding: 0em 1.2em;
+    color: grey;
+
+    @include mobile {
+      padding: none;
+    }
+  }
+
+  .media.group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-flow: wrap;
+
+    @include  mobile {
+      flex-flow: column;
+    }
+  }
+
+  .media.group .media__image {
+    width: 50%;
+    padding: 0.4em;
+
+    @include mobile {
+      width: 100%;
+      padding-right: 0em;
+      padding-left: 0em;
+    }
+  }
+
+}

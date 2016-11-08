@@ -9,7 +9,21 @@
     "_img-create-mobile": "rm -r ~/Sites/blog/img/article/mobile/*; sips -Z 800 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/mobile",
     "_img-create-desktop": "rm -r ~/Sites/blog/img/article/desktop/*; sips -Z 2048 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/desktop",
     "_push-to-github": "git add .; git commit -m 'Production build'; git push",
-    "_take-picture": "imagesnap ~/Dropbox/private/mac/git_snapshots/$(date +'%m-%d-%yT%H:%M').jpg"
+    "_take-picture": "imagesnap ~/Dropbox/private/mac/git_snapshots/$(date +'%m-%d-%yT%H:%M').jpg",
+    "gulp": "gulp --cwd ./frontend/gulp"
+  },
+  "babel": {
+    "presets": [
+      "es2015",
+      "stage-0"
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "L",
+      "$"
+    ]
   },
   "repository": {
     "type": "git",
@@ -23,7 +37,9 @@
   "homepage": "https://github.com/lindekaer/lindekaer.github.io#readme",
   "devDependencies": {
     "babel-core": "6.7.4",
+    "babel-eslint": "7.1.0",
     "babel-preset-es2015": "6.6.0",
+    "babel-preset-stage-0": "6.16.0",
     "babelify": "7.2.0",
     "browser-sync": "2.11.2",
     "browserify": "13.0.0",
@@ -37,24 +53,25 @@
     "gulp-htmlmin": "1.3.0",
     "gulp-inline": "0.1.1",
     "gulp-jade": "1.1.0",
+    "gulp-notify": "2.2.0",
     "gulp-plumber": "1.1.0",
     "gulp-rename": "1.2.2",
     "gulp-sass": "2.2.0",
     "gulp-uglify": "1.5.3",
     "gulp-watch": "4.3.5",
     "imagemin": "4.0.0",
-    "imagemin-jpegtran": "4.3.2",
-    "imagemin-optipng": "4.3.0",
     "jsonlylightbox": "0.5.3",
     "marked": "0.3.5",
     "moment": "2.12.0",
     "rollupify": "0.2.0",
     "run-sequence": "1.1.5",
+    "standard": "8.4.0",
     "vinyl-buffer": "1.0.0",
     "vinyl-source-stream": "1.1.0"
   },
   "dependencies": {
     "cheerio": "0.20.0",
+    "gulp-imagemin": "3.1.0",
     "hint.css": "2.2.1",
     "jump.js": "1.0.1",
     "leaflet": "0.7.7",

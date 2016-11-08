@@ -1,0 +1,111 @@
+/*
+-----------------------------------------------------------------------------------
+|
+| Imports
+|
+-----------------------------------------------------------------------------------
+*/
+
+@import 'reset';
+@import 'colors';
+@import 'mixins';
+@import 'typography';
+
+@import 'page.index';
+@import 'page.article';
+
+/*
+-----------------------------------------------------------------------------------
+|
+| Variables
+|
+-----------------------------------------------------------------------------------
+*/
+
+$table-of-contents-indent: 26px;
+
+/*
+-----------------------------------------------------------------------------------
+|
+| Base
+|
+-----------------------------------------------------------------------------------
+*/
+
+html {
+  font-family: 'Merriweather', 'Verdana', 'Arial', 'Helvetica', serif;
+  font-weight: 300;
+  font-size: 21px;
+  height: 100%;
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+/*
+-----------------------------------------------------------------------------------
+|
+| Map
+|
+-----------------------------------------------------------------------------------
+*/
+
+[id*="map"] {
+  margin: 3em 0em 3em 0em;
+  height: 500px;
+  border-radius: 4px;
+  @media (max-width: 720px) {
+    height: 350px;
+  }
+}
+
+/*
+-----------------------------------------------------------------------------------
+|
+| Misc.
+|
+-----------------------------------------------------------------------------------
+*/
+
+.hidden {
+  display: none !important;
+}
+
+.navigation__back {
+  text-align: center;
+  margin: 3em 0px 3em 0px;
+}
+
+ul.table-of-contents {
+  padding: 1em 2em;
+  margin: 3em 0em;
+  background-color: #f3f3f3;
+
+  li {
+    list-style: none;
+    font-size: 0.8em;
+    margin: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    text-decoration: none;
+
+    &:visited {
+      color: $color-purple;
+    }
+  }
+
+  .number-3 { padding-left: $table-of-contents-indent; }
+  .number-4 { padding-left: $table-of-contents-indent * 2; }
+  .number-5 { padding-left: $table-of-contents-indent * 3; }
+  .number-6 { padding-left: $table-of-contents-indent * 4; }
+
+}

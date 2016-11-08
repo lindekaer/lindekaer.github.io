@@ -8,3 +8,4 @@
 - Due to a bug in Leaflet, the map hijacks scroll touch events. Use version 7.5 or wait for fix.
 - Add Docker text (see below)
 - Create 404.html
+- Image orientation

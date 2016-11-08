@@ -4,10 +4,10 @@
   "description": "My personal blog",
   "main": "index.html",
   "scripts": {
-    "prod": "npm run _img-create-mobile; npm run _img-create-desktop; gulp prod; npm run _push-to-github; npm run _take-picture",
+    "prod": "npm run _img-create-mobile; npm run _img-create-desktop; npm run gulp prod; npm run _push-to-github; npm run _take-picture",
     "img": "npm run _img-create-mobile; npm run _img-create-desktop;",
-    "_img-create-mobile": "rm -r ~/Sites/blog/img/article/mobile/*; sips -Z 800 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/mobile",
-    "_img-create-desktop": "rm -r ~/Sites/blog/img/article/desktop/*; sips -Z 2048 ~/Sites/blog/img/article/src/*.jpg --out ~/Sites/blog/img/article/desktop",
+    "_img-create-mobile": "rm -r ~/Sites/blog/frontend/dist/images/article/mobile/*; sips -Z 800 ~/Sites/blog/frontend/src/images/article/src/*.jpg --out ~/Sites/blog/frontend/dist/images/article/mobile",
+    "_img-create-desktop": "rm -r ~/Sites/blog/frontend/dist/images/desktop/*; sips -Z 2048 ~/Sites/blog/frontend/src/images/article/src/*.jpg --out ~/Sites/blog/frontend/images/article/desktop",
     "_push-to-github": "git add .; git commit -m 'Production build'; git push",
     "_take-picture": "imagesnap ~/Dropbox/private/mac/git_snapshots/$(date +'%m-%d-%yT%H:%M').jpg",
     "gulp": "gulp --cwd ./frontend/gulp"

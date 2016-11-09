@@ -62,7 +62,7 @@ const articles = [
   new Article('GR 6 Barcelona to Montserrat', 'Travel', '2016-06-05'),
   new Article('GR 20 Calenzana to Conca', 'Travel', '2016-07-10'),
   new Article('Tour de Mont Blanc', 'Travel', '2016-08-30'),
-  // new Article('Hiking in Tatry Roháče', 'Travel', '2016-09-05'),
+  new Article('Hiking in Tatry Roháče', 'Travel', '2016-09-05')
   // new Article('Async error handling in Node', 'Development', '2016-10-05'),
   // new Article('Serve private content from AWS S3', 'Development', '2016-11-01')
 ]

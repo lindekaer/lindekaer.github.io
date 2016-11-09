@@ -28,9 +28,9 @@ The hosts are very friendly and usually have in-depth knowledge about the trails
 </div>
 
 ## Hiking opportunities
-We did two major hikes in the Tatry Roháče region. The first hike started by taking the cable car next to Penzióne Šindľovec to the top of XXXXX. From there we walked across the range passing XXX, YYY, ZZZ before finally reaching the (BANIKOCKS SEDLE) (the saddle between Banikov and XXXX). The hike was easy and had plenty of good view points along the way. We kept a decent pace, but took many breaks resulting in a total hiking time of around 8 hours.
+We did two major hikes in the Tatry Roháče region. The first hike started by taking the cable car next to Penzióne Šindľovec. We headed towards Salatin with the goal of ending by Banikovske sedlo before descending. The hike was easy and had plenty of good view points along the way. We kept a decent pace, but took many breaks resulting in a total hiking time of around 8 hours.
 
-The second hike was planned according to a goal that Karel and I set during our last visit to the region. We wanted to hike the great ciruit going from Penzióne Šindľovec across XXX and through XXX, YYY ending at Banikov before heading down into the valley. This was a more challenging hike with quite a few sections with chains on the steep mountain sides. It took us 12 hours to complete the full circuit.
+The second hike was planned according to a goal that Karel and I set during our last visit to the region. We wanted to hike the great ciruit going from Penzióne Šindľovec across Volovec, onto Ostry Roháč and several other peaks before ending at Banikov and descending down through the valley. This was a more challenging hike with quite a few sections with chains on the steep mountain sides. It took us 12 hours to complete the full circuit.
 
 For more relaxing days, one may walk around the mountain lakes (Roháče plesa) for some good views of the entire range and a handful of idyllic spots for eating lunch. Keep in mind that you do not encounter any huts or cabins when you hike in Tatry Roháče. Therefore you have to bring your own supplies for the entire day - this is no problem as a lunch pack and 3 liters of water is usually sufficient.
 

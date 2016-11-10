@@ -219,7 +219,7 @@ git log --oneline --decorate
 git reset HEAD^
 
 # Delete a remote branch
-git git push origin --delete test
+git push origin --delete test
 
 # Change the name of a branch
 git branch -m [OLD_NAME] [NEW_NAME]

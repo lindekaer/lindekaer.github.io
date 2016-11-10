@@ -44,6 +44,54 @@ This is the rule that enforces signed URLs to access resources
 - Expand **CloudFront Key Pairs**
 - Click **Create New Key Pair**
 - Download both the private and public key and store them safely
+- Note down the **Access Key ID**, you will need that for later
 
 ## 4. Create signed URLs
-I am using NodeJS for my application, so I made use of the NPM package `aws-cloudfront-sign`
+I am using NodeJS for my application, so I made use of the NPM package `aws-cloudfront-sign`. Install it in your project directory.
+
+```shell
+npm install --save aws-cloudfront-sign
+```
+
+I will demonstrate the creation of a signed URL by implementing the `aws-cloudfront-sign` package in an Express route handler.
+
+```javascript
+import express from 'express'
+import cf from 'aws-cloudfront-sign'
+
+// AWS specific options
+const AWS_ACCESS_KEY_ID = 'xxxxxxxxxx'
+const AWS_PRIVATE_KEY_PATH = './private-key.pem'
+const AWS_CLOUD_FRONT_URL = 'http://xxxxxxxx.cloudfront.net'
+
+// Initialize the Express application
+const app = express()
+app.listen(9000, () => console.log('Running on port 9000'))
+
+// Setup route handler
+app.get('/images', createSignedUrl)
+
+// Signed URL logic
+function createSignedUrl (req, res) {
+  const name = req.query.name
+  const extension = req.query.ext
+  const options = {
+    keypairId: AWS_ACCESS_KEY_ID,
+    privateKeyPath: AWS_PRIVATE_KEY_PATH,
+    expireTime: new Date().getTime() + 45000
+  }
+  const url = `${AWS_CLOUD_FRONT_URL}/${name}.${extension}`
+  const signedUrl = cf.getSignedUrl(url, options)
+  res.json({ url: signedUrl })
+}
+```
+
+You will now be able to create a signed URL for the `funny_cat.jpg` in your *private* S3 bucket. Try this:
+
+```shell
+curl http://localhost:9000/images?name=funny_cat&ext=jpg
+```
+
+That will return a looong URL with query keys *Expires*, *Policy* and *Key-Pair-Id*. With this URL, you can go right ahead and fetch the resource. The URL will expire after 45 seconds as declared in our `options` object.
+
+And well, that's it! ⚡️

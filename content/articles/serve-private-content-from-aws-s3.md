@@ -5,6 +5,11 @@ In this tutorial I will show you how to restrict access to the files you store i
 
 An answer to this problem is *usage of signed URLs*. A signed URL is a URL that been signed by a trusted authority. It is possible to include additional details in the signature such as time to expiry. This means that we can sign a URL pointing to a resource in our S3 bucket and thereby ensure that only authenticated users can access the resource. There is a bit more nuance to the solution, but let's take a look at the implementation step for step.
 
+<div class="media">
+  <img class="media__image" data-src="overview.png" title="The system">
+</div>
+
+
 ## Implementation
 My implementation is mostly based on the AWS Console (web interface), but using the AWS CLI is also a possibility.
 

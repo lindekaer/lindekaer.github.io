@@ -22,7 +22,8 @@
     "parser": "babel-eslint",
     "globals": [
       "L",
-      "$"
+      "$",
+      "dynamics"
     ]
   },
   "repository": {
@@ -71,6 +72,7 @@
   },
   "dependencies": {
     "cheerio": "0.20.0",
+    "dynamics.js": "1.1.5",
     "gulp-imagemin": "3.1.0",
     "hint.css": "2.2.1",
     "jump.js": "1.0.1",

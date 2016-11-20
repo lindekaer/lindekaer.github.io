@@ -1,9 +1,9 @@
-In this tutorial I will show you how to restrict access to the files you store in a AWS S3 bucket. In order to achieve this, we are going to set up both [AWS S3](https://github.com/open-guides/og-aws#s3) and [AWS CloudFront](https://github.com/open-guides/og-aws#cloudfront). Before doing into the implementation I'd like to provide an overview of the problem space and the technologies.
+In this tutorial I will show you how to restrict access to the files you store in a AWS S3 bucket. In order to achieve this, we are going to set up both [AWS S3](https://github.com/open-guides/og-aws#s3) and [AWS CloudFront](https://github.com/open-guides/og-aws#cloudfront). Next section is a brief overview of the technologies we are going to use.
 
 ## S3, CloudFront and signed URLs
 **S3** is a storage solution from Amazon Web Services (AWS) for storing files. These files can be anything from `.html` (for hosting a static site) to various image and audio formats such as `.mp3` and `.mp4`. **CloudFront** is a CDN service that plays well together with other AWS services. Storing files and serving them over CDN is all well and good, but what if I want to enable only authenticated users to be able to download? Additionally, what if I want to restrict the access to, let's say, 20 seconds?
 
-An answer to this problem is *usage of signed URLs*. A signed URL is a URL that been signed by a trusted authority. It is possible to include additional details in the signature such as time to expiry. This means that we can sign a URL pointing to a resource in our S3 bucket and thereby ensure that only authenticated users can access the resource. There is a bit more nuance to the solution, but let's take a look at the implementation step for step.
+An answer to this problem is *usage of signed URLs*. A signed URL is a URL that has been signed by a trusted authority. It is possible to include additional details in the signature such as time to expiry. This means that we can sign a URL pointing to a resource in our S3 bucket and ensure that only authenticated users can access it. There is a bit more nuance to the solution, but let's take a look at the implementation step for step.
 
 <div class="media">
   <img class="media__image" data-src="overview.png" title="Only clients with a signed URL are allowed to retrieve resources from the S3 bucket">
@@ -52,7 +52,7 @@ This is the rule that enforces signed URLs to access resources
 - Note down the **Access Key ID**, you will need that for later
 
 ## 4. Create signed URLs
-I am using NodeJS for my application, so I made use of the NPM package `aws-cloudfront-sign`. Install it in your project directory.
+As I am using NodeJS for my application, I use the NPM package `aws-cloudfront-sign`. Install it in your project directory.
 
 ```shell
 npm install --save aws-cloudfront-sign

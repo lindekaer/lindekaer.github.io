@@ -34,9 +34,9 @@ markupTasks.renderArticles = (cb) => {
   iterateArticles(articles, startIndex, cb)
 }
 
-markupTasks.renderIndex = (cb) => {
-  render('index', 'index', { articles, slides }, cb)
-}
+markupTasks.renderIndex = (cb) => { render('index', 'index', { articles, slides }, cb) }
+markupTasks.render404 = (cb) => { render('404', '404', { articles, slides }, cb) }
+markupTasks.render500 = (cb) => { render('500', '500', { articles, slides }, cb) }
 
 markupTasks.htmlSetAlt = () => {
   return gulp.src(path.join(__dirname, '..', '..', '*.html'))

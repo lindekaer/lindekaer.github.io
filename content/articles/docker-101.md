@@ -2,17 +2,19 @@ There are plenty of resources on Docker out there, but not all tutorials are equ
 
 ## Step 1 - Server setup
 
+<p class="article__notice">You are now able to run Docker directly on your Mac (running a small Linux image in the background). Download the new Mac OS Docker software.</p>
+
 Spin up a virtual server. You can use [Virtualbox](https://www.virtualbox.org/), but I decided to spin up a virtual 64 bit Centos server on Digital Ocean with 512 MB memory and a 20 GB disk (this server will in Docker context be referred to as the *host machine*). Prepare the server with the following commands:
 
 ```bash
 # List kernel version - it MUST be 3.10 or above
-> uname -r
+uname -r
 
 # Update system packages
-> sudo yum update
+sudo yum update
 
 # Add yum repository
-> sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
 [dockerrepo]
 name=Docker Repository
 baseurl=https://yum.dockerproject.org/repo/main/centos/$releasever/
@@ -22,10 +24,10 @@ gpgkey=https://yum.dockerproject.org/gpg
 EOF
 
 # Install Docker
-> sudo yum install docker-engine
+sudo yum install docker-engine
 
 # Start the Docker daemon
-> sudo service docker start
+sudo service docker start
 ```
 
 This should make it possible for you to run the `docker` command from the command line on your server. Try `docker --help` for a listing of commands. Before we proceed you need to know the differences between these Docker concepts:
@@ -47,10 +49,10 @@ You are now ready to start some containers. In order for our Nginx server to ser
 
 ```bash
 # Create a directory to store the HTML file
-> mkdir -p /var/www
+mkdir -p /var/www
 
 # Create an index page
-> echo "<html><h1>Hello from host machine!</h1></html>" > /var/www/index.html
+echo "<html><h1>Hello from host machine!</h1></html>" > /var/www/index.html
 ```
 
 Read carefully through the code below before firing up the containers. Additionally, run `docker run --help` for parameter explanations.
@@ -62,24 +64,24 @@ Read carefully through the code below before firing up the containers. Additiona
 # --name = name your container
 # -e     = set environment variable
 # -v     = mount a drive from the host machine to the container
-> docker run -d -p 80:80 -v /var/www/:/usr/share/nginx/html --name "nginx-server" nginx
-> docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Xa8j3cs10 --name "mysql-server" mysql
+docker run -d -p 80:80 -v /var/www/:/usr/share/nginx/html --name "nginx-server" nginx
+docker run -d -p 3306:3306 -e MYSQL_ROOT_PASSWORD=Xa8j3cs10 --name "mysql-server" mysql
 ```
 
 Containers should be regarded as immutable as they don't change after initialization. Furthermore, they can quickly be stopped, removed and started again. They are therefore not suitable for storing data. When working with MySQL, you want to make sure that the data written to the database is persisted. This can be achieved by mounting a directory from the host machine to the container.
 
 ```bash
 # Stop the MySQL container
-> docker stop "mysql-server"
+docker stop "mysql-server"
 
 # Remove the MySQL container
-> docker rm "mysql-server"
+docker rm "mysql-server"
  
 # Create directory on host machine to hold data
-> mkdir -p /var/data
+mkdir -p /var/data
 
 # Start the MySQL container again (this time writing data to the host machine)
-> docker run -d -p 3306:3306 -v /var/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Xa8j3cs10 --name "mysql-server" mysql
+docker run -d -p 3306:3306 -v /var/data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=Xa8j3cs10 --name "mysql-server" mysql
 ```
 
 Verify that the containers have started by running `docker ps`. 
@@ -97,31 +99,31 @@ I have included a few useful Docker snippets:
 
 ```bash
 # List all Docker images
-> docker images -a
+docker images -a
 
 # List all Docker containers
-> docker ps -a
+docker ps -a
 
 # Stop and remove all Docker containers
-> docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
+docker stop $(docker ps -a -q) && docker rm $(docker ps -a -q)
 
 # Remove all images
-> docker rmi $(docker images -q)
+docker rmi $(docker images -q)
 
 # Get command line access to a container
-> docker exec -it [CONTAINER_ID] /bin/bash
+docker exec -it [CONTAINER_ID] /bin/bash
 
 # Get logs from container
-> docker logs [CONTAINER_ID]
+docker logs [CONTAINER_ID]
 
 # Remove all exited containers
-> docker rm -v $(docker ps -a -q -f status=exited)
+docker rm -v $(docker ps -a -q -f status=exited)
 
 # Get command line access to a running container
-> docker attach [CONTAINER_ID]
+docker attach [CONTAINER_ID]
 
 # Get an updating log from container (like tail)
-> docker logs -f [CONTAINER_ID]
+docker logs -f [CONTAINER_ID]
 ```
 
 ## Docker syllabus

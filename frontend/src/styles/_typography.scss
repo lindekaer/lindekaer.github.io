@@ -6,6 +6,10 @@
 -----------------------------------------------------------------------------------
 */
 
+h1, h2, h3, h4, h5, h6, ul, li, p, button {
+  color: $color-soft-black;
+}
+
 h1, h2, h3, h4, h5, h6, input {
   font-family: 'Lato', 'Helvetica', sans-serif;
 }
@@ -17,6 +21,10 @@ h1 {
 code {
   font-size: 90%;
   font-family: 'Source Code Pro', 'Lucida Console' !important;
+}
+
+pre code {
+  font-size: 70%;
 }
 
 a {

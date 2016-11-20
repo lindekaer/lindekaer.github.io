@@ -53,11 +53,24 @@
 
   .article ul {
     padding-left: 1.5em;
-    line-height: 1.3em;
-    margin: 1em 0em 1em 0em;
+    line-height: 2em;
+    margin: 1.5em 0em 1.5em 0em;
+    list-style-type: none;
 
     li {
-      margin-top: 1em;
+      position: relative;
+      margin-top: 0.3em;
+
+      &:before {
+        content: '';
+        position: absolute;
+        height: 0.3em;
+        width: 0.3em;
+        border-radius: 50%;
+        background-color: $color-purple;
+        top: 0.9em;
+        left: -1.2em;
+      }
     }
   }
 
@@ -93,6 +106,12 @@
     border-radius: 4px;
   }
 
+  .article__notice {
+    padding: 1em;
+    background-color: $color-blue-light;
+    border-radius: 4px;
+  }
+
   .media {
     margin: 2em 0em 2em 0em;
   }
@@ -100,15 +119,15 @@
   .media__image {
     cursor: pointer;
     width: 100%;
+  }
 
-    .media.wide & {
-      width: 100vw;
-      position: relative;
-      left: 50%;
-      right: 50%;
-      margin-left: -50vw;
-      margin-right: -50vw;
-    }
+  .media.wide .media__image {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 
   .media__caption {

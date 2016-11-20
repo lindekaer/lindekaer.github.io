@@ -232,5 +232,5 @@ git fetch --all
 git reset --hard [COMMIT]
 
 # Change the message of your last commit
-git git commit --amend -m "New and correct message"
+git commit --amend -m "New and correct message"
 ```

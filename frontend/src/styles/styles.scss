@@ -13,6 +13,7 @@
 
 @import 'page.index';
 @import 'page.article';
+@import 'page.http-error';
 
 /*
 -----------------------------------------------------------------------------------
@@ -78,7 +79,7 @@ body {
 
 .navigation__back {
   text-align: center;
-  margin: 3em 0px 3em 0px;
+  padding: 3em 0px 3em 0px;
 }
 
 ul.table-of-contents {

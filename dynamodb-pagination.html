@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="description" content="In this tutorial I will walk you through using pagination with DynamoDB. We are going to use a simple dataset of comments to articles on a website."><meta name="keywords" content="development, programming, technology, IT, computer, algorithm, tutorial, guide, Docker, Node, Javascript, HTML, CSS"><meta name="author" content="Theodor Lindekaer"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="apple-touch-icon" sizes="57x57" href="frontend/dist/images/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="frontend/dist/images/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="frontend/dist/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="frontend/dist/images/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="frontend/dist/images/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="frontend/dist/images/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="frontend/dist/images/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="frontend/dist/images/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="frontend/dist/images/apple-touch-icon-180x180.png"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="frontend/dist/images/android-chrome-192x192.png" sizes="192x192"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="frontend/dist/images/manifest.json"><link rel="mask-icon" href="frontend/dist/images/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="frontend/dist/images/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="frontend/dist/images/mstile-144x144.png"><meta name="msapplication-config" content="frontend/dist/images/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,+300italic|Lato:400,900|Source+Code+Pro" media="all"><link rel="stylesheet" href="frontend/dist/styles/dist-vendor.min.css" type="text/css"><link rel="stylesheet" href="frontend/dist/styles/dist.min.css" type="text/css"><title>DynamoDB pagination | Lindekaer</title></head><body class="page-article"><div class="gradient-top"></div><article itemscope="" itemtype="http://schema.org/Article" class="article"><h1 itemprop="headline" class="article__title">DynamoDB pagination</h1><div class="article__meta"><div itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="article__meta__author"><span itemprop="name">Theodor Lindekaer</span></div><div class="article__meta__date"><span itemprop="datePublished">November 14th, 2016</span></div></div><main class="article__content"><p>In this tutorial I will walk you through using pagination with DynamoDB. We are going to use a simple dataset of comments to articles on a website.</p><p>Here is a small snapshot of the dataset:</p><pre><code class="lang-javascript">// ...
+{ _id: &apos;112&apos;, timestamp: 1478882596941, articleId: &apos;7&apos;, author: &apos;Xia Long&apos;, text: &apos;...&apos; },
+{ _id: &apos;113&apos;, timestamp: 1478882597111, articleId: &apos;7&apos;, author: &apos;Ben Langdon&apos;, text: &apos;...&apos; },
+{ _id: &apos;114&apos;, timestamp: 1478882696342, articleId: &apos;7&apos;, author: &apos;John Doe&apos;, text: &apos;...&apos; },
+{ _id: &apos;115&apos;, timestamp: 1478892592919, articleId: &apos;6&apos;, author: &apos;Mike Dott&apos;, text: &apos;...&apos; }
+// ...
+</code></pre><p>Each article has the following properties:</p><ul><li><code>_id</code>, a unique ID for the comment</li><li><code>timestamp</code>, the timestamp when the comment was made</li><li><code>articleId</code>, the ID for the article commented on</li><li><code>author</code>, name of the comment author</li><li><code>text</code>, the comment text</li></ul><h2 id="pagination">Pagination</h2><p>When you paginate through data, you consume it bit by bit. It&apos;s easy to understand with the analogy to a book. For each page your turn, you see the next batch of 500 words. Simple pagination simply uses the primary key (<code>_id</code> in our case) and gradually goes through all of the data. But what if you want to iterate only a subset in a specific order?</p><p>For our dataset, we would like to paginate only those comments belonging to a specific article and order the results by <code>timestamp</code>. Hopefully the walkthrough will help you to achieve your own &apos;beyond-basic&apos; pagination goals.</p><h2 id="dynamodb-setup">DynamoDB setup</h2><p>With this in mind, let&apos;s proceed to the AWS console (web UI) to setup our DynamoDB.</p><ul><li>Go to <code>DynamoDB</code> from the AWS console</li><li>Click <strong>Create Table</strong></li><li>As <strong>Table Name</strong> write <em>Comments</em></li><li>As <strong>Primary Key</strong> write <em>_id</em> and set it as string</li><li>Click <strong>Create</strong></li></ul><p>Now AWS is setting up your DynamoDB - please be patient! &#x1F349;&#x1F32E;&#x1F347; When your table is ready, we can proceed.</p><ul><li>Click <strong>Tables</strong> in the left navigation</li><li>Click the <strong>Comments</strong> table</li><li>Click <strong>Indexes</strong> in the top navigation</li><li>Click <strong>Create Index</strong></li></ul><p>Now things get exciting! Because we want to be able to query on <code>articleId</code> (which is <em>not</em> the primary key) and fetch the results in order of <code>timestamp</code>, we need to do the following:</p><ul><li>Write <em>articleId</em> as <strong>Primary Key</strong></li><li>Check <strong>Add sort key</strong> and write <em>timestamp</em></li><li>Ensure that <em>timestamp</em> is set as number (DynamoDB needs to know how to sort the rows)</li><li>Click <strong>Create Index</strong></li></ul><p>Now fill in some records before proceeding.</p><h2 id="querying-dynamodb">Querying DynamoDB</h2><p>Now we are set up and ready to start querying our DynamoDB. I will be using the AWS SDK for JS, but you can pick your own flavour. Start by initializing the AWS SDK:</p><pre><code class="lang-javascript">import AWS from &apos;aws-sdk&apos;
+
+AWS.config.update({
+  accessKeyId: &apos;YOUR_KEY_ID&apos;,
+  secretAccessKey: &apos;YOUR_ACCESS_KEY&apos;,
+  region: &apos;eu-central-1&apos; // region of choice
+})
+
+const dynamo = new AWS.DynamoDB.DocumentClient()
+</code></pre><p>Image we have an Express (NodeJS server framework) application running exposing the <code>/:articleId/comments</code> endpoint</p><pre><code class="lang-javascript">import express from &apos;express&apos;
+
+const app = express()
+app.listen(9000)
+
+app.get(&apos;/:articleId/comments&apos;, fetchComments)
+</code></pre><p>When clients fetch our comments from the endpoint they specify</p><ul><li><code>articleId</code> directly in the route</li><li><code>items</code> in the query string</li></ul><p>like this:</p><pre><code class="lang-shell">curl /7/comments?items=10
+</code></pre><p>We are then able to construct our query for DynamoDB</p><pre><code class="lang-javascript">const ITEMS_PER_PAGE = req.query.items
+const ARTICLE_ID = req.params.articleId
+
+const params = {
+  TableName: &apos;Comments&apos;,
+  Limit: ITEMS_PER_PAGE,
+  IndexName: &apos;articleId-timestamp-index&apos;,
+  KeyConditionExpression: &apos;articleId = :x&apos;,
+  ExpressionAttributeValues: {
+    &apos;:x&apos;: ARTICLE_ID
+  }
+}
+
+const result = await dynamo.query(params).promise()
+</code></pre><p>The result from the query above looks something like this:</p><pre><code class="lang-javascript">{ 
+  Items: [
+    { _id: &apos;112&apos;, timestamp: 1478882596941, articleId: &apos;7&apos;, author: &apos;Xia Long&apos;, text: &apos;...&apos; },
+    { _id: &apos;113&apos;, timestamp: 1478882597111, articleId: &apos;7&apos;, author: &apos;Ben Langdon&apos;, text: &apos;...&apos; },
+    { _id: &apos;114&apos;, timestamp: 1478882696342, articleId: &apos;7&apos;, author: &apos;John Doe&apos;, text: &apos;...&apos; } 
+  ],
+  Count: 3,
+  ScannedCount: 3,
+  LastEvaluatedKey: { 
+    articleId: 7,
+    _id: 114,
+    timestamp: 1478882696342 
+  } 
+}
+</code></pre><p>The <code>Items</code> property holds the retrieved data, while the other keys provide information about the query. From the example, <code>Count</code> and <code>ScannedCount</code> are equal because no filtering is applied - everything that was scanned has been returned to us. Pay particular attention to the <code>LastEvaluatedKey</code> property, as this is the required information to continue the pagination. If DynamoDB on a subsequent query is provided with <code>articleId</code>, <code>_id</code> and <code>timestamp</code>, it will be able to return the next batch of data in the correct order.</p><p class="article__notice">The <code>LastEvaluatedKey</code> property will only be returned from DynamoDB if <code>Count</code> is specified in the query or if the data exceeds 1 MB.</p><p>Let&apos;s take a look at our query for the next batch of data:</p><pre><code class="lang-javascript">const params = {
+  TableName: &apos;Comments&apos;,
+  Limit: ITEMS_PER_PAGE,
+  IndexName: &apos;articleId-timestamp-index&apos;,
+  KeyConditionExpression: &apos;articleId = :x&apos;,
+  ExpressionAttributeValues: {
+    &apos;:x&apos;: ARTICLE_ID
+  },
+  ExclusiveStartKey: { 
+    articleId: 7,
+    _id: 114,
+    timestamp: 1478882696342 
+  } 
+}
+
+const result = await dynamo.query(params).promise()
+</code></pre><p>Notice that we have added the <code>ExclusiveStartKey</code> property and passed the result from <code>LastEvaluatedKey</code> as the value. Once executed, the query will return the next batch of data. In order to have the <code>LastEvaluatedKey</code> key available in our route handler for <code>/:articleId/comments</code>, you need to pass the value of <code>LastEvaluatedKey</code> to the client and then receive it again upon next request.</p><p><em>A quick note</em> - you are able to change whether you receive the data in ascending or descending order by specifying the <code>ScanIndexForward</code> property when querying.</p><p>Congratulations, you made it to the end! Pagination over and out &#x1F525;</p></main></article><div class="navigation__back"><a href="/">Go to main page</a></div><script src="frontend/dist/scripts/dist-vendor.min.js"></script><script src="frontend/dist/scripts/dist.min.js"></script></body></html>

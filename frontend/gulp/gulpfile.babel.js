@@ -34,6 +34,8 @@ gulp.task('scripts', scriptTasks.scripts)
 gulp.task('scriptsVendor', scriptTasks.scriptsVendor)
 gulp.task('renderArticles', markupTasks.renderArticles)
 gulp.task('renderIndex', markupTasks.renderIndex)
+gulp.task('render404', markupTasks.render404)
+gulp.task('render500', markupTasks.render500)
 gulp.task('images', imageTasks.images)
 
 // Tasks to modify the generated HTML
@@ -44,13 +46,16 @@ gulp.task('htmlSetTableOfContents', markupTasks.htmlSetTableOfContents)
 gulp.task('htmlEnrichment', (cb) => {
   runSequence('htmlSetAlt', 'htmlSetCaption', 'htmlSetSrc', 'htmlSetTableOfContents', cb)
 })
+gulp.task('renderPages', (cb) => {
+  runSequence('renderIndex', 'render404', 'render500', cb)
+})
 
 // Development task
 gulp.task('default', () => {
-  runSequence('clean', 'images', 'styles', 'scripts', 'renderArticles', 'renderIndex', 'htmlEnrichment', 'server')
+  runSequence('clean', 'images', 'styles', 'scripts', 'renderArticles', 'renderPages', 'htmlEnrichment', 'server')
   watch(path.join(__dirname, '..', 'src', 'styles', '**', '*.scss'), () => runSequence('styles', browserSync.reload))
   watch(path.join(__dirname, '..', 'src', 'scripts', '**', '*.js'), () => runSequence('scripts', browserSync.reload))
-  watch(path.join(__dirname, '..', 'src', 'markup', '**', '*.jade'), () => runSequence('renderArticles', 'renderIndex', 'htmlEnrichment', browserSync.reload))
+  watch(path.join(__dirname, '..', 'src', 'markup', '**', '*.jade'), () => runSequence('renderArticles', 'renderPages', 'htmlEnrichment', browserSync.reload))
   watch(path.join(__dirname, '..', '..', 'content', '**', '*.md'), () => runSequence('renderArticles', 'htmlEnrichment', browserSync.reload))
 })
 

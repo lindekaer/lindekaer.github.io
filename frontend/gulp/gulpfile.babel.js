@@ -61,5 +61,5 @@ gulp.task('default', () => {
 
 // Production task
 gulp.task('prod', () => {
-  runSequence('clean', 'images', 'styles', 'stylesVendor', 'scripts', 'scriptsVendor', 'renderArticles', 'renderIndex', 'htmlEnrichment')
+  runSequence('clean', 'images', 'styles', 'stylesVendor', 'scripts', 'scriptsVendor', 'renderArticles', 'renderPages', 'htmlEnrichment')
 })

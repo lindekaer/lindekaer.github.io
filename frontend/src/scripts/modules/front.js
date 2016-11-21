@@ -68,7 +68,7 @@ class Front {
       this.dropdownIsShown = !this.dropdownIsShown
       dynamics.animate(this.dropDown, {
         opacity: 0,
-        scale: .1
+        scale: 0.1
       }, {
         type: dynamics.easeInOut,
         duration: 300,
@@ -85,7 +85,6 @@ class Front {
         friction: 400,
         duration: 800
       })
-
       // Animate each line individually
       for (var i = 0; i < items.length; i++) {
         var item = items[i]
@@ -94,7 +93,6 @@ class Front {
           opacity: 0,
           translateY: 20
         })
-
         // Animate to final properties
         dynamics.animate(item, {
           opacity: 1,
@@ -108,24 +106,6 @@ class Front {
         })
       }
     }
-
-
-
-
-
-
-
-   /* setTimeout(() => {
-      dynamics.animate(this.dropDown, {
-        opacity: 0,
-        scale: .1
-      }, {
-        type: dynamics.easeInOut,
-        duration: 300,
-        friction: 100
-      })
-    }, 2000)*/
-
   }
 }
 

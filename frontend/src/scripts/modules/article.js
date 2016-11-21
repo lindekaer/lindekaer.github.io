@@ -8,7 +8,6 @@ class Article {
     this.code = el.querySelectorAll('pre')
     this.article = el.querySelector('article.article')
     this.lazyLoadImages()
-    this.highlightCode()
 
     if (!isMobile()) {
       this.enableLightbox()
@@ -18,9 +17,6 @@ class Article {
   lazyLoadImages () {
     var images = document.querySelectorAll('img[data-src]')
     new LazyLoad(images)
-  }
-
-  highlightCode () {
   }
 
   enableLightbox () {

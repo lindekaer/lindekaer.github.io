@@ -121,6 +121,7 @@ body.page-index {
 
     &::placeholder {
       color: $color-faded;
+      user-select: none;
     }
 
     @include tablet {
@@ -150,6 +151,24 @@ body.page-index {
     width: 33.333%;
     padding: 0em 1em 0em 1em;
     margin-bottom: 2em;
+
+    &:nth-child(3n+1) {
+      padding-left: 0em;
+      padding-right: 1em;
+
+      @include mobile {
+        padding: 0em;
+      }
+    }
+
+    &:nth-child(3n+3) {
+      padding-left: 1em;
+      padding-right: 0em;
+
+      @include mobile {
+        padding: 0em;
+      }
+    }
 
     @include tablet {
       width: 100%;

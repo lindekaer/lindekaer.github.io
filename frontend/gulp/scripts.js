@@ -43,12 +43,11 @@ scriptTasks.scripts = () => {
 
 scriptTasks.scriptsVendor = () => {
   return gulp.src([
-    path.join(__dirname, '..', '..', 'node_modules', 'prismjs', 'prism.js'),
-    path.join(__dirname, '..', '..', 'node_modules', 'prismjs', 'components', 'prism-bash.js'),
     path.join(__dirname, '..', '..', 'node_modules', 'leaflet', 'dist', 'leaflet.js'),
-    path.join(__dirname, '..', '..', 'node_modules', 'jump.js', 'dist', 'jump.min.js'),
     path.join(__dirname, '..', '..', 'node_modules', 'jsonlylightbox', 'js', 'lightbox.js'),
-    path.join(__dirname, '..', '..', 'node_modules', 'dynamics.js', 'lib', 'dynamics.js')
+    path.join(__dirname, '..', '..', 'node_modules', 'dynamics.js', 'lib', 'dynamics.js'),
+    path.join(__dirname, '..', '..', 'node_modules', 'prismjs', 'prism.js'),
+    path.join(__dirname, '..', '..', 'node_modules', 'prismjs', 'components', 'prism-bash.js')
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.js'))

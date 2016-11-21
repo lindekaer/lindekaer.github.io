@@ -42,10 +42,9 @@ styleTasks.styles = () => {
 
 styleTasks.stylesVendor = () => {
   return gulp.src([
-    path.join(__dirname, '..', '..', 'node_modules', 'prismjs', 'themes', 'prism-okaidia.css'),
     path.join(__dirname, '..', '..', 'node_modules', 'leaflet', 'dist', 'leaflet.css'),
-    path.join(__dirname, '..', '..', 'node_modules', 'hint.css', 'hint.css'),
-    path.join(__dirname, '..', '..', 'node_modules', 'jsonlylightbox', 'css', 'lightbox.css')
+    path.join(__dirname, '..', '..', 'node_modules', 'jsonlylightbox', 'css', 'lightbox.css'),
+    path.join(__dirname, '..', '..', 'node_modules', 'prismjs', 'themes', 'prism-okaidia.css')
   ])
   .pipe(plumber(errHandler))
   .pipe(concat('dist-vendor.min.css'))

@@ -112,7 +112,7 @@ git merge feature-2
 
 Doing this we encounter a merge conflict since Git doesn't know whether to choose *rocks* or *sucks* as the `<h1>` text. The error looks like this:
 
-```plain
+```shell
 Auto-merging index.html
 CONFLICT (content): Merge conflict in index.html
 Automatic merge failed; fix conflicts and then commit the result.
@@ -120,7 +120,7 @@ Automatic merge failed; fix conflicts and then commit the result.
 
 Going to the `index.html` we see that Git has made it easy for us:
 
-```html
+```shell
 <<<<<<< HEAD
   <h1>Git rocks</h1>
 =======

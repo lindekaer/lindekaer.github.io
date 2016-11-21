@@ -54,10 +54,10 @@ git merge feature-1
 
 # Attempt to merge with the second branch
 git merge feature-2
-</code></pre><p>Doing this we encounter a merge conflict since Git doesn&apos;t know whether to choose <em>rocks</em> or <em>sucks</em> as the <code>&lt;h1&gt;</code> text. The error looks like this:</p><pre><code class="lang-plain">Auto-merging index.html
+</code></pre><p>Doing this we encounter a merge conflict since Git doesn&apos;t know whether to choose <em>rocks</em> or <em>sucks</em> as the <code>&lt;h1&gt;</code> text. The error looks like this:</p><pre><code class="lang-shell">Auto-merging index.html
 CONFLICT (content): Merge conflict in index.html
 Automatic merge failed; fix conflicts and then commit the result.
-</code></pre><p>Going to the <code>index.html</code> we see that Git has made it easy for us:</p><pre><code class="lang-html">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+</code></pre><p>Going to the <code>index.html</code> we see that Git has made it easy for us:</p><pre><code class="lang-shell">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
   &lt;h1&gt;Git rocks&lt;/h1&gt;
 =======
   &lt;h1&gt;Git sucks&lt;/h1&gt;

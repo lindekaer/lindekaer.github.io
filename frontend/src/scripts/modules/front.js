@@ -45,7 +45,7 @@ class Front {
             return a.title.toLowerCase().indexOf(this.query.toLowerCase()) !== -1
           })
           this.searchHasResults = result.length !== 0
-          return result
+          return result.reverse()
         }
       },
       methods: {

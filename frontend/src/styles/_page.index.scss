@@ -156,7 +156,7 @@ body.page-index {
       padding-left: 0em;
       padding-right: 1em;
 
-      @include mobile {
+      @include tablet {
         padding: 0em;
       }
     }
@@ -165,7 +165,7 @@ body.page-index {
       padding-left: 1em;
       padding-right: 0em;
 
-      @include mobile {
+      @include tablet {
         padding: 0em;
       }
     }

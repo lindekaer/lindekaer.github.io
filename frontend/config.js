@@ -67,7 +67,7 @@ const articles = [
   // new Article('Async error handling in Node', 'Development', '2016-10-05'),
   new Article('Serve private content from AWS S3', 'Development', '2016-11-01'),
   new Article('DynamoDB pagination', 'Development', '2016-11-14'),
-  // new Article('About me', 'Personal', '2016-11-20')
+  new Article('About me', 'Personal', '2016-11-20')
 ]
 
 const slides = [

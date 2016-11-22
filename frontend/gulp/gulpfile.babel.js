@@ -42,9 +42,8 @@ gulp.task('images', imageTasks.images)
 gulp.task('htmlSetAlt', markupTasks.htmlSetAlt)
 gulp.task('htmlSetCaption', markupTasks.htmlSetCaption)
 gulp.task('htmlSetSrc', markupTasks.htmlSetSrc)
-gulp.task('htmlSetTableOfContents', markupTasks.htmlSetTableOfContents)
 gulp.task('htmlEnrichment', (cb) => {
-  runSequence('htmlSetAlt', 'htmlSetCaption', 'htmlSetSrc', 'htmlSetTableOfContents', cb)
+  runSequence('htmlSetAlt', 'htmlSetCaption', 'htmlSetSrc', cb)
 })
 gulp.task('renderPages', (cb) => {
   runSequence('renderIndex', 'render404', 'render500', cb)

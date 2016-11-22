@@ -76,30 +76,6 @@ markupTasks.htmlSetSrc = () => {
   .pipe(gulp.dest(path.join(__dirname, '..', '..')))
 }
 
-markupTasks.htmlSetTableOfContents = () => {
-  return gulp.src(path.join(__dirname, '..', '..', '*.html'))
-  .pipe(cheerio(($, file) => {
-    if (!$('.table-of-contents').length) return
-    $('h2, h3, h4, h5, h6').each((index, el) => {
-      // Add unique class to all headings (anchor for scrolling)
-      const text = $(el).text()
-      $(el).addClass('jump-' + slugify(text))
-
-      // Add table-of-contents elements to the DOM
-      const headingNumber = $(el)[0].tagName.split('h')[1]
-      const $tableEl = $('<li><a></a></li>')
-      $tableEl.find('a').attr('href', '#')
-      $tableEl.find('a').attr('data-jump', slugify(text))
-      $tableEl.find('a').addClass(`number-${headingNumber}`)
-      // Add a dash to all sub-headings in the table
-      if (headingNumber !== '2') $tableEl.find('a').text('- ' + text)
-      else $tableEl.find('a').text(text)
-      $('.table-of-contents').append($tableEl)
-    })
-  }))
-  .pipe(gulp.dest(path.join(__dirname, '..', '..')))
-}
-
 /*
 -----------------------------------------------------------------------------------
 |

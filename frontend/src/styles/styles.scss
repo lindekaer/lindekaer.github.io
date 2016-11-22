@@ -110,4 +110,6 @@ ul.table-of-contents {
   .number-5 { padding-left: $table-of-contents-indent * 3; }
   .number-6 { padding-left: $table-of-contents-indent * 4; }
 
+  [v-cloak] { display: none }
+
 }

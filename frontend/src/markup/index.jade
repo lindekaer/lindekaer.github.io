@@ -27,7 +27,7 @@ block content
         input.header__search__field.js-search(v-model="query" , type="text", placeholder="Search")
 
     //- Vue used to render articles and search
-    .article-grid(v-cloak, :class="{ 'no-results': !searchHasResults }")
+    .article-grid.v-cloak--hidden(v-cloak, :class="{ 'no-results': !searchHasResults }")
       .article-grid__item(v-for="article in filteredArticles")
         a.article-grid__item__card(:href="getArticleUrl(article.slug)", :class="getArticleCategory(article.category)")
           h2.article-grid__title {{ article.title }}

@@ -83,33 +83,6 @@ body {
   padding: 3em 0px 3em 0px;
 }
 
-ul.table-of-contents {
-  padding: 1em 2em;
-  margin: 3em 0em;
-  background-color: #f3f3f3;
-
-  li {
-    list-style: none;
-    font-size: 0.8em;
-    margin: 0px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
-  a {
-    text-decoration: none;
-
-    &:visited {
-      color: $color-purple;
-    }
-  }
-
-  .number-3 { padding-left: $table-of-contents-indent; }
-  .number-4 { padding-left: $table-of-contents-indent * 2; }
-  .number-5 { padding-left: $table-of-contents-indent * 3; }
-  .number-6 { padding-left: $table-of-contents-indent * 4; }
-
-  [v-cloak] { display: none }
-
+[v-cloak].v-cloak--hidden {
+  display: none;
 }

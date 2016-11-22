@@ -3,9 +3,12 @@ extends ./templates/template.jade
 block vars
   - var page = 'page-index';
 
+block head
+  script(src="https://unpkg.com/vue/dist/vue.js")
+
 block content
 
-  .wrapper
+  .wrapper#app
 
     .header
       .header__graphic.js-top
@@ -21,18 +24,19 @@ block content
             a(href="/about-me.html", target="_blank", title="Article about me") About me
 
       .header__search
-        input.header__search__field.js-search(type="text", placeholder="Search")
+        input.header__search__field.js-search(v-model="query" , type="text", placeholder="Search")
 
+    //- Vue used to render articles and search
+    .article-grid(v-cloak, :class="{ 'no-results': !searchHasResults }")
+      .article-grid__item(v-for="article in filteredArticles")
+        a.article-grid__item__card(:href="getArticleUrl(article.slug)", :class="getArticleCategory(article.category)")
+          h2.article-grid__title {{ article.title }}
+          p.article-grid__meta
+            span.category {{ article.category }}
+            span.date {{ article.date }}
 
-    .article-grid.js-grid
-      for article in articles.reverse()
-        .article-grid__item.js-grid-item(data-title="#{article.title}")
-          a.article-grid__item__card(href="#{article.slug}.html", class="category-#{article.category.toLowerCase()}")
-            h2.article-grid__title #{article.title}
-            p.article-grid__meta
-              span(class="category") #{article.category}
-              | #{article.date}
-
-      .article-grid__no-results.hidden.js-no-results
+      .article-grid__no-results(v-if="!searchHasResults")
         p.emoji 🤕
         p Nothing found, try something else
+
+  script var articles = !{JSON.stringify(articles)}

@@ -22,43 +22,37 @@ class Front {
     if (el === null) return
     this.button = el.querySelector('.js-button')
     this.dropDown = el.querySelector('.js-dropdown')
-    this.articleGrid = el.querySelector('.js-grid')
-    this.noResults = el.querySelector('.js-no-results')
-    this.articles = el.querySelectorAll('.js-grid-item')
-    this.search = el.querySelector('.js-search')
     this.dropdownIsShown = false
     this.addEvents()
+    this.enableSearch()
   }
 
   addEvents () {
-    this.search.addEventListener('keyup', debounce(() => {
-      const query = this.search.value
-      this.filterArticles(query)
-    }, 300))
-
     this.button.addEventListener('click', this.toggleDropdown.bind(this))
   }
 
-  filterArticles (query) {
-    let numFound = 0
-    for (const article of this.articles) {
-      const title = article.getAttribute('data-title').toLowerCase()
-      query = query.toLowerCase()
-      if (title.indexOf(query) === -1) {
-        article.classList.add('hidden')
-      } else {
-        numFound++
-        article.classList.remove('hidden')
+  enableSearch () {
+    window.app = new Vue({
+      el: '#app',
+      data: {
+        query: '',
+        searchHasResults: true,
+        articles: window.articles
+      },
+      computed: {
+        filteredArticles: function () {
+          const result = this.articles.filter((a) => {
+            return a.title.toLowerCase().indexOf(this.query.toLowerCase()) !== -1
+          })
+          this.searchHasResults = result.length !== 0
+          return result
+        }
+      },
+      methods: {
+        getArticleUrl: (slug) => slug + '.html',
+        getArticleCategory: (cat) => `category-${cat.toLowerCase()}`
       }
-    }
-    // If no result show message, else reset to initial state
-    if (numFound === 0) {
-      this.articleGrid.classList.add('no-results')
-      this.noResults.classList.remove('hidden')
-    } else {
-      this.articleGrid.classList.remove('no-results')
-      this.noResults.classList.add('hidden')
-    }
+    })
   }
 
   toggleDropdown () {

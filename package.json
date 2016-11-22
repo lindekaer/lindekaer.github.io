@@ -25,7 +25,7 @@
       "$",
       "dynamics",
       "Lightbox",
-      "hljs"
+      "Vue"
     ]
   },
   "repository": {

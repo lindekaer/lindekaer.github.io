@@ -1,16 +1,6 @@
 /*
 -----------------------------------------------------------------------------------
 |
-| Imports
-|
------------------------------------------------------------------------------------
-*/
-
-import { debounce } from '../utils'
-
-/*
------------------------------------------------------------------------------------
-|
 | Front page module
 |
 -----------------------------------------------------------------------------------
@@ -20,23 +10,16 @@ class Front {
   constructor () {
     var el = document.querySelector('.page-index')
     if (el === null) return
-    this.button = el.querySelector('.js-button')
-    this.dropDown = el.querySelector('.js-dropdown')
-    this.dropdownIsShown = false
-    this.addEvents()
-    this.enableSearch()
+    this.init()
   }
 
-  addEvents () {
-    this.button.addEventListener('click', this.toggleDropdown.bind(this))
-  }
-
-  enableSearch () {
+  init () {
     window.app = new Vue({
       el: '#app',
       data: {
         query: '',
         searchHasResults: true,
+        dropdownIsShown: false,
         articles: window.articles
       },
       computed: {
@@ -50,57 +33,66 @@ class Front {
       },
       methods: {
         getArticleUrl: (slug) => slug + '.html',
-        getArticleCategory: (cat) => `category-${cat.toLowerCase()}`
+        getArticleCategory: (cat) => `category-${cat.toLowerCase()}`,
+        toggleDropdown: function () {
+          if (this.dropdownIsShown) this.hideDropdown()
+          else this.showDropdown()
+        },
+        showDropdown,
+        hideDropdown
       }
     })
   }
+}
 
-  toggleDropdown () {
-    var items = this.dropDown.querySelectorAll('a')
+function showDropdown () {
+  this.dropdownIsShown = !this.dropdownIsShown
+  const dropDown = this.$el.querySelector('.js-dropdown')
+  const items = dropDown.querySelectorAll('a')
 
-    if (this.dropdownIsShown) {
-      this.dropdownIsShown = !this.dropdownIsShown
-      dynamics.animate(this.dropDown, {
-        opacity: 0,
-        scale: 0.1
-      }, {
-        type: dynamics.easeInOut,
-        duration: 300,
-        friction: 100
-      })
-    } else {
-      this.dropdownIsShown = !this.dropdownIsShown
-      dynamics.animate(this.dropDown, {
-        opacity: 1,
-        scale: 1
-      }, {
-        type: dynamics.spring,
-        frequency: 200,
-        friction: 400,
-        duration: 800
-      })
-      // Animate each line individually
-      for (var i = 0; i < items.length; i++) {
-        var item = items[i]
-        // Define initial properties
-        dynamics.css(item, {
-          opacity: 0,
-          translateY: 20
-        })
-        // Animate to final properties
-        dynamics.animate(item, {
-          opacity: 1,
-          translateY: 0
-        }, {
-          type: dynamics.spring,
-          frequency: 300,
-          friction: 435,
-          duration: 1000,
-          delay: 100 + i * 40
-        })
-      }
-    }
+  dynamics.animate(dropDown, {
+    opacity: 1,
+    scale: 1
+  }, {
+    type: dynamics.spring,
+    frequency: 200,
+    friction: 400,
+    duration: 800
+  })
+
+  // Animate each line individually
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i]
+    // Define initial properties
+    dynamics.css(item, {
+      opacity: 0,
+      translateY: 20
+    })
+    // Animate to final properties
+    dynamics.animate(item, {
+      opacity: 1,
+      translateY: 0
+    }, {
+      type: dynamics.spring,
+      frequency: 300,
+      friction: 435,
+      duration: 1000,
+      delay: 100 + i * 40
+    })
   }
+}
+
+function hideDropdown () {
+  this.dropdownIsShown = !this.dropdownIsShown
+  const dropDown = this.$el.querySelector('.js-dropdown')
+  dynamics.animate(dropDown, {
+    opacity: 0,
+    scale: 0.1
+  }, {
+    type: dynamics.easeInOut,
+    duration: 300,
+    friction: 100
+  })
 }
 
 /*

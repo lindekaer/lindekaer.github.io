@@ -11,10 +11,10 @@ block content
   .wrapper#app
 
     .header
-      .header__graphic.js-top
-        img.header__logo.js-logo(src="frontend/dist/images/logo.png")
+      .header__graphic
+        img.header__logo(src="frontend/dist/images/logo.png")
         .header__contact
-          button.header__contact__button.js-button ⚡️ Find me here ⚡️
+          button.header__contact__button(@click="toggleDropdown") ⚡️ Find me here ⚡️
           .header__contact__dropdown.js-dropdown
             a(href="mailto:theodor.lindekaer@gmail.com", title="Email") Email
             a(href="https://github.com/lindekaer", target="_blank", title="Github") Github
@@ -24,7 +24,7 @@ block content
             a(href="/about-me.html", target="_blank", title="Article about me") About me
 
       .header__search
-        input.header__search__field.js-search(v-model="query" , type="text", placeholder="Search")
+        input.header__search__field(v-model="query" , type="text", placeholder="Search")
 
     //- Vue used to render articles and search
     .article-grid.v-cloak--hidden(v-cloak, :class="{ 'no-results': !searchHasResults }")

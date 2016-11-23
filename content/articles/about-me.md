@@ -31,6 +31,6 @@ My technological competencies revolve around web systems. I have started as a fr
 - **Databases** - MySQL, MongoDB, DynamoDB
 - **AWS** - Lambda, S3, CloudFront
 - **CI and deployment** - Heroku, CircleCI, Docker
-- **Misc.** - Pug, Babel, Sass, PostCSS, Redis 
+- **Misc.** - Pug, Babel, Sass, PostCSS, Redis, Claudia, Serverless 
 
 Please see [Github](https://github.com/lindekaer) for more details.

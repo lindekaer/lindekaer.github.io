@@ -4,7 +4,7 @@ block vars
   - var page = 'page-index';
 
 block head
-  script(src="https://unpkg.com/vue/dist/vue.js")
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", type="text/css")
 
 block content
 
@@ -16,13 +16,27 @@ block content
         .header__contact
           button.header__contact__button(@click="toggleDropdown") ⚡️ Find me here ⚡️
           .header__contact__dropdown.js-dropdown
-            a(href="mailto:theodor.lindekaer@gmail.com", title="Email") Email
-            a(href="https://github.com/lindekaer", target="_blank", title="Github") Github
-            a(href="https://www.linkedin.com/in/theodor-c-listov-lindekaer-3289833b", target="_blank", title="LinkedIn") LinkedIn
-            a(href="https://www.facebook.com/theodor.lindekaer", target="_blank", title="Facebook") Facebook
-            a(href="https://twitter.com/lindekaer", target="_blank", title="Twitter") Twitter
-            a(href="http://codepen.io/theodor-lindekaer/", target="_blank", title="Codepend") Codepen
-            a(href="/about-me.html", title="Article about me") About me
+            a(href="mailto:theodor.lindekaer@gmail.com", title="Email")
+              i.fa.fa-paper-plane(aria-hidden="true")
+              | &nbsp; Email
+            a(href="https://github.com/lindekaer", target="_blank", title="Github")
+              i.fa.fa-github-alt(aria-hidden="true")
+              | &nbsp; Github
+            a(href="https://www.linkedin.com/in/theodor-c-listov-lindekaer-3289833b", target="_blank", title="LinkedIn")
+              i.fa.fa-linkedin-square(aria-hidden="true")
+              | &nbsp; LinkedIn
+            a(href="https://www.facebook.com/theodor.lindekaer", target="_blank", title="Facebook")
+              i.fa.fa-facebook-square(aria-hidden="true")
+              | &nbsp; Facebook
+            a(href="https://twitter.com/lindekaer", target="_blank", title="Twitter")
+              i.fa.fa-twitter(aria-hidden="true")
+              | &nbsp; Twitter
+            a(href="http://codepen.io/theodor-lindekaer/", target="_blank", title="Codepend")
+              i.fa.fa-codepen(aria-hidden="true")
+              | &nbsp; Codepen
+            a(href="/about-me.html", title="Article about me")
+              i.fa.fa-tag(aria-hidden="true")
+              | &nbsp; About me
 
       .header__search
         input.header__search__field(v-model="query" , type="text", placeholder="Search")
@@ -42,3 +56,4 @@ block content
 
   //- Make articles available for Vue
   script var articles = !{JSON.stringify(articles)}
+  script(src="https://unpkg.com/vue/dist/vue.js")

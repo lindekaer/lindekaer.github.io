@@ -91,7 +91,7 @@ curl /7/comments?items=10
 We are then able to construct our query for DynamoDB 
 
 ```javascript
-const ITEMS_PER_PAGE = req.query.items
+const ITEMS_PER_PAGE = parseInt(req.query.items)
 const ARTICLE_ID = req.params.articleId
 
 const params = {

@@ -16,10 +16,13 @@ block content
     h1.article__title(itemprop='headline') #{article.title}
 
     .article__meta
-      .article__meta__author(itemprop='author', itemscope='', itemtype='https://schema.org/Person') 
-        span(itemprop='name') #{article.author}
-      .article__meta__date
-        span(itemprop='datePublished') #{article.date}
+      div
+        img.article__meta__image(src="frontend/dist/images/theo.jpg")
+      div
+        .article__meta__author(itemprop='author', itemscope='', itemtype='https://schema.org/Person')
+          span(itemprop='name') #{article.author}
+        .article__meta__date
+          span(itemprop='datePublished') #{article.date}
 
     main.article__content.
       !{article.content}

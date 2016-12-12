@@ -67,6 +67,8 @@ const articles = [
   new Article('Serve private content from AWS S3', 'Development', '2016-11-01'),
   new Article('DynamoDB pagination', 'Development', '2016-11-14'),
   new Article('About me', 'Personal', '2016-11-20'),
+  // new Article('Getting started with AWS Lambda', 'Development', '2016-11-27'),
+  new Article('WebRTC explained', 'Development', '2016-12-12')
   // new Article('Async error handling in Node', 'Development', '2016-11-23')
 ]
 

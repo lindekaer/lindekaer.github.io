@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="description" content="Web Real-Time Communication (WebRTC) is an emerging API on the web platform that greatly empowers developers to create rich media and data sharing applications running over peer-to-peer (P2P) connections. I am currently writing my Master&apos;s thesis on WebRTC at the IT University of Copenhagen and as an exercise to gather my thoughts here is an introduction to the concepts of WebRTC."><meta name="keywords" content="development, programming, technology, IT, computer, algorithm, tutorial, guide, Docker, Node, Javascript, HTML, CSS"><meta name="author" content="Theodor Lindekaer"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><link rel="apple-touch-icon" sizes="57x57" href="frontend/dist/images/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="frontend/dist/images/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="frontend/dist/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="frontend/dist/images/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="frontend/dist/images/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="frontend/dist/images/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="frontend/dist/images/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="frontend/dist/images/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="frontend/dist/images/apple-touch-icon-180x180.png"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="frontend/dist/images/android-chrome-192x192.png" sizes="192x192"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="frontend/dist/images/manifest.json"><link rel="mask-icon" href="frontend/dist/images/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="frontend/dist/images/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="frontend/dist/images/mstile-144x144.png"><meta name="msapplication-config" content="frontend/dist/images/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,+300italic|Lato:400,900|Source+Code+Pro" media="all"><link rel="stylesheet" href="frontend/dist/styles/dist-vendor.min.css" type="text/css"><link rel="stylesheet" href="frontend/dist/styles/dist.min.css" type="text/css"><title>WebRTC explained | Lindekaer</title></head><body class="page-article"><div class="gradient-top"></div><article itemscope="" itemtype="http://schema.org/Article" class="article"><h1 itemprop="headline" class="article__title">WebRTC explained</h1><div class="article__meta"><div><img src="frontend/dist/images/theo.jpg" class="article__meta__image"></div><div><div itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="article__meta__author"><span itemprop="name">Theodor Lindekaer</span></div><div class="article__meta__date"><span itemprop="datePublished">December 12th, 2016</span></div></div></div><main class="article__content"><p>Web Real-Time Communication (WebRTC) is an emerging API on the web platform that greatly empowers developers to create rich media and data sharing applications running over peer-to-peer (P2P) connections. I am currently writing my Master&apos;s thesis on WebRTC at the IT University of Copenhagen and as an exercise to gather my thoughts here is an introduction to the concepts of WebRTC.</p><h2 id="what-is-it-">What is it?</h2><p>WebRTC is a collection of standards and protocols that enable two clients to establish a P2P connection. The connection can be used to stream video and audio or send arbitrary data without relying on plugins or other third-party software. The functionality is available through a high-level browser API that makes it really easy to get started.</p><h2 id="the-api">The API</h2><p class="article__notice">The WebRTC API is under development and the described interfaces may change over time. Check the <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API">Mozilla docs</a> for the newest version.</p><p>WebRTC is available both in the browser (<a href="http://iswebrtcreadyyet.com/">browser support table</a>) and in Node through the <code>wrtc</code> package. To avoid issues with browser prefixes for the different interfaces, you can use <code>adapter.js</code> which can be found <a href="https://github.com/webrtc/adapter">here</a>.</p><p>In order to get started with WebRTC, you have to know the following three interfaces:</p><ul><li><code>RTCPeerConnection</code>, the linking of two peers</li><li><code>RTCDataChannel</code>, the channel to transfer arbitrary binary data</li><li><code>MediaStream</code>, the channel to transfer video and audio</li></ul><p>Everytime you to set up a P2P connection you need both sides to instantiate a <code>RTCPeerConnection</code>. Once instantiated you are able to create <code>DataChannel</code> and <code>MediaStream</code> directly from the <code>RTCPeerConnection</code> instance.</p><h2 id="core-concepts">Core concepts</h2><p>To dive deep into WebRTC you have to familiarize yourself with a quite a few concepts and technologies. However, to get started you just need a basic understanding of:</p><ul><li>Session Description Protocol (SDP)</li><li>Interactive Connectivity Establishment (ICE)</li><li>Signaling</li></ul><p><strong>SDP</strong>: Whenever two peers want to establish a connection, they need to agree on a contract (or <em>rules</em>) for the connection. SDP is a way to describe the details of such a contract. In the context of WebRTC one peer sends an <strong>SDP offer</strong> to the other peer, who consumes the offer and generates a corresponding <strong>SDP answer</strong>. In essence, SDP is just a document format that describes connection parameters.</p><p><strong>ICE</strong>: Two peers who would like to establish a connection will have to exhange addresses and ports, so they are able to reach each other. Usually a peer is located behind a NAT, firewall or other barriers, which means that it doesn&apos;t expose a direct public IP address. The process of ICE makes it possible to <em>traverse the NAT</em>. The protocols used for this are <a href="https://en.wikipedia.org/wiki/STUN">STUN</a> and <a href="https://en.wikipedia.org/wiki/Traversal_Using_Relays_around_NAT">TURN</a></p><p><strong>Signaling</strong>: The above mentioned process of finding each other is accomplished through signaling. A signaling server is an intermediary between two peers and facilitates the initial connection by exchanging offer/answer. Once the connection is etablished, the peers communicate purely on a direct P2P connection with no need for a server. A common approach to signaling is a simple Websocket server.</p><p>To really dig into the details I can recommend the documents from IETF:</p><ul><li><a href="https://tools.ietf.org/search/rfc3264">SDP RFC</a> by IEFF</li><li><a href="https://tools.ietf.org/search/rfc5245">ICE RFC</a> by IETF</li></ul><h2 id="data-channel-example">Data channel example</h2><p>In order for two peers (<strong>Peer1</strong> and <strong>Peer2</strong>) to setup a data channel the following sequence of actions will have to take place:</p><ol><li>Peer1 instantiates a <code>RTCPeerConnection</code></li><li>Peer1 creates a <code>DataChannel</code></li><li>Peer1 creates a SDP offer</li><li>Peer1 gathers ICE candidates</li><li>Peer1 sends offer to Peer2</li><li>Peer2 instantiates a <code>RTCPeerConnection</code></li><li>Peer2 generates a SDP answer based on Peer1&apos;s offer</li><li>Peer2 gathers ICE candidates</li><li>Peer2 sends answer to Peer1</li></ol><p>Let&apos;s dive into the code - is will not be as much as it looks from the list above &#x26A1;&#xFE0F;</p><p>Firstly, the initial setup for <strong>Peer1</strong>:</p><pre><code class="lang-javascript">import { RTCPeerConnection } from &apos;wrtc&apos;
+
+// Setup of P2P connection and data channel
+const pc1 = new RTCPeerConnection()
+const dc = pc1.createDataChannel()
+
+// Add event handlers on data channel
+dc.onopen = () =&gt; console.log(&apos;Peer 1: Data channel has opened&apos;)
+dc.onmessage = (event) =&gt; console.log(`Peer 1: Got message: &quot;${event.data}&quot;`)
+</code></pre><p>Now we need to create an offer that we can send to <strong>Peer2</strong>. Once the offer is created, we set the offer as the local description of the peer connection.</p><pre><code class="lang-javascript">// A set of options for a data offer (no audio or video)
+const options = {
+  offerToReceiveAudio: false,
+  offerToReceiveVideo: false
+}
+
+// Create an offer with the specified options
+pc1.createOffer((offer) =&gt; {
+  // Set the offer as the local description
+  pc1.setLocalDescription(offer, () =&gt; {
+    console.log(&apos;Peer 1: Setting local description&apos;)
+  }, errorHandler)
+}, errorHandler, options)
+</code></pre><p>Even though the offer is created, we still need to gather all the possible ICE candidates befores sending the offer off to <strong>Peer2</strong>. When you call <code>setLocalDescription</code> the process of finding potential ICE candidates begins. For each candidate, the <code>onicecandidate</code> event fires on the <code>PeerConnection</code>.</p><pre><code class="lang-javascript">// Event handler for candidates
+pc1.onicecandidate = (event) =&gt; {
+  console.log(&apos;Peer 1: Found an ICE candidate&apos;)
+  // This fires when no more candidates are to be found
+  if (event.candidate === null) {
+    // Send offer to Peer2
+    sendOffer(pc1.localDescription)
+  }
+}
+</code></pre><p>A few things to note here. Once all the candidates have been gathered, we can access the final offer through <code>pc1.localDescription</code>. The function <code>sendOffer</code> can be any function that sends the offer to <strong>Peer2</strong>. This is trivial in our case, since both <strong>Peer1</strong> and <strong>Peer2</strong> are in the same <code>.js</code> file.</p><pre><code class="lang-javascript">// Setup of P2P connection
+const pc2 = new RTCPeerConnection()
+
+function sendOffer (offer) {
+  // Set the offer from Peer1 as remote description
+  console.log(&apos;Peer 2: Setting remote description&apos;)
+  pc2.setRemoteDescription(offer)
+  // Create an answer
+  pc2.createAnswer((answer) =&gt; {
+    // Set the answer as the local description
+    pc2.setLocalDescription(answer, () =&gt; {
+      console.log(&apos;Peer 2: Setting local description&apos;)
+    }, errorHandler)
+  }, errorHandler)
+}
+</code></pre><p>As we just saw with <strong>Peer1</strong>, we need to gather the potential ICE candidates before we can send back the answer.</p><pre><code class="lang-javascript">pc2.onicecandidate = (event) =&gt; {
+  console.log(&apos;Peer 2: Found an ICE candidate&apos;)
+  // This fires when no more candidates are to be found
+  if (event.candidate === null) {
+    // Send offer to Peer1
+    sendAnswer(pc2.localDescription)
+  }
+}
+</code></pre><p>And now the very last step required to set up the P2P connection:</p><pre><code class="lang-javascript">function sendAnswer (answer) {
+  // Peer1 sets the answer as the remote description
+  console.log(&apos;Peer 1: Setting remote description&apos;)
+  pc1.setRemoteDescription(answer)
+  // ... and the connection is established!
+}
+</code></pre><p>We can test out the connection by sending a message from <strong>Peer2</strong> to <strong>Peer1</strong>. We just need to attach and event handler that listens for the opening of the data channel.</p><pre><code class="lang-javascript">pc2.ondatachannel = (event) =&gt; {
+  console.log(&apos;Peer 2: Sending message&apos;)
+  event.channel.send(&apos;Cookies 4 life&apos;)
+}
+</code></pre><p>Run the code and check the console output:</p><pre><code class="lang-bash">Peer 1: Setting local description
+Peer 1: Found an ICE candidate
+Peer 1: Found an ICE candidate
+Peer 1: Found an ICE candidate
+Peer 1: Found an ICE candidate
+# Offer sent to Peer2
+Peer 2: Setting remote description
+Peer 2: Setting local description
+Peer 2: Found an ICE candidate
+Peer 2: Found an ICE candidate
+Peer 2: Found an ICE candidate
+# Answer sent to Peer1
+Peer 1: Setting remote description
+Peer 1: Data channel has opened
+Peer 2: Sending message
+Peer 1: Got message: &quot;Cookies 4 life&quot;
+</code></pre><p>As soon as both sides of the connection have set both the local and remote description, we have a P2P connection between the two peers. Through the <code>DataChannel</code> they are able to send data (even files!) to each other. You are not restricted to having only one data channel between a set of peers - theoretically you can have <a href="https://developer.mozilla.org/en-US/docs/Web/API/RTCDataChannel">65,534</a>.</p><h2 id="what-s-next-">What&apos;s next?</h2><p>I hope this simple walkthrough has sparked an interest in you. I can highly recommend the following resources to dive deeper and learn more &#x1F4DA;</p><ul><li><a href="https://hpbn.co/webrtc/">WebRTC</a> by Ilya Grigorik</li><li><a href="https://www.html5rocks.com/en/tutorials/webrtc/basics/">Getting started with WebRTC</a> by Sam Dutton</li><li><a href="http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/">WebRTC in the real world: STUN, TURN and signaling</a> by Sam Dutton</li></ul><p>... and of course, lots of cool code:</p><ul><li><a href="https://github.com/openrtc-io/awesome-webrtc">awesome-webrtc repository</a> on Github</li></ul></main></article><div class="navigation__back"><a href="/">Go to main page</a></div><script src="frontend/dist/scripts/dist-vendor.min.js"></script><script src="frontend/dist/scripts/dist.min.js"></script></body></html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="description" content="I am currently doing backend development for a company that uses DynamoDB. When running my API tests I would like to hit a testing database. Amazon Web Services (AWS) provides a local version of DynamoDB that can be used for exactly this purpose."><meta name="keywords" content="development, programming, technology, IT, computer, algorithm, tutorial, guide, Docker, Node, Javascript, HTML, CSS"><meta name="author" content="Theodor Lindekaer"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><link rel="apple-touch-icon" sizes="57x57" href="frontend/dist/images/apple-touch-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="frontend/dist/images/apple-touch-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="frontend/dist/images/apple-touch-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="frontend/dist/images/apple-touch-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="frontend/dist/images/apple-touch-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="frontend/dist/images/apple-touch-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="frontend/dist/images/apple-touch-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="frontend/dist/images/apple-touch-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="frontend/dist/images/apple-touch-icon-180x180.png"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-32x32.png" sizes="32x32"><link rel="icon" type="image/png" href="frontend/dist/images/android-chrome-192x192.png" sizes="192x192"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/png" href="frontend/dist/images/favicon-16x16.png" sizes="16x16"><link rel="manifest" href="frontend/dist/images/manifest.json"><link rel="mask-icon" href="frontend/dist/images/safari-pinned-tab.svg" color="#5bbad5"><link rel="shortcut icon" href="frontend/dist/images/favicon.ico"><meta name="msapplication-TileColor" content="#da532c"><meta name="msapplication-TileImage" content="frontend/dist/images/mstile-144x144.png"><meta name="msapplication-config" content="frontend/dist/images/browserconfig.xml"><meta name="theme-color" content="#ffffff"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merriweather:300,+300italic|Lato:400,900|Source+Code+Pro" media="all"><link rel="stylesheet" href="frontend/dist/styles/dist-vendor.min.css" type="text/css"><link rel="stylesheet" href="frontend/dist/styles/dist.min.css" type="text/css"><title>Running a local DynamoDB | Lindekaer</title></head><body class="page-article"><div class="gradient-top"></div><article itemscope="" itemtype="http://schema.org/Article" class="article"><h1 itemprop="headline" class="article__title">Running a local DynamoDB</h1><div class="article__meta"><div><img src="frontend/dist/images/theo.jpg" class="article__meta__image"></div><div><div itemprop="author" itemscope="" itemtype="https://schema.org/Person" class="article__meta__author"><span itemprop="name">Theodor Lindekaer</span></div><div class="article__meta__date"><span itemprop="datePublished">December 21st, 2016</span></div></div></div><main class="article__content"><p>I am currently doing backend development for a company that uses DynamoDB. When running my API tests I would like to hit a testing database. Amazon Web Services (AWS) provides a local version of DynamoDB that can be used for exactly this purpose.</p><h2 id="run-the-docker-image">Run the Docker image</h2><p>The local DynamoDB is available as a Java program, but have been packaged in a Docker container for ease of use. I ended up using <code>ryanratcliff/dynamodb</code>, which I fetched from Docker Hub. This is how I downloaded and ran the container:</p><pre><code class="lang-bash"># Download the image from Docker Hub
+docker pull ryanratcliff/dynamodb
+
+# Run the container
+docker run -d -p 8000:8000 --name my-local-dynamodb ryanratcliff/dynamodb
+</code></pre><p>Once running, you can interact with DynamoDB through a shell exposed on <code>http://localhost:8000/shell</code>. You can either configure the database through the shell or programatically as part of your testing (what I did).</p><h2 id="connect-to-dynamodb">Connect to DynamoDB</h2><p>I use Node for the backend project. Connecting to the local DynamoDB is identical to the way you would normally do using the <code>aws-sdk</code>. However, pay attention to fields in the <code>update</code> object below:</p><pre><code class="lang-javascript">import AWS from &apos;aws-sdk&apos;
+
+AWS.config.update({
+  region: &apos;localhost&apos;,              // use localhost here
+  accessKeyId: &apos;xxx&apos;,               // random string
+  secretAccessKey: &apos;xxx&apos;,           // random string
+  endpoint: &apos;http://localhost:8000&apos; // hit your local instance
+})
+
+var dynamo = new AWS.DynamoDB()
+</code></pre><h2 id="configure-dynamodb">Configure DynamoDB</h2><p>Once you have established the connection, you can easily create your tables. Below is a simple example of a user table with <code>_id</code> as the primary key. Notice that the creation of tables is instant on the local version of DynamoDB.</p><pre><code class="lang-javascript">const tableConfig = {
+  &quot;TableName&quot;: &quot;Users&quot;,
+  &quot;KeySchema&quot;: [
+    {
+      &quot;AttributeName&quot;: &quot;_id&quot;,
+      &quot;KeyType&quot;: &quot;HASH&quot;
+    }
+  ],
+  &quot;AttributeDefinitions&quot;: [
+    {
+      &quot;AttributeName&quot;: &quot;_id&quot;,
+      &quot;AttributeType&quot;: &quot;S&quot;
+    }
+  ],
+  &quot;ProvisionedThroughput&quot;: {
+    &quot;ReadCapacityUnits&quot;: 1,
+    &quot;WriteCapacityUnits&quot;: 1
+  }
+}
+
+dynamo.createTable(tableConfig, (err, data) =&gt; {
+  console.log(&apos;Table is ready to use! &#x1F984;&apos;)
+})
+</code></pre><h2 id="start-testing">Start testing</h2><p>Now you are ready to start testing on your local DynamoDB. That&apos;s it, take care!</p></main></article><div class="navigation__back"><a href="/">Go to main page</a></div><script src="frontend/dist/scripts/dist-vendor.min.js"></script><script src="frontend/dist/scripts/dist.min.js"></script></body></html>

@@ -34,22 +34,22 @@ Once you have established the connection, you can easily create your tables. Bel
 
 ```javascript
 const tableConfig = {
-  "TableName": "Users",
-  "KeySchema": [
+  TableName: 'Users',
+  KeySchema: [
     {
-      "AttributeName": "_id",
-      "KeyType": "HASH"
+      AttributeName: '_id',
+      KeyType: 'HASH'
     }
   ],
-  "AttributeDefinitions": [
+  AttributeDefinitions: [
     {
-      "AttributeName": "_id",
-      "AttributeType": "S"
+      AttributeName: '_id',
+      AttributeType: 'S'
     }
   ],
-  "ProvisionedThroughput": {
-    "ReadCapacityUnits": 1,
-    "WriteCapacityUnits": 1
+  ProvisionedThroughput: {
+    ReadCapacityUnits: 1,
+    WriteCapacityUnits: 1
   }
 }
 

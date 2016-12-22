@@ -14,22 +14,22 @@ AWS.config.update({
 
 var dynamo = new AWS.DynamoDB()
 </code></pre><h2 id="configure-dynamodb">Configure DynamoDB</h2><p>Once you have established the connection, you can easily create your tables. Below is a simple example of a user table with <code>_id</code> as the primary key. Notice that the creation of tables is instant on the local version of DynamoDB.</p><pre><code class="lang-javascript">const tableConfig = {
-  &quot;TableName&quot;: &quot;Users&quot;,
-  &quot;KeySchema&quot;: [
+  TableName: &apos;Users&apos;,
+  KeySchema: [
     {
-      &quot;AttributeName&quot;: &quot;_id&quot;,
-      &quot;KeyType&quot;: &quot;HASH&quot;
+      AttributeName: &apos;_id&apos;,
+      KeyType: &apos;HASH&apos;
     }
   ],
-  &quot;AttributeDefinitions&quot;: [
+  AttributeDefinitions: [
     {
-      &quot;AttributeName&quot;: &quot;_id&quot;,
-      &quot;AttributeType&quot;: &quot;S&quot;
+      AttributeName: &apos;_id&apos;,
+      AttributeType: &apos;S&apos;
     }
   ],
-  &quot;ProvisionedThroughput&quot;: {
-    &quot;ReadCapacityUnits&quot;: 1,
-    &quot;WriteCapacityUnits&quot;: 1
+  ProvisionedThroughput: {
+    ReadCapacityUnits: 1,
+    WriteCapacityUnits: 1
   }
 }
 

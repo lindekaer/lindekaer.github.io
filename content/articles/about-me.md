@@ -14,7 +14,7 @@ Please see [LinkedIn](https://www.linkedin.com/in/theodor-c-listov-lindekaer-328
 ## Technologies
 My technological competencies revolve around web systems. I have started as a frontend developer doing HTML, CSS and client side JS, but have progressed to also doing backend development. My language of choice for backend development is Node. I consider myself a fullstack developer.
 
-- **Frameworks** - Express, Vue, React
+- **Frameworks** - Express, Vue, React, React Native
 - **Task runners** - Gulp, Webpack
 - **Testing** - Mocha, Chai, Supertest
 - **Databases** - MySQL, MongoDB, DynamoDB

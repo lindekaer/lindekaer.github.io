@@ -46,4 +46,4 @@ function untilDoneEvent () {
   })().then(() => true)
 ```
 
-It workds, but is not the must concise. If you have some ideas for improvement, please let me know!
+It works, but is not the must concise. If you have some ideas for improvement, please let me know!

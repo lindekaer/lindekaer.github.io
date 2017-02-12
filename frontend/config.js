@@ -71,7 +71,8 @@ const articles = [
   new Article('WebRTC explained', 'Development', '2016-12-12'),
   new Article('Running a local DynamoDB', 'Development', '2016-12-21'),
   new Article('Batch process files in Bash', 'Development', '2017-01-30'),
-  new Article('Browser logs from Selenium', 'Development', '2017-02-02')
+  new Article('Browser logs from Selenium', 'Development', '2017-02-02'),
+  new Article('2016 - A year of commits', 'Personal', '2017-02-12')
   // new Article('Async error handling in Node', 'Development', '2016-11-23')
 ]
 

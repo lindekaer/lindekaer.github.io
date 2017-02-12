@@ -8,4 +8,4 @@ Sitting here one year later, I am enjoying every picture. They help me recall mo
 
 I am happy to present my 2016 in a GIF!
 
-<img src="/frontend/dist/images/2016.gif" />
+<img class="media__center" src="/frontend/dist/images/2016.gif" />

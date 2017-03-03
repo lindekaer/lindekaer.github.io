@@ -1,6 +1,6 @@
 As part of doing the [Swedish Classic](https://en.wikipedia.org/wiki/Swedish_Classic_Circuit) I have been working hard on getting some cross country skiing experience prior to Vasaloppet. This led me and my friends Karel, Andrei and Patrik to sign up for the Czech race **Čez Jizerská 50**. It turned out that **50** was not only an indication of the number of kilometers to ski, but also a celebration of the event's 50th anniversary. I call it timing!
 
-## Godlike accomodation
+## Godlike accommodation
 The race took place in and around the area of Bedrichov. Fortunately Karel had a good friend in the nearby city of Liberec. In fact, Karel's friend is a priest at the local monestary and he invited us to crash there. We could not have wished for more generous accommodation.
 
 <div id="map1" data-lat="50.791088" data-lng="15.142471" data-zoom="9" data-type="streets">

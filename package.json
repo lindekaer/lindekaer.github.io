@@ -4,6 +4,7 @@
   "description": "My personal blog",
   "main": "index.html",
   "scripts": {
+    "start": "open -a 'Visual Studio Code' .; npm run gulp",
     "prod": "npm run _img-create-mobile; npm run _img-create-desktop; npm run gulp prod; npm run _push-to-github; npm run _take-picture",
     "img": "npm run _img-create-mobile; npm run _img-create-desktop;",
     "_img-create-mobile": "rm -r ~/Sites/blog/frontend/dist/images/article/mobile/*; sips -Z 800 ~/Sites/blog/frontend/src/images/article/src/*.jpg --out ~/Sites/blog/frontend/dist/images/article/mobile",

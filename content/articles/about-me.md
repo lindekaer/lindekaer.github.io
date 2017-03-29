@@ -41,3 +41,11 @@ Meanwhile working as a frontend developer I started a small side project called 
 I love to travel and especially sharing the amazing moments I experience. Prior to walking the [Camino de Santiago](http://lindekaer.com/camino-de-santiago.html) I started tinkering with a GSM modem and a SIM-card to make it possible for me to send SMS with geolocation back home while traveling. This date should then be displayed on a web based map for all my friends and family to follow. This led to me developing **Hikebeat** with my friends Niklas, Jesper and Dimitar. Today Hikebeat is available as an IOS app - check it out at [Hikebeat.io](https://hikebeat.io). 
 
 Please see [LinkedIn](https://www.linkedin.com/in/theodor-c-listov-lindekaer-3289833b) for more details and the profiles of my awesome partners.
+
+## Open source
+When I face a problem, I know I'm not alone. Therefore I try to publish as much as possible. Most of code end up at [Github](https://github.com/lindekaer).
+
+- [Express Detective](https://github.com/lindekaer/express-detective) is a simple Express middleware to pretty print the details of incoming requests
+- [Hyperterm Earthsong](https://github.com/lindekaer/hyperterm-earthsong) is a Hyper port of Iterm's Earthsong theme
+- [Express Await Starter](https://github.com/lindekaer/express-await-starter) is an opinionated boilerplate project for Express using async/await
+- [QuizWizz](https://github.com/lindekaer/QuizWizz) is a native IOS application for flash cards developed in React Native.

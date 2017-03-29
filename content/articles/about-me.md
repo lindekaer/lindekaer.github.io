@@ -1,5 +1,5 @@
 ## Education
-I'm a software engineering student currently writing my Master's thesis in *WebRTC P2P Performance* at the [IT University of Copenhagen](http://itu.dk). I have a Bachelor degree in *International Business* from [Copenhagen Business School](http://cbs.dk) with a thesis on the *Business Value of the Internet of Things*. I have a broad technical foundation with academic experience from the fields of:
+I'm a software engineering student currently studying at the [IT University of Copenhagen](http://itu.dk). I have a Bachelor degree in *International Business* from [Copenhagen Business School](http://cbs.dk) with a thesis on the *Business Value of the Internet of Things*. I have a broad technical foundation with academic experience from the fields of:
 
 - Discrete mathematics 
 - Algorithms 

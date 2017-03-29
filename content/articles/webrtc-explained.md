@@ -178,6 +178,8 @@ I hope this simple walkthrough has sparked an interest in you. I can highly reco
 - [WebRTC](https://hpbn.co/webrtc/) by Ilya Grigorik
 - [Getting started with WebRTC](https://www.html5rocks.com/en/tutorials/webrtc/basics/) by Sam Dutton
 - [WebRTC in the real world: STUN, TURN and signaling](http://www.html5rocks.com/en/tutorials/webrtc/infrastructure/) by Sam Dutton
+- [What is ICE?](https://www.youtube.com/watch?v=7qAQuC9muf8) by Mozilla
+- [WebRTC network stack](https://www.youtube.com/watch?v=ZkEOSrHEXX8) by Mozilla
 
 ... and of course, lots of cool code:
 
